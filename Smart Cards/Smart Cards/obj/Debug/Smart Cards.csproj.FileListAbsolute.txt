@@ -8,3 +8,4 @@ C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smar
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CoreCompileInputs.cache
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
+C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources

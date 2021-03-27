@@ -9,6 +9,6 @@ namespace Smart_Cards
 {
     public static class StyleManager
     {
-        private static Color _primaryColor = ;
+        private static Color _primaryColor = new Color();
     }
 }

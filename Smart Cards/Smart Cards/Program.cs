@@ -16,7 +16,7 @@ namespace Smart_Cards
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PrimaryForm());
         }
     }
 }

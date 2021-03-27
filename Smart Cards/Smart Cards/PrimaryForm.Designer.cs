@@ -1,6 +1,6 @@
 ﻿namespace Smart_Cards
 {
-    partial class Form1
+    partial class PrimaryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.studyButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
+            this.studyPanel1 = new Smart_Cards.StudyPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -162,11 +163,20 @@
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Smart Cards";
             // 
+            // studyPanel1
+            // 
+            this.studyPanel1.AutoScroll = true;
+            this.studyPanel1.Location = new System.Drawing.Point(150, 75);
+            this.studyPanel1.Name = "studyPanel1";
+            this.studyPanel1.Size = new System.Drawing.Size(634, 486);
+            this.studyPanel1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.studyPanel1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
             this.Name = "Form1";
@@ -188,6 +198,7 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
+        private StudyPanel studyPanel1;
     }
 }
 

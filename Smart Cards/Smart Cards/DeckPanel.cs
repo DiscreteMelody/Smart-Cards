@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
-    public static class StyleManager
+    public partial class DeckPanel : UserControl
     {
-        private static Color _primaryColor = new Color();
-
-        public static Color PrimaryColor
+        public DeckPanel()
         {
-            get { return _primaryColor; }
+            InitializeComponent();
         }
     }
 }

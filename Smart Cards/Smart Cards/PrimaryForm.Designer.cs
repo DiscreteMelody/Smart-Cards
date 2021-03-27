@@ -166,12 +166,13 @@
             // studyPanel1
             // 
             this.studyPanel1.AutoScroll = true;
-            this.studyPanel1.Location = new System.Drawing.Point(150, 75);
+            this.studyPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.studyPanel1.Location = new System.Drawing.Point(156, 81);
             this.studyPanel1.Name = "studyPanel1";
-            this.studyPanel1.Size = new System.Drawing.Size(634, 486);
+            this.studyPanel1.Size = new System.Drawing.Size(628, 480);
             this.studyPanel1.TabIndex = 3;
             // 
-            // Form1
+            // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +180,7 @@
             this.Controls.Add(this.studyPanel1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
-            this.Name = "Form1";
+            this.Name = "PrimaryForm";
             this.Text = "Form1";
             this.menuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);

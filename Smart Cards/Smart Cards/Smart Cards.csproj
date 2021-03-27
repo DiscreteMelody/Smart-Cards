@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeckPanel.Designer.cs">
+      <DependentUpon>DeckPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrimaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +70,9 @@
       <DependentUpon>StudyPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="StyleManager.cs" />
+    <EmbeddedResource Include="DeckPanel.resx">
+      <DependentUpon>DeckPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrimaryForm.resx">
       <DependentUpon>PrimaryForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -2,10 +2,11 @@ C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smar
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\bin\Debug\Smart Cards.exe
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\bin\Debug\Smart Cards.pdb
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csprojAssemblyReference.cache
-C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.Form1.resources
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.Properties.Resources.resources
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.GenerateResource.cache
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CoreCompileInputs.cache
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
 C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.PrimaryForm.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\Projects\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.DeckPanel.resources

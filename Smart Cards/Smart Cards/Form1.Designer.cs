@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.studyButton = new System.Windows.Forms.Button();
-            this.highlightPanel = new System.Windows.Forms.Panel();
-            this.editDecksButton = new System.Windows.Forms.Button();
-            this.helpButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
+            this.addDeckButton = new System.Windows.Forms.Button();
+            this.highlightPanel = new System.Windows.Forms.Panel();
+            this.studyButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
@@ -45,7 +45,7 @@
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.menuPanel.Controls.Add(this.exitButton);
             this.menuPanel.Controls.Add(this.helpButton);
-            this.menuPanel.Controls.Add(this.editDecksButton);
+            this.menuPanel.Controls.Add(this.addDeckButton);
             this.menuPanel.Controls.Add(this.highlightPanel);
             this.menuPanel.Controls.Add(this.studyButton);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -53,71 +53,6 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(150, 561);
             this.menuPanel.TabIndex = 0;
-            // 
-            // studyButton
-            // 
-            this.studyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.studyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.studyButton.FlatAppearance.BorderSize = 0;
-            this.studyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.studyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studyButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studyButton.ForeColor = System.Drawing.Color.White;
-            this.studyButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.studyButton.Location = new System.Drawing.Point(0, 75);
-            this.studyButton.Name = "studyButton";
-            this.studyButton.Size = new System.Drawing.Size(150, 110);
-            this.studyButton.TabIndex = 3;
-            this.studyButton.Text = "Study";
-            this.studyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.studyButton.UseVisualStyleBackColor = false;
-            // 
-            // highlightPanel
-            // 
-            this.highlightPanel.BackColor = System.Drawing.Color.White;
-            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
-            this.highlightPanel.Name = "highlightPanel";
-            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
-            this.highlightPanel.TabIndex = 3;
-            // 
-            // editDecksButton
-            // 
-            this.editDecksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.editDecksButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editDecksButton.FlatAppearance.BorderSize = 0;
-            this.editDecksButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.editDecksButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.editDecksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editDecksButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editDecksButton.ForeColor = System.Drawing.Color.White;
-            this.editDecksButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.editDecksButton.Location = new System.Drawing.Point(0, 185);
-            this.editDecksButton.Name = "editDecksButton";
-            this.editDecksButton.Size = new System.Drawing.Size(150, 110);
-            this.editDecksButton.TabIndex = 4;
-            this.editDecksButton.Text = "Edit Decks";
-            this.editDecksButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.editDecksButton.UseVisualStyleBackColor = false;
-            // 
-            // helpButton
-            // 
-            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.helpButton.FlatAppearance.BorderSize = 0;
-            this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpButton.ForeColor = System.Drawing.Color.White;
-            this.helpButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.helpButton.Location = new System.Drawing.Point(0, 295);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(150, 110);
-            this.helpButton.TabIndex = 5;
-            this.helpButton.Text = "Help";
-            this.helpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.helpButton.UseVisualStyleBackColor = false;
             // 
             // exitButton
             // 
@@ -138,6 +73,71 @@
             this.exitButton.Text = "Exit";
             this.exitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.exitButton.UseVisualStyleBackColor = false;
+            // 
+            // helpButton
+            // 
+            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.helpButton.FlatAppearance.BorderSize = 0;
+            this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.ForeColor = System.Drawing.Color.White;
+            this.helpButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.helpButton.Location = new System.Drawing.Point(0, 295);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(150, 110);
+            this.helpButton.TabIndex = 5;
+            this.helpButton.Text = "Help";
+            this.helpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.helpButton.UseVisualStyleBackColor = false;
+            // 
+            // addDeckButton
+            // 
+            this.addDeckButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.addDeckButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addDeckButton.FlatAppearance.BorderSize = 0;
+            this.addDeckButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.addDeckButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.addDeckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDeckButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDeckButton.ForeColor = System.Drawing.Color.White;
+            this.addDeckButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.addDeckButton.Location = new System.Drawing.Point(0, 185);
+            this.addDeckButton.Name = "addDeckButton";
+            this.addDeckButton.Size = new System.Drawing.Size(150, 110);
+            this.addDeckButton.TabIndex = 4;
+            this.addDeckButton.Text = "Add New";
+            this.addDeckButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.addDeckButton.UseVisualStyleBackColor = false;
+            // 
+            // highlightPanel
+            // 
+            this.highlightPanel.BackColor = System.Drawing.Color.White;
+            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
+            this.highlightPanel.Name = "highlightPanel";
+            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
+            this.highlightPanel.TabIndex = 3;
+            // 
+            // studyButton
+            // 
+            this.studyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.studyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.studyButton.FlatAppearance.BorderSize = 0;
+            this.studyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.studyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.studyButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studyButton.ForeColor = System.Drawing.Color.White;
+            this.studyButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.studyButton.Location = new System.Drawing.Point(0, 75);
+            this.studyButton.Name = "studyButton";
+            this.studyButton.Size = new System.Drawing.Size(150, 110);
+            this.studyButton.TabIndex = 3;
+            this.studyButton.Text = "Study";
+            this.studyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.studyButton.UseVisualStyleBackColor = false;
             // 
             // headerPanel
             // 
@@ -183,7 +183,7 @@
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button studyButton;
         private System.Windows.Forms.Button helpButton;
-        private System.Windows.Forms.Button editDecksButton;
+        private System.Windows.Forms.Button addDeckButton;
         private System.Windows.Forms.Panel highlightPanel;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel headerPanel;

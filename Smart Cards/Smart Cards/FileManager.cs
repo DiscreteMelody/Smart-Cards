@@ -4,15 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace Smart_Cards
 {
     public class FileManager
     {
-        private string filePath;
+        private readonly string filePath;
 
 
-        private StreamReader deckFile;
+        private readonly StreamReader deckFile;
 
         public FileManager(string path)
         {
@@ -27,16 +29,27 @@ namespace Smart_Cards
         {
             List<Deck> deckList = new List<Deck>();
 
-            string line;
-            while ((line = deckFile.ReadLine()) != null)
+            //string line;
+            //while ((line = deckFile.ReadLine()) != null)
+            //{
+            //    deckList.Add(ParseDeck(line));
+            //}
+
+            string data = deckFile.ReadToEnd();
+
+            Console.WriteLine(data);
+
+            DeckJson DeckJson = JsonConvert.DeserializeObject<DeckJson>(data);
+
+            foreach (Deck d in DeckJson.DeckList)
             {
-                deckList.Add(parseDeck(line));
+                Console.WriteLine(d.ToString());
             }
 
             return deckList;
         }
 
-        private Deck parseDeck(string deckData)
+        private Deck ParseDeck(string deckData)
         {
             //assumptions: deck must have at least one card, a title, and a description
             //deck parse goes as follows:
@@ -45,22 +58,24 @@ namespace Smart_Cards
             //second entry is description
             //after that each entry is a card with front and back separated with forward slash
 
-            string[] strArray = deckData.Split(',');
+            //string[] strArray = deckData.Split(',');
 
-            string deckTitle = strArray[0];
-            string deckDescription = strArray[1];
-            List<Card> cards = new List<Card>();
+            //string deckTitle = strArray[0];
+            //string deckDescription = strArray[1];
+            //List<Card> cards = new List<Card>();
 
             //ignore the first 2 elements (those are title and desc)
-            for (int i = 2; i < strArray.Length; i += 2)
-            {
-                cards.Add(new Card(strArray[i], strArray[i + 1]));
-            }
+            //for (int i = 2; i < strArray.Length; i += 2)
+            //{
+            //    cards.Add(new Card(strArray[i], strArray[i + 1]));
+            //}
 
-            return new Deck(deckTitle, deckDescription, cards);
+            //return new Deck(deckTitle, deckDescription, cards);
+
+            return null;
         }
 
-        private void saveDecks(List<Deck> deckList)
+        private void SaveDecks(List<Deck> deckList)
         {
             try
             {
@@ -68,7 +83,7 @@ namespace Smart_Cards
 
                 foreach (Deck d in deckList)
                 {
-                    sw.WriteLine(d.title + "," + d.description + "," + "cards go here");
+                    sw.WriteLine(d.Title + "," + d.Description + "," + "cards go here");
                 }
 
             }

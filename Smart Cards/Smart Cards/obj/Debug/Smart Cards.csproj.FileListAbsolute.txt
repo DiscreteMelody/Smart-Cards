@@ -22,3 +22,6 @@ C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Car
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CoreCompileInputs.cache
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CopyComplete

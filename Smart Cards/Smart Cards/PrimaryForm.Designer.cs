@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.helpButton = new System.Windows.Forms.Button();
-            this.addDeckButton = new System.Windows.Forms.Button();
             this.highlightPanel = new System.Windows.Forms.Panel();
-            this.decksButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.DeckListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
+            this.addDeckButton = new System.Windows.Forms.Button();
+            this.decksButton = new System.Windows.Forms.Button();
+            this.editPanel1 = new Smart_Cards.EditPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            this.DeckListFlowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -54,6 +56,45 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(150, 561);
             this.menuPanel.TabIndex = 0;
+            // 
+            // highlightPanel
+            // 
+            this.highlightPanel.BackColor = System.Drawing.Color.White;
+            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
+            this.highlightPanel.Name = "highlightPanel";
+            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
+            this.highlightPanel.TabIndex = 3;
+            // 
+            // headerPanel
+            // 
+            this.headerPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.headerPanel.Controls.Add(this.headerLabel);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(150, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(634, 75);
+            this.headerPanel.TabIndex = 2;
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.headerLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.White;
+            this.headerLabel.Location = new System.Drawing.Point(6, 18);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(205, 38);
+            this.headerLabel.TabIndex = 0;
+            this.headerLabel.Text = "Smart Cards";
+            // 
+            // DeckListFlowPanel
+            // 
+            this.DeckListFlowPanel.Controls.Add(this.editPanel1);
+            this.DeckListFlowPanel.Location = new System.Drawing.Point(163, 85);
+            this.DeckListFlowPanel.Name = "DeckListFlowPanel";
+            this.DeckListFlowPanel.Size = new System.Drawing.Size(609, 464);
+            this.DeckListFlowPanel.TabIndex = 3;
             // 
             // exitButton
             // 
@@ -117,14 +158,6 @@
             this.addDeckButton.UseVisualStyleBackColor = false;
             this.addDeckButton.Click += new System.EventHandler(this.addDeckButton_Click);
             // 
-            // highlightPanel
-            // 
-            this.highlightPanel.BackColor = System.Drawing.Color.White;
-            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
-            this.highlightPanel.Name = "highlightPanel";
-            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
-            this.highlightPanel.TabIndex = 3;
-            // 
             // decksButton
             // 
             this.decksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
@@ -145,35 +178,12 @@
             this.decksButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.decksButton.UseVisualStyleBackColor = false;
             // 
-            // headerPanel
+            // editPanel1
             // 
-            this.headerPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.headerPanel.Controls.Add(this.headerLabel);
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(150, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(634, 75);
-            this.headerPanel.TabIndex = 2;
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.headerLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(6, 18);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(205, 38);
-            this.headerLabel.TabIndex = 0;
-            this.headerLabel.Text = "Smart Cards";
-            // 
-            // DeckListFlowPanel
-            // 
-            this.DeckListFlowPanel.Location = new System.Drawing.Point(163, 85);
-            this.DeckListFlowPanel.Name = "DeckListFlowPanel";
-            this.DeckListFlowPanel.Size = new System.Drawing.Size(609, 464);
-            this.DeckListFlowPanel.TabIndex = 3;
+            this.editPanel1.Location = new System.Drawing.Point(3, 3);
+            this.editPanel1.Name = "editPanel1";
+            this.editPanel1.Size = new System.Drawing.Size(609, 464);
+            this.editPanel1.TabIndex = 1;
             // 
             // PrimaryForm
             // 
@@ -189,6 +199,7 @@
             this.menuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            this.DeckListFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -204,6 +215,7 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
+        private EditPanel editPanel1;
     }
 }
 

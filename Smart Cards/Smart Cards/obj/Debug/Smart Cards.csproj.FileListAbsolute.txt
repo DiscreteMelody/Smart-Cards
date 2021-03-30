@@ -24,3 +24,19 @@ C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Car
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CopyComplete
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Smart Cards.exe.config
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Smart Cards.exe
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Smart Cards.pdb
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csprojAssemblyReference.cache
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.DeckPanel.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.PrimaryForm.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.Properties.Resources.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.GenerateResource.cache
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CoreCompileInputs.cache
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CopyComplete
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.EditPanel.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.paddingPanel.resources

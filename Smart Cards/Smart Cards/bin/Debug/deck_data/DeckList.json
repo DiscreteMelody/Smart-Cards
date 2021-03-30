@@ -1,0 +1,53 @@
+{
+  "decks":[
+    {
+      "Title": "Spanish 2",
+      "Description": "Sra. Mendoza's class",
+      "cards":[
+        {
+          "Question": "Spanish Question 1",
+          "Answer": "Spanish Answer 1"
+        },
+        {
+          "Question": "Spanish Question 2",
+          "Answer": "Spanish Answer 2"
+        },
+        {
+          "Question": "Spanish Question 3",
+          "Answer": "Spanish Answer 3"
+        },
+        {
+          "Question": "Spanish Question 4",
+          "Answer": "Spanish Answer 4"
+        }
+        ]
+    },
+    {
+      "Title": "History",
+      "Description": "Learning about WW2",
+      "cards":[
+        {
+          "Question": "History Question 1",
+          "Answer": "History Answer 1"
+        },
+        {
+          "Question": "History Question 2",
+          "Answer": "History Answer 2"
+        },
+        {
+          "Question": "History Question 3",
+          "Answer": "History Answer 3"
+        },
+        {
+          "Question": "History Question 4",
+          "Answer": "History Answer 4"
+        },
+        {
+          "Question": "History Question 5",
+          "Answer": "History Answer 5"
+        }
+        ]
+    }
+    ]
+
+}

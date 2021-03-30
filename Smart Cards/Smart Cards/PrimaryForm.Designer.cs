@@ -146,6 +146,7 @@
             this.addDeckButton.Text = "Add New";
             this.addDeckButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addDeckButton.UseVisualStyleBackColor = false;
+            this.addDeckButton.Click += new System.EventHandler(this.addDeckButton_Click);
             // 
             // decksButton
             // 
@@ -175,6 +176,7 @@
             this.studyPanel1.Name = "studyPanel1";
             this.studyPanel1.Size = new System.Drawing.Size(628, 480);
             this.studyPanel1.TabIndex = 3;
+            this.studyPanel1.Load += new System.EventHandler(this.studyPanel1_Load);
             // 
             // PrimaryForm
             // 

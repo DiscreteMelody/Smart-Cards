@@ -12,22 +12,19 @@ namespace Smart_Cards
 {
     public partial class PrimaryForm : Form
     {
-        FileManager fm;
+        private readonly FileManager fm;
+        private readonly List<Deck> DeckList;
         public PrimaryForm()
         {
             InitializeComponent();
 
             fm = new FileManager("deck_data/DeckList.json");
-        }
-
-        private void studyPanel1_Load(object sender, EventArgs e)
-        {
-
+            DeckList = fm.ImportDecksFromJson();
         }
 
         private void addDeckButton_Click(object sender, EventArgs e)
         {
-            fm.ImportDecks();
+            
         }
 
         //use this to run neccessary code at the time the application runs
@@ -35,6 +32,21 @@ namespace Smart_Cards
         {
             //this will be the default screen when the app loads
             decksButton.PerformClick();
+
+
+            UpdateDeckScreen();
+        }
+
+        private void UpdateDeckScreen()
+        {
+
+
+            DeckPanel newDeckPanel;
+            foreach (Deck d in DeckList)
+            {
+                newDeckPanel = new DeckPanel(d);
+                DeckListFlowPanel.Controls.Add(newDeckPanel);
+            }
         }
     }
 }

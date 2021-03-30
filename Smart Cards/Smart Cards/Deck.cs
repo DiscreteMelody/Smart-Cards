@@ -13,21 +13,22 @@ namespace Smart_Cards
         public string Description { get; set; }
         public List<Card> Cards { get; set; }
 
-        public Deck(string newTitle, string newDescription, List<Card> newCards)
+        public Deck(string title, string description, List<Card> cards)
         {
-            Title = newTitle;
-            Description = newDescription;
-            Cards = newCards;
+            Title = title;
+            Description = description;
+            Cards = cards;
         }
 
         public override string ToString()
         {
-            string deckInfo = "Deck Title: " + Title +
-                "\nDeck Description: " + Description +
-                "\nNumber of cards: " + Cards.Count;
+            string deckInfo = "\n-----------------------------------------" +
+                "\nDeck Title:\t\t\t" + Title +
+                "\nDeck Description:\t" + Description +
+                "\n\nNumber of cards:\t" + Cards.Count + "\n";
             foreach(Card c in Cards)
             {
-                deckInfo += "\n" + c.ToString();
+                deckInfo += "\n" + c.ToString() + "\n";
             }
             return deckInfo;
         }

@@ -12,9 +12,14 @@ namespace Smart_Cards
 {
     public partial class DeckPanel : UserControl
     {
-        public DeckPanel()
+        private Deck DeckReference;
+        public DeckPanel(Deck d)
         {
             InitializeComponent();
+
+            DeckReference = d;
+
+            deckTitleLabel.Text = DeckReference.Title;
         }
     }
 }

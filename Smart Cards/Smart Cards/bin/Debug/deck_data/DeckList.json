@@ -47,6 +47,58 @@
           "Answer": "History Answer 5"
         }
         ]
+    },
+    {
+      "Title": "Computer Science",
+      "Description": "Web Design",
+      "cards":[
+        {
+          "Question": "Computer Science Question 1",
+          "Answer": "Computer Science Answer 1"
+        },
+        {
+          "Question": "Computer Science Question 2",
+          "Answer": "Computer Science Answer 2"
+        },
+        {
+          "Question": "Computer Science Question 3",
+          "Answer": "Computer Science Answer 3"
+        },
+        {
+          "Question": "Computer Science Question 4",
+          "Answer": "Computer Science Answer 4"
+        },
+        {
+          "Question": "Computer Science Question 5",
+          "Answer": "Computer Science Answer 5"
+        }
+        ]
+    },
+    {
+      "Title": "Criminal Justice",
+      "Description": "CJ1932",
+      "cards":[
+        {
+          "Question": "Criminal Justice Question 1",
+          "Answer": "Criminal Justice Answer 1"
+        },
+        {
+          "Question": "Criminal Justice Question 2",
+          "Answer": "Criminal Justice Answer 2"
+        },
+        {
+          "Question": "Criminal Justice Question 3",
+          "Answer": "Criminal Justice Answer 3"
+        },
+        {
+          "Question": "Criminal Justice Question 4",
+          "Answer": "Criminal Justice Answer 4"
+        },
+        {
+          "Question": "Criminal Justice Question 5",
+          "Answer": "Criminal Justice Answer 5"
+        }
+        ]
     }
     ]
 

@@ -25,20 +25,10 @@ namespace Smart_Cards
             //path to deck data doesn't exist
         }
 
-        public List<Deck> ImportDecks()
+        //reads Json file located at 'filePath' and returns list of Decks
+        public List<Deck> ImportDecksFromJson()
         {
-            List<Deck> deckList = new List<Deck>();
-
-            //string line;
-            //while ((line = deckFile.ReadLine()) != null)
-            //{
-            //    deckList.Add(ParseDeck(line));
-            //}
-
             string data = deckFile.ReadToEnd();
-
-            Console.WriteLine(data);
-
             DeckJson DeckJson = JsonConvert.DeserializeObject<DeckJson>(data);
 
             foreach (Deck d in DeckJson.DeckList)
@@ -46,34 +36,9 @@ namespace Smart_Cards
                 Console.WriteLine(d.ToString());
             }
 
-            return deckList;
+            return DeckJson.DeckList;
         }
 
-        private Deck ParseDeck(string deckData)
-        {
-            //assumptions: deck must have at least one card, a title, and a description
-            //deck parse goes as follows:
-            //each entry is separated by a comma
-            //first entry is title
-            //second entry is description
-            //after that each entry is a card with front and back separated with forward slash
-
-            //string[] strArray = deckData.Split(',');
-
-            //string deckTitle = strArray[0];
-            //string deckDescription = strArray[1];
-            //List<Card> cards = new List<Card>();
-
-            //ignore the first 2 elements (those are title and desc)
-            //for (int i = 2; i < strArray.Length; i += 2)
-            //{
-            //    cards.Add(new Card(strArray[i], strArray[i + 1]));
-            //}
-
-            //return new Deck(deckTitle, deckDescription, cards);
-
-            return null;
-        }
 
         private void SaveDecks(List<Deck> deckList)
         {

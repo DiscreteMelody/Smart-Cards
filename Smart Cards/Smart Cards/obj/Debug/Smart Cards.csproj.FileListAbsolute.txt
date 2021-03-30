@@ -17,7 +17,6 @@ C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Car
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.DeckPanel.resources
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.PrimaryForm.resources
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.Properties.Resources.resources
-C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.GenerateResource.cache
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CoreCompileInputs.cache
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe

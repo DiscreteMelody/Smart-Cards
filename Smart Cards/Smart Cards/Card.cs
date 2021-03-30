@@ -12,16 +12,16 @@ namespace Smart_Cards
         public string Question { get; set; }
         public string Answer { get; set; }
 
-        public Card(string newQuestion, string newAnswer)
+        public Card(string question, string answer)
         {
-            Question = newQuestion;
-            Answer = newAnswer;
+            Question = question;
+            Answer = answer;
         }
 
         public override string ToString()
         {
-            return "Question: " + Question +
-                "\nAnswer: " + Answer;
+            return "Question:\t\t\t" + Question +
+                "\nAnswer:\t\t\t\t" + Answer;
         }
     }
 }

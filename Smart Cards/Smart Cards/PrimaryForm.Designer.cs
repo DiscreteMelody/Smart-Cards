@@ -88,9 +88,9 @@
             // 
             // DeckListFlowPanel
             // 
-            this.DeckListFlowPanel.Location = new System.Drawing.Point(163, 85);
+            this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
-            this.DeckListFlowPanel.Size = new System.Drawing.Size(609, 464);
+            this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);
             this.DeckListFlowPanel.TabIndex = 3;
             // 
             // exitButton

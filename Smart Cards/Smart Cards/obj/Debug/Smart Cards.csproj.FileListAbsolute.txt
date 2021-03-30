@@ -40,3 +40,4 @@ C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Car
 C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
 C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.EditPanel.resources
 C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.CustomizedTextBox.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\App\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources

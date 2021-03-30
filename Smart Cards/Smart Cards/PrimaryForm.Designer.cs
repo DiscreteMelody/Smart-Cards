@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.exitButton = new System.Windows.Forms.Button();
             this.highlightPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.studyPanel1 = new Smart_Cards.StudyPanel();
+            this.exitButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.addDeckButton = new System.Windows.Forms.Button();
             this.decksButton = new System.Windows.Forms.Button();
+            this.studyPanel1 = new Smart_Cards.StudyPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,27 +54,6 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(150, 561);
             this.menuPanel.TabIndex = 0;
-            // 
-            // exitButton
-            // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Image = global::Smart_Cards.Properties.Resources.power_icon_light;
-            this.exitButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.exitButton.Location = new System.Drawing.Point(0, 451);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(150, 110);
-            this.exitButton.TabIndex = 6;
-            this.exitButton.Text = "Exit";
-            this.exitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.exitButton.UseVisualStyleBackColor = false;
             // 
             // highlightPanel
             // 
@@ -107,14 +86,26 @@
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Smart Cards";
             // 
-            // studyPanel1
+            // exitButton
             // 
-            this.studyPanel1.AutoScroll = true;
-            this.studyPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.studyPanel1.Location = new System.Drawing.Point(156, 81);
-            this.studyPanel1.Name = "studyPanel1";
-            this.studyPanel1.Size = new System.Drawing.Size(628, 480);
-            this.studyPanel1.TabIndex = 3;
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Image = global::Smart_Cards.Properties.Resources.power_icon_light;
+            this.exitButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exitButton.Location = new System.Drawing.Point(0, 451);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(150, 110);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "Exit";
+            this.exitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.exitButton.UseVisualStyleBackColor = false;
             // 
             // helpButton
             // 
@@ -176,6 +167,15 @@
             this.decksButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.decksButton.UseVisualStyleBackColor = false;
             // 
+            // studyPanel1
+            // 
+            this.studyPanel1.AutoScroll = true;
+            this.studyPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.studyPanel1.Location = new System.Drawing.Point(156, 81);
+            this.studyPanel1.Name = "studyPanel1";
+            this.studyPanel1.Size = new System.Drawing.Size(628, 480);
+            this.studyPanel1.TabIndex = 3;
+            // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +186,7 @@
             this.Controls.Add(this.menuPanel);
             this.Name = "PrimaryForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.PrimaryForm_Load);
             this.menuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();

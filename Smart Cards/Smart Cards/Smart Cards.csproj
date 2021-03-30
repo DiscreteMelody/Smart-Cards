@@ -84,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StudyPanel.resx">
       <DependentUpon>StudyPanel.cs</DependentUpon>
@@ -100,6 +101,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flashcard icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flashcard icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study icon light1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\study icon dark1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

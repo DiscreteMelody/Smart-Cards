@@ -10,11 +10,13 @@ namespace Smart_Cards
 {
     public static class StyleManager
     {
-        private static Color _primaryColor = new Color();
+        public static Color primaryColor = Color.FromArgb(0, 0, 0);
+        public static Color highlightColor = Color.FromArgb(92, 214, 255);
+        public static Color lightTextColor = Color.FromArgb(0, 0, 0);
+        public static Color darkTextColor = Color.FromArgb(255, 255, 255);
+        public static Color pressedDownColor = Color.FromArgb(3, 169, 244);
 
-        public static Color PrimaryColor
-        {
-            get { return _primaryColor; }
-        }
+        public static Cursor buttonHoverCursor = Cursors.Hand;
+
     }
 }

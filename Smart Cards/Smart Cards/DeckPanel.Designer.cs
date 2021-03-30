@@ -31,8 +31,8 @@
             this.deckTitleLabel = new System.Windows.Forms.Label();
             this.studyLabel = new System.Windows.Forms.Label();
             this.editLabel = new System.Windows.Forms.Label();
-            this.circularButton1 = new Smart_Cards.CircularButton();
-            this.circularButton2 = new Smart_Cards.CircularButton();
+            this.editButton = new Smart_Cards.CircularButton();
+            this.studyButton = new Smart_Cards.CircularButton();
             this.SuspendLayout();
             // 
             // deckTitleLabel
@@ -69,39 +69,46 @@
             this.editLabel.TabIndex = 11;
             this.editLabel.Text = "Edit";
             // 
-            // circularButton1
+            // editButton
             // 
-            this.circularButton1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.circularButton1.BorderColor = System.Drawing.Color.DarkGray;
-            this.circularButton1.BorderRadius = 20;
-            this.circularButton1.FlatAppearance.BorderSize = 0;
-            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton1.Location = new System.Drawing.Point(174, 80);
-            this.circularButton1.Name = "circularButton1";
-            this.circularButton1.Size = new System.Drawing.Size(82, 82);
-            this.circularButton1.TabIndex = 3;
-            this.circularButton1.UseVisualStyleBackColor = false;
+            this.editButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.editButton.BorderColor = System.Drawing.Color.DarkGray;
+            this.editButton.BorderRadius = 20;
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.FlatAppearance.BorderSize = 0;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Image = global::Smart_Cards.Properties.Resources.edit_icon_light;
+            this.editButton.Location = new System.Drawing.Point(174, 80);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(82, 82);
+            this.editButton.TabIndex = 3;
+            this.editButton.UseVisualStyleBackColor = false;
             // 
-            // circularButton2
+            // studyButton
             // 
-            this.circularButton2.BorderColor = System.Drawing.Color.Empty;
-            this.circularButton2.BorderRadius = 0;
-            this.circularButton2.Location = new System.Drawing.Point(61, 80);
-            this.circularButton2.Name = "circularButton2";
-            this.circularButton2.Size = new System.Drawing.Size(76, 82);
-            this.circularButton2.TabIndex = 12;
-            this.circularButton2.Text = "circularButton2";
-            this.circularButton2.UseVisualStyleBackColor = true;
+            this.studyButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.studyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.studyButton.BorderColor = System.Drawing.Color.DarkGray;
+            this.studyButton.BorderRadius = 20;
+            this.studyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.studyButton.FlatAppearance.BorderSize = 0;
+            this.studyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.studyButton.Image = global::Smart_Cards.Properties.Resources.study_icon_light;
+            this.studyButton.Location = new System.Drawing.Point(49, 80);
+            this.studyButton.Name = "studyButton";
+            this.studyButton.Size = new System.Drawing.Size(82, 82);
+            this.studyButton.TabIndex = 12;
+            this.studyButton.UseVisualStyleBackColor = false;
             // 
             // DeckPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.circularButton2);
+            this.Controls.Add(this.studyButton);
             this.Controls.Add(this.editLabel);
             this.Controls.Add(this.studyLabel);
-            this.Controls.Add(this.circularButton1);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.deckTitleLabel);
             this.Name = "DeckPanel";
             this.Size = new System.Drawing.Size(301, 230);
@@ -113,9 +120,9 @@
         #endregion
 
         private System.Windows.Forms.Label deckTitleLabel;
-        private CircularButton circularButton1;
+        private CircularButton editButton;
         private System.Windows.Forms.Label studyLabel;
         private System.Windows.Forms.Label editLabel;
-        private CircularButton circularButton2;
+        private CircularButton studyButton;
     }
 }

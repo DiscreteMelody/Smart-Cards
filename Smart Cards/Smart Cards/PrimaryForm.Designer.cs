@@ -37,10 +37,8 @@
             this.helpButton = new System.Windows.Forms.Button();
             this.addDeckButton = new System.Windows.Forms.Button();
             this.decksButton = new System.Windows.Forms.Button();
-            this.editPanel1 = new Smart_Cards.EditPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
-            this.DeckListFlowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -90,7 +88,6 @@
             // 
             // DeckListFlowPanel
             // 
-            this.DeckListFlowPanel.Controls.Add(this.editPanel1);
             this.DeckListFlowPanel.Location = new System.Drawing.Point(163, 85);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
             this.DeckListFlowPanel.Size = new System.Drawing.Size(609, 464);
@@ -178,13 +175,6 @@
             this.decksButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.decksButton.UseVisualStyleBackColor = false;
             // 
-            // editPanel1
-            // 
-            this.editPanel1.Location = new System.Drawing.Point(3, 3);
-            this.editPanel1.Name = "editPanel1";
-            this.editPanel1.Size = new System.Drawing.Size(609, 464);
-            this.editPanel1.TabIndex = 1;
-            // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,12 +184,10 @@
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
             this.Name = "PrimaryForm";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.PrimaryForm_Load);
             this.menuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            this.DeckListFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -215,7 +203,6 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
-        private EditPanel editPanel1;
     }
 }
 

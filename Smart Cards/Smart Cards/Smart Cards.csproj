@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudyPanel.Designer.cs">
+      <DependentUpon>StudyPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="StyleManager.cs" />
     <EmbeddedResource Include="CustomizedTextBox.resx">
       <DependentUpon>CustomizedTextBox.cs</DependentUpon>
@@ -105,6 +111,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StudyPanel.resx">
+      <DependentUpon>StudyPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

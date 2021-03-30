@@ -143,6 +143,26 @@ namespace Smart_Cards.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plus_icon_dark {
+            get {
+                object obj = ResourceManager.GetObject("plus icon dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_icon_light {
+            get {
+                object obj = ResourceManager.GetObject("plus icon light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap power_icon_dark {
             get {
                 object obj = ResourceManager.GetObject("power icon dark", resourceCulture);
@@ -156,6 +176,26 @@ namespace Smart_Cards.Properties {
         internal static System.Drawing.Bitmap power_icon_light {
             get {
                 object obj = ResourceManager.GetObject("power icon light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_icon_dark {
+            get {
+                object obj = ResourceManager.GetObject("save icon dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_icon_light {
+            get {
+                object obj = ResourceManager.GetObject("save icon light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

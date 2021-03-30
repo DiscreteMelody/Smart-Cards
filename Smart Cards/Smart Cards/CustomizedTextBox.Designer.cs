@@ -1,6 +1,6 @@
 ﻿namespace Smart_Cards
 {
-    partial class paddingPanel
+    partial class CustomizedTextBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -46,7 +46,7 @@
             this.textBox.Enter += new System.EventHandler(this.textBox_Enter);
             this.textBox.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // paddingPanel
+            // CustomizedTextBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -54,7 +54,7 @@
             this.Controls.Add(this.textBox);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ForeColor = System.Drawing.Color.Transparent;
-            this.Name = "paddingPanel";
+            this.Name = "CustomizedTextBox";
             this.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
             this.Size = new System.Drawing.Size(176, 33);
             this.Load += new System.EventHandler(this.CustomizedTextBox_Load);

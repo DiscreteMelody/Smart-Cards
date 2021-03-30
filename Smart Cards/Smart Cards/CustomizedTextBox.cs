@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
-    public partial class paddingPanel : UserControl
+    public partial class CustomizedTextBox : UserControl
     {
-        private string watermarkText = "";
-        private Color watermarkColor = StyleManager.highlightColor;
+        private string watermarkText = "Watermark";
+        private Color watermarkColor = StyleManager.watermarkTextColor;
         private Color foreColor = StyleManager.lightTextColor;
-        private Color borderColor = Color.Transparent;
-        private bool togglesBorder = false;
+        private Color borderColor = StyleManager.primaryColor;
+        private bool togglesBorder = true;
 
         [Browsable(true)]
         [Description("The Watermark text of the textbox"), Category("Data")]
@@ -56,7 +56,7 @@ namespace Smart_Cards
             }
         }
 
-        public paddingPanel()
+        public CustomizedTextBox()
         {
             InitializeComponent();
             this.foreColor = textBox.ForeColor;

@@ -164,5 +164,17 @@
   <ItemGroup>
     <None Include="Resources\flashcard icon light empty.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus icon dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save icon dark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -173,6 +173,8 @@
             // 
             // DeckListFlowPanel
             // 
+            this.DeckListFlowPanel.AutoScroll = true;
+            this.DeckListFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
             this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);

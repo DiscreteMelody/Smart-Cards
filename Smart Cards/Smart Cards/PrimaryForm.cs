@@ -71,17 +71,22 @@ namespace Smart_Cards
         private void decksButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(decksButton);
+            DeckListFlowPanel.Controls.Clear();
             UpdateDeckScreen();
         }
 
         private void addDeckButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(addDeckButton);
+            DeckListFlowPanel.Controls.Clear();
+            DeckListFlowPanel.Controls.Add(new EditPanel());
         }
 
         private void helpButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(helpButton);
+            DeckListFlowPanel.Controls.Clear();
+            DeckListFlowPanel.Controls.Add(new HelpPanel());
         }
 
         private void exitButton_Click(object sender, EventArgs e)

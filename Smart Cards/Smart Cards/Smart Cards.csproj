@@ -74,6 +74,12 @@
       <DependentUpon>EditPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="FileManager.cs" />
+    <Compile Include="HelpPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpPanel.Designer.cs">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrimaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPanel.resx">
       <DependentUpon>EditPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpPanel.resx">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrimaryForm.resx">
       <DependentUpon>PrimaryForm.cs</DependentUpon>

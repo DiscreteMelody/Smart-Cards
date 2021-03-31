@@ -30,7 +30,7 @@
         {
             this.deckTitleLabel = new System.Windows.Forms.Label();
             this.termFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.removeTermButton = new System.Windows.Forms.Button();
+            this.deleteTermButton = new System.Windows.Forms.Button();
             this.saveDeckLabel = new System.Windows.Forms.Label();
             this.saveDeckButton = new Smart_Cards.CircularButton();
             this.termTextbox = new Smart_Cards.CustomizedTextBox();
@@ -56,31 +56,30 @@
             this.termFlowLayoutPanel.AutoScroll = true;
             this.termFlowLayoutPanel.Controls.Add(this.termTextbox);
             this.termFlowLayoutPanel.Controls.Add(this.termAnswerTextbox);
-            this.termFlowLayoutPanel.Controls.Add(this.removeTermButton);
-            this.termFlowLayoutPanel.Controls.Add(this.addTermButton);
+            this.termFlowLayoutPanel.Controls.Add(this.deleteTermButton);
             this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 121);
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 226);
+            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 146);
             this.termFlowLayoutPanel.TabIndex = 15;
             // 
-            // removeTermButton
+            // deleteTermButton
             // 
-            this.removeTermButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.removeTermButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.removeTermButton.FlatAppearance.BorderSize = 0;
-            this.removeTermButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.removeTermButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.removeTermButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removeTermButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeTermButton.ForeColor = System.Drawing.Color.White;
-            this.removeTermButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.removeTermButton.Location = new System.Drawing.Point(493, 3);
-            this.removeTermButton.Name = "removeTermButton";
-            this.removeTermButton.Size = new System.Drawing.Size(100, 33);
-            this.removeTermButton.TabIndex = 15;
-            this.removeTermButton.Text = "Delete";
-            this.removeTermButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.removeTermButton.UseVisualStyleBackColor = false;
+            this.deleteTermButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.deleteTermButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteTermButton.FlatAppearance.BorderSize = 0;
+            this.deleteTermButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.deleteTermButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.deleteTermButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteTermButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteTermButton.ForeColor = System.Drawing.Color.White;
+            this.deleteTermButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.deleteTermButton.Location = new System.Drawing.Point(493, 3);
+            this.deleteTermButton.Name = "deleteTermButton";
+            this.deleteTermButton.Size = new System.Drawing.Size(100, 33);
+            this.deleteTermButton.TabIndex = 15;
+            this.deleteTermButton.Text = "Delete";
+            this.deleteTermButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.deleteTermButton.UseVisualStyleBackColor = false;
             // 
             // saveDeckLabel
             // 
@@ -107,6 +106,7 @@
             this.saveDeckButton.Size = new System.Drawing.Size(82, 82);
             this.saveDeckButton.TabIndex = 17;
             this.saveDeckButton.UseVisualStyleBackColor = false;
+            this.saveDeckButton.Click += new System.EventHandler(this.saveDeckButton_Click);
             // 
             // termTextbox
             // 
@@ -147,11 +147,12 @@
             this.addTermButton.FlatAppearance.BorderSize = 0;
             this.addTermButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTermButton.Image = global::Smart_Cards.Properties.Resources.plus_icon_light;
-            this.addTermButton.Location = new System.Drawing.Point(3, 42);
+            this.addTermButton.Location = new System.Drawing.Point(6, 273);
             this.addTermButton.Name = "addTermButton";
             this.addTermButton.Size = new System.Drawing.Size(82, 82);
             this.addTermButton.TabIndex = 16;
             this.addTermButton.UseVisualStyleBackColor = false;
+            this.addTermButton.Click += new System.EventHandler(this.addTermButton_Click);
             // 
             // deckTitleTextbox
             // 
@@ -175,10 +176,12 @@
             this.Controls.Add(this.saveDeckLabel);
             this.Controls.Add(this.saveDeckButton);
             this.Controls.Add(this.termFlowLayoutPanel);
+            this.Controls.Add(this.addTermButton);
             this.Controls.Add(this.deckTitleTextbox);
             this.Controls.Add(this.deckTitleLabel);
             this.Name = "EditPanel";
             this.Size = new System.Drawing.Size(609, 464);
+            this.Load += new System.EventHandler(this.EditPanel_Load);
             this.termFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,7 +194,7 @@
         private CustomizedTextBox termTextbox;
         private System.Windows.Forms.FlowLayoutPanel termFlowLayoutPanel;
         private CustomizedTextBox termAnswerTextbox;
-        private System.Windows.Forms.Button removeTermButton;
+        private System.Windows.Forms.Button deleteTermButton;
         private CircularButton addTermButton;
         private CircularButton saveDeckButton;
         private System.Windows.Forms.Label saveDeckLabel;

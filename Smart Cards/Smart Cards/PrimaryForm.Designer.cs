@@ -188,6 +188,7 @@
             this.Controls.Add(this.DeckListFlowPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "PrimaryForm";
             this.Load += new System.EventHandler(this.PrimaryForm_Load);
             this.menuPanel.ResumeLayout(false);

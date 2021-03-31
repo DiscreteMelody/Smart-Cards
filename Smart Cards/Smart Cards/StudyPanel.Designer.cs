@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.termTitleLabel = new System.Windows.Forms.Label();
-            this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.submitAnswerButton = new System.Windows.Forms.Button();
             this.termAnswerLabel = new System.Windows.Forms.Label();
             this.nextTermButton = new System.Windows.Forms.Button();
+            this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.SuspendLayout();
             // 
             // termTitleLabel
@@ -45,21 +45,6 @@
             this.termTitleLabel.Size = new System.Drawing.Size(310, 32);
             this.termTitleLabel.TabIndex = 10;
             this.termTitleLabel.Text = "Sample Term/Question";
-            // 
-            // termAnswerTextbox
-            // 
-            this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.Location = new System.Drawing.Point(153, 179);
-            this.termAnswerTextbox.Name = "termAnswerTextbox";
-            this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.termAnswerTextbox.Size = new System.Drawing.Size(302, 33);
-            this.termAnswerTextbox.TabIndex = 15;
-            this.termAnswerTextbox.TogglesBorder = true;
-            this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.termAnswerTextbox.WatermarkText = "Enter the answer here";
             // 
             // submitAnswerButton
             // 
@@ -79,6 +64,7 @@
             this.submitAnswerButton.Text = "Submit";
             this.submitAnswerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.submitAnswerButton.UseVisualStyleBackColor = false;
+            this.submitAnswerButton.Click += new System.EventHandler(this.submitAnswerButton_Click);
             // 
             // termAnswerLabel
             // 
@@ -109,6 +95,22 @@
             this.nextTermButton.Text = "Next";
             this.nextTermButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.nextTermButton.UseVisualStyleBackColor = false;
+            this.nextTermButton.Click += new System.EventHandler(this.nextTermButton_Click);
+            // 
+            // termAnswerTextbox
+            // 
+            this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
+            this.termAnswerTextbox.Location = new System.Drawing.Point(153, 179);
+            this.termAnswerTextbox.Name = "termAnswerTextbox";
+            this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
+            this.termAnswerTextbox.Size = new System.Drawing.Size(302, 33);
+            this.termAnswerTextbox.TabIndex = 15;
+            this.termAnswerTextbox.TogglesBorder = true;
+            this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.termAnswerTextbox.WatermarkText = "Enter the answer here";
             // 
             // StudyPanel
             // 
@@ -121,6 +123,7 @@
             this.Controls.Add(this.termTitleLabel);
             this.Name = "StudyPanel";
             this.Size = new System.Drawing.Size(609, 464);
+            this.Load += new System.EventHandler(this.StudyPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

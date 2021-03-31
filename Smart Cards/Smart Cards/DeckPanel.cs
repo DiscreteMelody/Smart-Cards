@@ -13,6 +13,17 @@ namespace Smart_Cards
     public partial class DeckPanel : UserControl
     {
         private Deck DeckReference;
+        
+        public CircularButton StudyButton
+        {
+            get { return studyButton; }
+        }
+
+        public CircularButton EditButton
+        {
+            get { return editButton; }
+        }
+
         public DeckPanel(Deck d)
         {
             InitializeComponent();

@@ -39,7 +39,7 @@ namespace Smart_Cards
         /// <param name="e"></param>
         private void OnDeleteButtonClicked(object sender, EventArgs e)
         {
-            //remove the delete button, answertextbox, and termtextbox from the EditPanel
+            //remove the chosen delete button, answertextbox, and termtextbox from the EditPanel
             for(int i = 0; i < deleteTermButtons.Count; i++)
             {
                 if(deleteTermButtons[i] == sender)

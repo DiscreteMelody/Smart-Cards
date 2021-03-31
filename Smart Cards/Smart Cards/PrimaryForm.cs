@@ -15,6 +15,7 @@ namespace Smart_Cards
         private readonly FileManager fm;
         private readonly List<Deck> DeckList;
         private Button[] MenuButtons;
+        private List<DeckPanel> DeckPanels;
 
         public PrimaryForm()
         {
@@ -27,8 +28,9 @@ namespace Smart_Cards
         //use this to run neccessary code at the time the application runs
         private void PrimaryForm_Load(object sender, EventArgs e)
         {
-            //instantiate the side menu buttons here
+            //instantiate the necessary variables
             MenuButtons = new Button[] { decksButton, addDeckButton, helpButton };
+            DeckPanels = new List<DeckPanel>();
 
             //this will be the default screen when the app loads
             decksButton.PerformClick();
@@ -37,15 +39,19 @@ namespace Smart_Cards
         private void UpdateDeckScreen()
         {
             DeckPanel newDeckPanel;
+            DeckPanels.Clear();
             foreach (Deck d in DeckList)
             {
                 newDeckPanel = new DeckPanel(d);
                 DeckListFlowPanel.Controls.Add(newDeckPanel);
+                DeckPanels.Add(newDeckPanel);
+                newDeckPanel.StudyButton.Click += new EventHandler(OnStudyButtonClicked);
+                newDeckPanel.EditButton.Click += new EventHandler(OnEditButtonClicked);
             }
         }
 
         /// <summary>
-        /// Styles the Menu to show which button
+        /// Styles the Menu to show which button is clicked
         /// </summary>
         /// <param name="button"></param>
         private void SetMenuButtonAsClicked(Button button)
@@ -92,6 +98,30 @@ namespace Smart_Cards
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// Executes whenever a Study button of a deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnStudyButtonClicked(object sender, EventArgs e)
+        {
+            DeckListFlowPanel.Controls.Clear();
+            DeckListFlowPanel.Controls.Add(new StudyPanel());
+            MessageBox.Show("TODO: Show actual deck questions and answers here");
+        }
+
+        /// <summary>
+        /// Executes whenever an Edit button of a deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnEditButtonClicked(object sender, EventArgs e)
+        {
+            //clicks the Add Deck button on the menu bar for now
+            addDeckButton_Click(null, EventArgs.Empty);
+            MessageBox.Show("TODO: Populate textboxes with existing deck data");
         }
     }
 }

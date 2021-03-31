@@ -16,5 +16,24 @@ namespace Smart_Cards
         {
             InitializeComponent();
         }
+
+        //use this to run code that's necessary when the StudyPanel loads
+        private void StudyPanel_Load(object sender, EventArgs e)
+        {
+            termAnswerLabel.Visible = false;
+            nextTermButton.Visible = false;
+        }
+
+        private void submitAnswerButton_Click(object sender, EventArgs e)
+        {
+            termAnswerLabel.Visible = true;
+            nextTermButton.Visible = true;
+        }
+
+        private void nextTermButton_Click(object sender, EventArgs e)
+        {
+            termAnswerLabel.Visible = false;
+            nextTermButton.Visible = false;
+        }
     }
 }

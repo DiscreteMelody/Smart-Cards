@@ -5,20 +5,20 @@
       "Description": "Sra. Mendoza's class",
       "cards":[
         {
-          "Question": "Spanish Question 1",
-          "Answer": "Spanish Answer 1"
+          "Question": "One",
+          "Answer": "Uno"
         },
         {
-          "Question": "Spanish Question 2",
-          "Answer": "Spanish Answer 2"
+          "Question": "Two",
+          "Answer": "Dos"
         },
         {
-          "Question": "Spanish Question 3",
-          "Answer": "Spanish Answer 3"
+          "Question": "Three",
+          "Answer": "Tres"
         },
         {
-          "Question": "Spanish Question 4",
-          "Answer": "Spanish Answer 4"
+          "Question": "Four",
+          "Answer": "Cuatro"
         }
         ]
     },

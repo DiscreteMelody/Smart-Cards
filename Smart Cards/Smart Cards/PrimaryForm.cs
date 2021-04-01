@@ -45,7 +45,7 @@ namespace Smart_Cards
                 newDeckPanel = new DeckPanel(d);
                 DeckListFlowPanel.Controls.Add(newDeckPanel);
                 DeckPanels.Add(newDeckPanel);
-                newDeckPanel.StudyButton.Click += new EventHandler(OnStudyButtonClicked);
+                newDeckPanel.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, d); };
                 newDeckPanel.EditButton.Click += new EventHandler(OnEditButtonClicked);
             }
         }
@@ -105,11 +105,10 @@ namespace Smart_Cards
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnStudyButtonClicked(object sender, EventArgs e)
+        private void OnStudyButtonClicked(object sender, EventArgs e, Deck DeckClicked)
         {
             DeckListFlowPanel.Controls.Clear();
-            DeckListFlowPanel.Controls.Add(new StudyPanel());
-            MessageBox.Show("TODO: Show actual deck questions and answers here");
+            DeckListFlowPanel.Controls.Add(new StudyPanel(DeckClicked));
         }
 
         /// <summary>

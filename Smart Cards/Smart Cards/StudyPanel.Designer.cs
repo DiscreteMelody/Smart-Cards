@@ -37,14 +37,17 @@
             // 
             // termTitleLabel
             // 
-            this.termTitleLabel.AutoSize = true;
+            this.termTitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.termTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.termTitleLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.termTitleLabel.Location = new System.Drawing.Point(149, 74);
+            this.termTitleLabel.Location = new System.Drawing.Point(0, 0);
             this.termTitleLabel.Name = "termTitleLabel";
-            this.termTitleLabel.Size = new System.Drawing.Size(310, 32);
+            this.termTitleLabel.Padding = new System.Windows.Forms.Padding(20);
+            this.termTitleLabel.Size = new System.Drawing.Size(609, 122);
             this.termTitleLabel.TabIndex = 10;
             this.termTitleLabel.Text = "Sample Term/Question";
+            this.termTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // submitAnswerButton
             // 
@@ -57,7 +60,7 @@
             this.submitAnswerButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitAnswerButton.ForeColor = System.Drawing.Color.White;
             this.submitAnswerButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.submitAnswerButton.Location = new System.Drawing.Point(240, 218);
+            this.submitAnswerButton.Location = new System.Drawing.Point(240, 196);
             this.submitAnswerButton.Name = "submitAnswerButton";
             this.submitAnswerButton.Size = new System.Drawing.Size(128, 49);
             this.submitAnswerButton.TabIndex = 16;
@@ -68,14 +71,16 @@
             // 
             // termAnswerLabel
             // 
-            this.termAnswerLabel.AutoSize = true;
+            this.termAnswerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.termAnswerLabel.BackColor = System.Drawing.Color.Transparent;
             this.termAnswerLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.termAnswerLabel.Location = new System.Drawing.Point(21, 331);
+            this.termAnswerLabel.Location = new System.Drawing.Point(0, 248);
             this.termAnswerLabel.Name = "termAnswerLabel";
-            this.termAnswerLabel.Size = new System.Drawing.Size(566, 25);
+            this.termAnswerLabel.Padding = new System.Windows.Forms.Padding(20);
+            this.termAnswerLabel.Size = new System.Drawing.Size(609, 129);
             this.termAnswerLabel.TabIndex = 17;
             this.termAnswerLabel.Text = "Sample Term Answer (iinvisible until answer submitted)";
+            this.termAnswerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nextTermButton
             // 
@@ -88,7 +93,7 @@
             this.nextTermButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextTermButton.ForeColor = System.Drawing.Color.White;
             this.nextTermButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.nextTermButton.Location = new System.Drawing.Point(240, 359);
+            this.nextTermButton.Location = new System.Drawing.Point(240, 380);
             this.nextTermButton.Name = "nextTermButton";
             this.nextTermButton.Size = new System.Drawing.Size(128, 49);
             this.nextTermButton.TabIndex = 18;
@@ -102,11 +107,13 @@
             this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
             this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.termAnswerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.Location = new System.Drawing.Point(153, 179);
+            this.termAnswerTextbox.Location = new System.Drawing.Point(137, 127);
+            this.termAnswerTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.termAnswerTextbox.Name = "termAnswerTextbox";
             this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.termAnswerTextbox.Size = new System.Drawing.Size(302, 33);
+            this.termAnswerTextbox.Size = new System.Drawing.Size(360, 46);
             this.termAnswerTextbox.TabIndex = 15;
             this.termAnswerTextbox.TogglesBorder = true;
             this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -125,7 +132,6 @@
             this.Size = new System.Drawing.Size(609, 464);
             this.Load += new System.EventHandler(this.StudyPanel_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

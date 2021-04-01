@@ -77,3 +77,7 @@ C:\Users\Levi\Documents\Current Classes\Senior Project\Smart-Cards\Smart Cards\S
 C:\Users\Levi\Documents\Current Classes\Senior Project\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.csproj.CopyComplete
 C:\Users\Levi\Documents\Current Classes\Senior Project\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.exe
 C:\Users\Levi\Documents\Current Classes\Senior Project\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart Cards.pdb
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.CustomizedTextBox.resources
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.EditPanel.resources
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.HelpPanel.resources
+C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources

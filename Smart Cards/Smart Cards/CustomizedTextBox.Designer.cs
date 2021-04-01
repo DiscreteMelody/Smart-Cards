@@ -1,4 +1,7 @@
-﻿namespace Smart_Cards
+﻿using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+
+namespace Smart_Cards
 {
     partial class CustomizedTextBox
     {
@@ -36,11 +39,12 @@
             this.textBox.BackColor = System.Drawing.Color.White;
             this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Century", 20F);
             this.textBox.Location = new System.Drawing.Point(5, 7);
             this.textBox.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox.MinimumSize = new System.Drawing.Size(0, 20);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(166, 20);
+            this.textBox.Size = new System.Drawing.Size(166, 33);
             this.textBox.TabIndex = 1;
             this.textBox.Click += new System.EventHandler(this.textBox_Enter);
             this.textBox.Enter += new System.EventHandler(this.textBox_Enter);

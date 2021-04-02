@@ -194,5 +194,11 @@
   <ItemGroup>
     <None Include="Resources\save icon dark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash icon light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash icon dark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

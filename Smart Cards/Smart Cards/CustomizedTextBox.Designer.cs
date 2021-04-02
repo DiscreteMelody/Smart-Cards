@@ -60,7 +60,7 @@ namespace Smart_Cards
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "CustomizedTextBox";
             this.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.Size = new System.Drawing.Size(176, 33);
+            this.Size = new System.Drawing.Size(176, 48);
             this.Load += new System.EventHandler(this.CustomizedTextBox_Load);
             this.Click += new System.EventHandler(this.paddingPanel_Enter);
             this.Enter += new System.EventHandler(this.paddingPanel_Enter);

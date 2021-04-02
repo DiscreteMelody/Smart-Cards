@@ -91,5 +91,17 @@ namespace Smart_Cards
         {
             MessageBox.Show("TODO: Save the user's deck.");
         }
+
+        private void deleteDeckButton_Click(object sender, EventArgs e)
+        {
+            //create a yes/no dialog box
+            var confirmResult = MessageBox.Show("Really delete the deck?", "Deck deletion", MessageBoxButtons.YesNo);
+
+            //if the user answers yes
+            if (confirmResult == DialogResult.Yes)
+            {
+                MessageBox.Show("TODO: delete the user's deck.");
+            }
+        }
     }
 }

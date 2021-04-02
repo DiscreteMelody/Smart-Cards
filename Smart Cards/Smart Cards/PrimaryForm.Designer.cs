@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.highlightPanel = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.addDeckButton = new System.Windows.Forms.Button();
-            this.highlightPanel = new System.Windows.Forms.Panel();
             this.decksButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
@@ -54,6 +54,14 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(150, 561);
             this.menuPanel.TabIndex = 0;
+            // 
+            // highlightPanel
+            // 
+            this.highlightPanel.BackColor = System.Drawing.Color.White;
+            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
+            this.highlightPanel.Name = "highlightPanel";
+            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
+            this.highlightPanel.TabIndex = 3;
             // 
             // exitButton
             // 
@@ -119,14 +127,6 @@
             this.addDeckButton.UseVisualStyleBackColor = false;
             this.addDeckButton.Click += new System.EventHandler(this.addDeckButton_Click);
             // 
-            // highlightPanel
-            // 
-            this.highlightPanel.BackColor = System.Drawing.Color.White;
-            this.highlightPanel.Location = new System.Drawing.Point(130, 75);
-            this.highlightPanel.Name = "highlightPanel";
-            this.highlightPanel.Size = new System.Drawing.Size(20, 110);
-            this.highlightPanel.TabIndex = 3;
-            // 
             // decksButton
             // 
             this.decksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
@@ -174,7 +174,6 @@
             // DeckListFlowPanel
             // 
             this.DeckListFlowPanel.AutoScroll = true;
-            this.DeckListFlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
             this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);

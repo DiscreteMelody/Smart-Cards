@@ -40,16 +40,14 @@ namespace Smart_Cards
         }
 
 
-        private void SaveDecks(List<Deck> deckList)
+        public void SaveDecks(List<Deck> deckList)
         {
             try
             {
-                StreamWriter sw = new StreamWriter(filePath);
-
-                foreach (Deck d in deckList)
-                {
-                    sw.WriteLine(d.Title + "," + d.Description + "," + "cards go here");
-                }
+                using (StreamWriter file = File.CreateText(filePath)) {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(file, deckList);
+				}
 
             }
             catch (Exception e)

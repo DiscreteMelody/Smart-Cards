@@ -30,6 +30,8 @@ namespace Smart_Cards
             deleteTermButtons = new List<Button>() { deleteTermButton };
             deleteTermButton.Click += new EventHandler(OnDeleteButtonClicked);
             deleteTermButton.Enabled = false;
+
+            this.EditPanel_Resize(sender, e);
         }
 
         /// <summary>
@@ -102,6 +104,16 @@ namespace Smart_Cards
             {
                 MessageBox.Show("TODO: delete the user's deck.");
             }
+        }
+
+        //resize the EditPanel to match its parent width and height
+        private void EditPanel_Resize(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+            this.AutoSize = false;
+            this.Width = Parent.Width;
+            this.Height = Parent.Height;
+            
         }
     }
 }

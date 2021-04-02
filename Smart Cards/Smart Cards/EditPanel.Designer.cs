@@ -55,7 +55,7 @@
             // 
             // termFlowLayoutPanel
             // 
-            this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.termFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.termFlowLayoutPanel.AutoScroll = true;
             this.termFlowLayoutPanel.Controls.Add(this.termTextbox);
             this.termFlowLayoutPanel.Controls.Add(this.termAnswerTextbox);
@@ -174,6 +174,7 @@
             // 
             // addTermButton
             // 
+            this.addTermButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addTermButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.addTermButton.BorderColor = System.Drawing.Color.DarkGray;
             this.addTermButton.BorderRadius = 20;
@@ -205,7 +206,7 @@
             // 
             // EditPanel
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.Controls.Add(this.deleteDeckLabel);
             this.Controls.Add(this.deleteDeckButton);
@@ -215,9 +216,11 @@
             this.Controls.Add(this.addTermButton);
             this.Controls.Add(this.deckTitleTextbox);
             this.Controls.Add(this.deckTitleLabel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EditPanel";
             this.Size = new System.Drawing.Size(609, 464);
             this.Load += new System.EventHandler(this.EditPanel_Load);
+            this.Resize += new System.EventHandler(this.EditPanel_Resize);
             this.termFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

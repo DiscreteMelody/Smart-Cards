@@ -173,8 +173,12 @@
             // 
             // DeckListFlowPanel
             // 
+            this.DeckListFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DeckListFlowPanel.AutoScroll = true;
             this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
+            this.DeckListFlowPanel.Margin = new System.Windows.Forms.Padding(0);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
             this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);
             this.DeckListFlowPanel.TabIndex = 3;

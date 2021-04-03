@@ -51,6 +51,8 @@
             // 
             // submitAnswerButton
             // 
+            this.submitAnswerButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.submitAnswerButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.submitAnswerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitAnswerButton.FlatAppearance.BorderSize = 0;
@@ -71,7 +73,8 @@
             // 
             // termAnswerLabel
             // 
-            this.termAnswerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.termAnswerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.termAnswerLabel.BackColor = System.Drawing.Color.Transparent;
             this.termAnswerLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termAnswerLabel.Location = new System.Drawing.Point(0, 248);
@@ -84,6 +87,8 @@
             // 
             // nextTermButton
             // 
+            this.nextTermButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nextTermButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.nextTermButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextTermButton.FlatAppearance.BorderSize = 0;
@@ -104,6 +109,8 @@
             // 
             // termAnswerTextbox
             // 
+            this.termAnswerTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
             this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -131,6 +138,7 @@
             this.Name = "StudyPanel";
             this.Size = new System.Drawing.Size(609, 464);
             this.Load += new System.EventHandler(this.StudyPanel_Load);
+            this.Resize += new System.EventHandler(this.StudyPanel_Resize);
             this.ResumeLayout(false);
 
         }

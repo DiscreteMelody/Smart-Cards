@@ -30,14 +30,14 @@
         {
             this.deckTitleLabel = new System.Windows.Forms.Label();
             this.termFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.termTextbox = new Smart_Cards.CustomizedTextBox();
+            this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.deleteTermButton = new System.Windows.Forms.Button();
             this.saveDeckLabel = new System.Windows.Forms.Label();
             this.deleteDeckLabel = new System.Windows.Forms.Label();
             this.newTermLabel = new System.Windows.Forms.Label();
             this.deleteDeckButton = new Smart_Cards.CircularButton();
             this.saveDeckButton = new Smart_Cards.CircularButton();
-            this.termTextbox = new Smart_Cards.CustomizedTextBox();
-            this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.addTermButton = new Smart_Cards.CircularButton();
             this.deckTitleTextbox = new Smart_Cards.CustomizedTextBox();
             this.termFlowLayoutPanel.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             // termFlowLayoutPanel
             // 
-            this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.termFlowLayoutPanel.AutoScroll = true;
             this.termFlowLayoutPanel.Controls.Add(this.termTextbox);
             this.termFlowLayoutPanel.Controls.Add(this.termAnswerTextbox);
@@ -67,6 +67,38 @@
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
             this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 221);
             this.termFlowLayoutPanel.TabIndex = 15;
+            // 
+            // termTextbox
+            // 
+            this.termTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.termTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.termTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.termTextbox.ForeColor = System.Drawing.Color.Transparent;
+            this.termTextbox.Location = new System.Drawing.Point(3, 3);
+            this.termTextbox.MinimumSize = new System.Drawing.Size(176, 48);
+            this.termTextbox.Name = "termTextbox";
+            this.termTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
+            this.termTextbox.Size = new System.Drawing.Size(176, 48);
+            this.termTextbox.TabIndex = 12;
+            this.termTextbox.TogglesBorder = true;
+            this.termTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.termTextbox.WatermarkText = "Enter a term/question";
+            // 
+            // termAnswerTextbox
+            // 
+            this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
+            this.termAnswerTextbox.Location = new System.Drawing.Point(185, 3);
+            this.termAnswerTextbox.MinimumSize = new System.Drawing.Size(302, 48);
+            this.termAnswerTextbox.Name = "termAnswerTextbox";
+            this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
+            this.termAnswerTextbox.Size = new System.Drawing.Size(302, 48);
+            this.termAnswerTextbox.TabIndex = 14;
+            this.termAnswerTextbox.TogglesBorder = true;
+            this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.termAnswerTextbox.WatermarkText = "Enter the answer here";
             // 
             // deleteTermButton
             // 
@@ -157,38 +189,6 @@
             this.saveDeckButton.TabIndex = 17;
             this.saveDeckButton.UseVisualStyleBackColor = false;
             this.saveDeckButton.Click += new System.EventHandler(this.saveDeckButton_Click);
-            // 
-            // termTextbox
-            // 
-            this.termTextbox.BackColor = System.Drawing.Color.Transparent;
-            this.termTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.termTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.termTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.termTextbox.Location = new System.Drawing.Point(3, 3);
-            this.termTextbox.MinimumSize = new System.Drawing.Size(176, 48);
-            this.termTextbox.Name = "termTextbox";
-            this.termTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.termTextbox.Size = new System.Drawing.Size(176, 48);
-            this.termTextbox.TabIndex = 12;
-            this.termTextbox.TogglesBorder = true;
-            this.termTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.termTextbox.WatermarkText = "Enter a term/question";
-            // 
-            // termAnswerTextbox
-            // 
-            this.termAnswerTextbox.BackColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.Location = new System.Drawing.Point(185, 3);
-            this.termAnswerTextbox.MinimumSize = new System.Drawing.Size(302, 48);
-            this.termAnswerTextbox.Name = "termAnswerTextbox";
-            this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.termAnswerTextbox.Size = new System.Drawing.Size(302, 48);
-            this.termAnswerTextbox.TabIndex = 14;
-            this.termAnswerTextbox.TogglesBorder = true;
-            this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.termAnswerTextbox.WatermarkText = "Enter the answer here";
             // 
             // addTermButton
             // 

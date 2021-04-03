@@ -36,6 +36,10 @@ namespace Smart_Cards
         {
             termAnswerLabel.Visible = false;
             nextTermButton.Visible = false;
+            this.Dock = DockStyle.Fill;
+            this.AutoSize = false;
+            this.Width = Parent.Width;
+            this.Height = Parent.Height;
 
             UpdateCard();
         }
@@ -93,6 +97,14 @@ namespace Smart_Cards
             termAnswerTextbox.clearText();
 
             this.BackColor = StudyPanel.DefaultBackColor;
+        }
+
+        private void StudyPanel_Resize(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+            this.AutoSize = false;
+            this.Width = Parent.Width;
+            this.Height = Parent.Height;
         }
     }
 }

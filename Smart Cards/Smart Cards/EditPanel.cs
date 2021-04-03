@@ -31,6 +31,9 @@ namespace Smart_Cards
             deleteTermButton.Click += new EventHandler(OnDeleteButtonClicked);
             deleteTermButton.Enabled = false;
 
+            //add a line break after the delete button
+            termFlowLayoutPanel.SetFlowBreak(deleteTermButton, true);
+
             this.EditPanel_Resize(sender, e);
         }
 
@@ -81,7 +84,9 @@ namespace Smart_Cards
             deleteTermButtons.Add(newDeleteButton);
             termTextboxes.Add(newTermTextbox);
             termAnswerTextboxes.Add(newTermAnswerTextbox);
-            
+
+            //add a line break after the last delete button on the form
+            termFlowLayoutPanel.SetFlowBreak(deleteTermButtons[deleteTermButtons.Count -1], true);
 
             //add the controls to the UI
             termFlowLayoutPanel.Controls.Add(newTermTextbox);
@@ -113,7 +118,10 @@ namespace Smart_Cards
             this.AutoSize = false;
             this.Width = Parent.Width;
             this.Height = Parent.Height;
-            
+
+            termFlowLayoutPanel.Height = Convert.ToInt32(this.Height * 0.45);
+            termFlowLayoutPanel.Width = Convert.ToInt32(this.Width * 0.9);
+
         }
     }
 }

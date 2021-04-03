@@ -33,6 +33,7 @@
             this.deleteTermButton = new System.Windows.Forms.Button();
             this.saveDeckLabel = new System.Windows.Forms.Label();
             this.deleteDeckLabel = new System.Windows.Forms.Label();
+            this.newTermLabel = new System.Windows.Forms.Label();
             this.deleteDeckButton = new Smart_Cards.CircularButton();
             this.saveDeckButton = new Smart_Cards.CircularButton();
             this.termTextbox = new Smart_Cards.CustomizedTextBox();
@@ -44,6 +45,7 @@
             // 
             // deckTitleLabel
             // 
+            this.deckTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.deckTitleLabel.AutoSize = true;
             this.deckTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.deckTitleLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -55,12 +57,13 @@
             // 
             // termFlowLayoutPanel
             // 
-            this.termFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.termFlowLayoutPanel.AutoScroll = true;
             this.termFlowLayoutPanel.Controls.Add(this.termTextbox);
             this.termFlowLayoutPanel.Controls.Add(this.termAnswerTextbox);
             this.termFlowLayoutPanel.Controls.Add(this.deleteTermButton);
             this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 121);
+            this.termFlowLayoutPanel.MinimumSize = new System.Drawing.Size(603, 221);
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
             this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 221);
             this.termFlowLayoutPanel.TabIndex = 15;
@@ -77,6 +80,7 @@
             this.deleteTermButton.ForeColor = System.Drawing.Color.White;
             this.deleteTermButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.deleteTermButton.Location = new System.Drawing.Point(493, 3);
+            this.deleteTermButton.MinimumSize = new System.Drawing.Size(88, 48);
             this.deleteTermButton.Name = "deleteTermButton";
             this.deleteTermButton.Size = new System.Drawing.Size(88, 48);
             this.deleteTermButton.TabIndex = 15;
@@ -107,6 +111,18 @@
             this.deleteDeckLabel.Size = new System.Drawing.Size(136, 25);
             this.deleteDeckLabel.TabIndex = 20;
             this.deleteDeckLabel.Text = "Delete Deck";
+            // 
+            // newTermLabel
+            // 
+            this.newTermLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.newTermLabel.AutoSize = true;
+            this.newTermLabel.BackColor = System.Drawing.Color.Transparent;
+            this.newTermLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTermLabel.Location = new System.Drawing.Point(3, 434);
+            this.newTermLabel.Name = "newTermLabel";
+            this.newTermLabel.Size = new System.Drawing.Size(113, 25);
+            this.newTermLabel.TabIndex = 21;
+            this.newTermLabel.Text = "New Term";
             // 
             // deleteDeckButton
             // 
@@ -149,6 +165,7 @@
             this.termTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.termTextbox.ForeColor = System.Drawing.Color.Transparent;
             this.termTextbox.Location = new System.Drawing.Point(3, 3);
+            this.termTextbox.MinimumSize = new System.Drawing.Size(176, 48);
             this.termTextbox.Name = "termTextbox";
             this.termTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
             this.termTextbox.Size = new System.Drawing.Size(176, 48);
@@ -164,6 +181,7 @@
             this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
             this.termAnswerTextbox.Location = new System.Drawing.Point(185, 3);
+            this.termAnswerTextbox.MinimumSize = new System.Drawing.Size(302, 48);
             this.termAnswerTextbox.Name = "termAnswerTextbox";
             this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
             this.termAnswerTextbox.Size = new System.Drawing.Size(302, 48);
@@ -174,7 +192,7 @@
             // 
             // addTermButton
             // 
-            this.addTermButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addTermButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.addTermButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.addTermButton.BorderColor = System.Drawing.Color.DarkGray;
             this.addTermButton.BorderRadius = 20;
@@ -182,7 +200,7 @@
             this.addTermButton.FlatAppearance.BorderSize = 0;
             this.addTermButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTermButton.Image = global::Smart_Cards.Properties.Resources.plus_icon_light;
-            this.addTermButton.Location = new System.Drawing.Point(6, 348);
+            this.addTermButton.Location = new System.Drawing.Point(17, 348);
             this.addTermButton.Name = "addTermButton";
             this.addTermButton.Size = new System.Drawing.Size(82, 82);
             this.addTermButton.TabIndex = 16;
@@ -191,6 +209,7 @@
             // 
             // deckTitleTextbox
             // 
+            this.deckTitleTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.deckTitleTextbox.BackColor = System.Drawing.Color.Transparent;
             this.deckTitleTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.deckTitleTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -208,6 +227,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.Controls.Add(this.newTermLabel);
             this.Controls.Add(this.deleteDeckLabel);
             this.Controls.Add(this.deleteDeckButton);
             this.Controls.Add(this.saveDeckLabel);
@@ -239,5 +259,6 @@
         private System.Windows.Forms.Label saveDeckLabel;
         private CircularButton deleteDeckButton;
         private System.Windows.Forms.Label deleteDeckLabel;
+        private System.Windows.Forms.Label newTermLabel;
     }
 }

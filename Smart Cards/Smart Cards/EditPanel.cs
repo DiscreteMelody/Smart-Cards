@@ -17,24 +17,42 @@ namespace Smart_Cards
         private List<CustomizedTextBox> termAnswerTextboxes;
         private List<Button> deleteTermButtons;
 
-        public EditPanel()
+        private Deck DeckReference;
+
+        public EditPanel(Deck DeckClicked)
         {
             InitializeComponent();
+
+            DeckReference = DeckClicked;
         }
 
         //use this to run necessary code when the EditPanel is opened
         private void EditPanel_Load(object sender, EventArgs e)
         {
-            termTextboxes = new List<CustomizedTextBox>() { termTextbox };
-            termAnswerTextboxes = new List<CustomizedTextBox>() { termAnswerTextbox };
-            deleteTermButtons = new List<Button>() { deleteTermButton };
-            deleteTermButton.Click += new EventHandler(OnDeleteButtonClicked);
-            deleteTermButton.Enabled = false;
+            //termTextboxes = new List<CustomizedTextBox>() { termTextbox };
+            //termAnswerTextboxes = new List<CustomizedTextBox>() { termAnswerTextbox };
+            //deleteTermButtons = new List<Button>() { deleteTermButton };
+            //deleteTermButton.Click += new EventHandler(OnDeleteButtonClicked);
+            //deleteTermButton.Enabled = false;
 
-            //add a line break after the delete button
-            termFlowLayoutPanel.SetFlowBreak(deleteTermButton, true);
+            foreach (Card c in DeckReference.Cards)
+            {
+                termFlowLayoutPanel.Controls.Add(new EditCardPanel(c));
+            }
 
             this.EditPanel_Resize(sender, e);
+        }
+
+        private void EditPanel_Resize(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+            this.AutoSize = false;
+            this.Width = Parent.Width;
+            this.Height = Parent.Height;
+
+            termFlowLayoutPanel.Height = Convert.ToInt32(this.Height * 0.45);
+            termFlowLayoutPanel.Width = Convert.ToInt32(this.Width * 0.9);
+
         }
 
         /// <summary>
@@ -45,9 +63,9 @@ namespace Smart_Cards
         private void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             //remove the chosen delete button, answertextbox, and termtextbox from the EditPanel
-            for(int i = 0; i < deleteTermButtons.Count; i++)
+            for (int i = 0; i < deleteTermButtons.Count; i++)
             {
-                if(deleteTermButtons[i] == sender)
+                if (deleteTermButtons[i] == sender)
                 {
                     deleteTermButtons[i].Dispose();
                     termTextboxes[i].Dispose();
@@ -61,42 +79,10 @@ namespace Smart_Cards
             }
 
             //if there is only 1 term left in the list, disable its delete button
-            if(deleteTermButtons.Count == 1)
+            if (deleteTermButtons.Count == 1)
             {
                 deleteTermButtons[0].Enabled = false;
             }
-        }
-
-        private void addTermButton_Click(object sender, EventArgs e)
-        {
-            //reenable the first term's delete button if disabled
-            deleteTermButtons[0].Enabled = true;
-
-            //add 3 new controls to the editPanel - 2 textboxes and a delete button
-            CustomizedTextBox newTermTextbox = termTextboxes[0].Clone();
-            CustomizedTextBox newTermAnswerTextbox = termAnswerTextboxes[0].Clone();
-            Button newDeleteButton = deleteTermButtons[0].Clone();
-
-            //give click functionality to the new Delete button
-            newDeleteButton.Click += new EventHandler(OnDeleteButtonClicked);
-
-            //add the newly created controls to the parrallel lists
-            deleteTermButtons.Add(newDeleteButton);
-            termTextboxes.Add(newTermTextbox);
-            termAnswerTextboxes.Add(newTermAnswerTextbox);
-
-            //add a line break after the last delete button on the form
-            termFlowLayoutPanel.SetFlowBreak(deleteTermButtons[deleteTermButtons.Count -1], true);
-
-            //add the controls to the UI
-            termFlowLayoutPanel.Controls.Add(newTermTextbox);
-            termFlowLayoutPanel.Controls.Add(newTermAnswerTextbox);
-            termFlowLayoutPanel.Controls.Add(newDeleteButton);
-        }
-
-        private void saveDeckButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("TODO: Save the user's deck.");
         }
 
         private void deleteDeckButton_Click(object sender, EventArgs e)
@@ -111,16 +97,19 @@ namespace Smart_Cards
             }
         }
 
-        //resize the EditPanel to match its parent width and height
-        private void EditPanel_Resize(object sender, EventArgs e)
+        private void addTermButton_Click(object sender, EventArgs e)
         {
-            this.Dock = DockStyle.Fill;
-            this.AutoSize = false;
-            this.Width = Parent.Width;
-            this.Height = Parent.Height;
+            termFlowLayoutPanel.Controls.Add(new EditCardPanel(new Card()));
+        }
 
-            termFlowLayoutPanel.Height = Convert.ToInt32(this.Height * 0.45);
-            termFlowLayoutPanel.Width = Convert.ToInt32(this.Width * 0.9);
+        private void saveDeckButton_Click(object sender, EventArgs e)
+        {
+            List<Card> Cards = new List<Card>();
+            foreach (EditCardPanel cardInDeck in this.termFlowLayoutPanel.Controls)
+            {
+                Cards.Add(cardInDeck.CardReference);
+            }
+            DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards);
 
         }
     }

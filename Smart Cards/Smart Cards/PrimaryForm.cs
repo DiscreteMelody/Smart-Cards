@@ -46,7 +46,7 @@ namespace Smart_Cards
                 DeckListFlowPanel.Controls.Add(newDeckPanel);
                 DeckPanels.Add(newDeckPanel);
                 newDeckPanel.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, d); };
-                newDeckPanel.EditButton.Click += new EventHandler(OnEditButtonClicked);
+                newDeckPanel.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, d); };
             }
         }
 
@@ -85,7 +85,7 @@ namespace Smart_Cards
         {
             SetMenuButtonAsClicked(addDeckButton);
             DeckListFlowPanel.Controls.Clear();
-            DeckListFlowPanel.Controls.Add(new EditPanel());
+            //DeckListFlowPanel.Controls.Add(new EditPanel());
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -116,11 +116,10 @@ namespace Smart_Cards
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnEditButtonClicked(object sender, EventArgs e)
+        private void OnEditButtonClicked(object sender, EventArgs e, Deck DeckClicked)
         {
-            //clicks the Add Deck button on the menu bar for now
-            addDeckButton_Click(null, EventArgs.Empty);
-            MessageBox.Show("TODO: Populate textboxes with existing deck data");
+            DeckListFlowPanel.Controls.Clear();
+            DeckListFlowPanel.Controls.Add(new EditPanel(DeckClicked));
         }
     }
 }

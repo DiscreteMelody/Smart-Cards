@@ -23,28 +23,108 @@
         ]
     },
     {
-      "Title": "History",
-      "Description": "Learning about WW2",
+      "Title": "U.S Capitals",
+      "Description": "Memorize the capitals",
       "cards":[
         {
-          "Question": "History Question 1",
-          "Answer": "History Answer 1"
+          "Question": "Alabama",
+          "Answer": "Montgomery"
         },
         {
-          "Question": "History Question 2",
-          "Answer": "History Answer 2"
+          "Question": "Alaska",
+          "Answer": "Juneau"
         },
         {
-          "Question": "History Question 3",
-          "Answer": "History Answer 3"
+          "Question": "Arizona",
+          "Answer": "Phoenix"
         },
         {
-          "Question": "History Question 4",
-          "Answer": "History Answer 4"
+          "Question": "Arkansas",
+          "Answer": "Little Rock"
         },
         {
-          "Question": "History Question 5",
-          "Answer": "History Answer 5"
+          "Question": "California",
+          "Answer": "Sacramento"
+        },
+        {
+          "Question": "Colorado",
+          "Answer": "Denver"
+        },
+        {
+          "Question": "Connecticut",
+          "Answer": "Hartford"
+        },
+        {
+          "Question": "Delaware",
+          "Answer": "Dover"
+        },
+        {
+          "Question": "Florida",
+          "Answer": "Tallahassee"
+        },
+        {
+          "Question": "Georgia",
+          "Answer": "Atlanta"
+        },
+        {
+          "Question": "Hawaii",
+          "Answer": "Honolulu"
+        },
+        {
+          "Question": "Idaho",
+          "Answer": "Boise"
+        },
+        {
+          "Question": "Illinois",
+          "Answer": "Springfield"
+        },
+        {
+          "Question": "Indiana",
+          "Answer": "Indianapolis"
+        },
+        {
+          "Question": "Iowa",
+          "Answer": "Des Moines"
+        },
+        {
+          "Question": "Kansas",
+          "Answer": "Topeka"
+        },
+        {
+          "Question": "Kentucky",
+          "Answer": "Frankfort"
+        },
+        {
+          "Question": "Louisiana",
+          "Answer": "Baton Rouge"
+        },
+        {
+          "Question": "Maine",
+          "Answer": "Augusta"
+        },
+        {
+          "Question": "Maryland",
+          "Answer": "Annapolis"
+        },
+        {
+          "Question": "Massachusetts",
+          "Answer": "Boston"
+        },
+        {
+          "Question": "Michigan",
+          "Answer": "Lansing"
+        },
+        {
+          "Question": "Minnesota",
+          "Answer": "St. Paul"
+        },
+        {
+          "Question": "Mississippi",
+          "Answer": "Jackson"
+        },
+        {
+          "Question": "Missouri",
+          "Answer": "Jefferson City"
         }
         ]
     },

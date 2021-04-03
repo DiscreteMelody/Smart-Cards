@@ -67,6 +67,12 @@
     <Compile Include="DeckPanel.Designer.cs">
       <DependentUpon>DeckPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCardPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditCardPanel.Designer.cs">
+      <DependentUpon>EditCardPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeckPanel.resx">
       <DependentUpon>DeckPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCardPanel.resx">
+      <DependentUpon>EditCardPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPanel.resx">
       <DependentUpon>EditPanel.cs</DependentUpon>

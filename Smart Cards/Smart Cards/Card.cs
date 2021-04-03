@@ -12,6 +12,12 @@ namespace Smart_Cards
         public string Question { get; set; }
         public string Answer { get; set; }
 
+
+        public Card()
+        {
+            Question = "Enter a question";
+            Answer = "Enter an answer";
+        }
         public Card(string question, string answer)
         {
             Question = question;

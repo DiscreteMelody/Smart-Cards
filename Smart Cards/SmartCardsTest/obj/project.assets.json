@@ -5687,19 +5687,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ben\\.nuget\\packages\\": {}
+    "C:\\Users\\Levi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+      "projectUniqueName": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
       "projectName": "SmartCardsTest",
-      "projectPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
-      "packagesPath": "C:\\Users\\Ben\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
+      "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+      "packagesPath": "C:\\Users\\Levi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ben\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Levi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5755,7 +5755,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

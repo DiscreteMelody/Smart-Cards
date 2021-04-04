@@ -76,13 +76,13 @@
             this.termAnswerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.termAnswerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.termAnswerLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.termAnswerLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termAnswerLabel.Location = new System.Drawing.Point(0, 248);
             this.termAnswerLabel.Name = "termAnswerLabel";
             this.termAnswerLabel.Padding = new System.Windows.Forms.Padding(20);
             this.termAnswerLabel.Size = new System.Drawing.Size(609, 129);
             this.termAnswerLabel.TabIndex = 17;
-            this.termAnswerLabel.Text = "Sample Term Answer (iinvisible until answer submitted)";
+            this.termAnswerLabel.Text = "Sample Term Answer (invisible until answer submitted)";
             this.termAnswerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nextTermButton

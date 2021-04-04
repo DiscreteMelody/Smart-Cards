@@ -14,6 +14,11 @@ namespace Smart_Cards
     {
         private Deck DeckReference;
 
+        public EditPanel()
+        {
+            InitializeComponent();
+        }
+
         public EditPanel(Deck DeckClicked)
         {
             InitializeComponent();
@@ -24,9 +29,12 @@ namespace Smart_Cards
         //use this to run necessary code when the EditPanel is opened
         private void EditPanel_Load(object sender, EventArgs e)
         {
-            foreach (Card c in DeckReference.Cards)
+            if(DeckReference != null)
             {
-                termFlowLayoutPanel.Controls.Add(new EditCardPanel(c));
+                foreach (Card c in DeckReference.Cards)
+                {
+                    termFlowLayoutPanel.Controls.Add(new EditCardPanel(c));
+                }
             }
 
             this.EditPanel_Resize(sender, e);

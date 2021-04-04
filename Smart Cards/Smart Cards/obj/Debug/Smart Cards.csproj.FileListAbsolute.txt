@@ -82,3 +82,4 @@ C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Car
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.HelpPanel.resources
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.StudyPanel.resources
 C:\Users\Ben\Documents\Santa Fe Work\CIS4891 Senior Project\Repository\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.EditCardPanel.resources
+C:\Users\Levi\Documents\Current Classes\Senior Project\Smart-Cards\Smart Cards\Smart Cards\obj\Debug\Smart_Cards.EditCardPanel.resources

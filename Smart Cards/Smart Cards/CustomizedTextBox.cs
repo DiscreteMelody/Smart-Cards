@@ -17,6 +17,8 @@ namespace Smart_Cards
         private Color foreColor = StyleManager.lightTextColor;
         private Color borderColor = StyleManager.primaryColor;
         private bool togglesBorder = true;
+        private Button submitButton;
+        private Keys submitKey;
 
         [Browsable(true)]
         [Description("The Watermark text of the textbox"), Category("Data")]
@@ -126,6 +128,34 @@ namespace Smart_Cards
             this.textBox.Text = "";
             this.onTextBoxClicked();
             this.onTextBoxLeave();
+        }
+
+        public void PerformClick()
+        {
+            clearText();
+            onTextBoxLeave();
+            onTextBoxClicked();
+        }
+
+        public void SetSubmitButton(Button submit_button, Keys submit_key_press = Keys.Enter)
+        {
+            this.submitButton = submit_button;
+            this.submitKey = submit_key_press;
+
+            textBox.KeyDown += new KeyEventHandler(OnKeyPressed);
+        }
+
+        private void OnKeyPressed(object sender, KeyEventArgs e)
+        {
+            if (submitButton == null)
+                return;
+
+            if(e.KeyCode == submitKey)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+                submitButton.PerformClick();
+            }
         }
     }
 }

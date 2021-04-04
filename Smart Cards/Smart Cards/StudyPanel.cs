@@ -40,6 +40,7 @@ namespace Smart_Cards
             this.AutoSize = false;
             this.Width = Parent.Width;
             this.Height = Parent.Height;
+            termAnswerTextbox.SetSubmitButton(submitAnswerButton);
 
             UpdateCard();
         }
@@ -48,7 +49,12 @@ namespace Smart_Cards
         {
             termAnswerLabel.Visible = true;
             nextTermButton.Visible = true;
+            nextTermButton.Enabled = true;
 
+            termAnswerLabel.Location = termTitleLabel.Location;
+            nextTermButton.Location = submitAnswerButton.Location;
+
+            submitAnswerButton.Visible = false;
             submitAnswerButton.Enabled = false;
 
             CompareAnswer();
@@ -58,8 +64,12 @@ namespace Smart_Cards
         {
             termAnswerLabel.Visible = false;
             nextTermButton.Visible = false;
+            nextTermButton.Enabled = false;
 
+            submitAnswerButton.Visible = true;
             submitAnswerButton.Enabled = true;
+
+            termAnswerTextbox.PerformClick();
 
             NextQuestion();
         }
@@ -93,8 +103,6 @@ namespace Smart_Cards
         {
             termTitleLabel.Text = CurrentCard.Question;
             termAnswerLabel.Text = CurrentCard.Answer;
-
-            termAnswerTextbox.clearText();
 
             this.BackColor = StudyPanel.DefaultBackColor;
         }

@@ -79,7 +79,7 @@ namespace Smart_Cards
         {
             SetMenuButtonAsClicked(addDeckButton);
             DeckListFlowPanel.Controls.Clear();
-            //DeckListFlowPanel.Controls.Add(new EditPanel());
+            DeckListFlowPanel.Controls.Add(new EditPanel());
         }
 
         private void helpButton_Click(object sender, EventArgs e)

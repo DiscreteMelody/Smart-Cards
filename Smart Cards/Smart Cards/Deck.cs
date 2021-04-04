@@ -27,6 +27,13 @@ namespace Smart_Cards
         {
             Id = overwrittenId;
         }
+        public Deck()
+        {
+            Id = NextId++;
+            Title = "Enter a Title";
+            Description = "Enter a Description";
+            Cards = new List<Card>();
+        }
 
         public override string ToString()
         {

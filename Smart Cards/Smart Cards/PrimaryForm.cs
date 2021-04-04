@@ -90,8 +90,8 @@ namespace Smart_Cards
         private void addDeckButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(addDeckButton);
-            DeckListFlowPanel.Controls.Clear();
-            DeckListFlowPanel.Controls.Add(new EditPanel());
+            ePanel.BringToFront();
+            ePanel.setDeckToEdit(DeckManager.GetNewDeck().Id);
         }
 
         private void helpButton_Click(object sender, EventArgs e)

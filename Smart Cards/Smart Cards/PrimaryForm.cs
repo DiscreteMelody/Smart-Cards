@@ -16,10 +16,13 @@ namespace Smart_Cards
     public partial class PrimaryForm : Form
     {
         private Button[] MenuButtons;
-        
+        public EditPanel ePanel { get; set; }
+
         public PrimaryForm()
         {
             InitializeComponent();
+
+            ePanel = EditPanelLayout;
 
             DeckManager.ImportDecksFromJson();
         }
@@ -34,12 +37,14 @@ namespace Smart_Cards
             decksButton.PerformClick();
         }
 
-        private void UpdateDeckScreen()
+        
+
+        public void UpdateDeckScreen()
         {
             foreach(DeckPanel dp in DeckManager.CreateDeckPanels())
             {
                 dp.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, dp.DeckReference); };
-                dp.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, dp.DeckReference); };
+                //dp.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, dp.DeckReference); };
                 DeckListFlowPanel.Controls.Add(dp);
             }
         }
@@ -70,7 +75,14 @@ namespace Smart_Cards
 
         private void decksButton_Click(object sender, EventArgs e)
         {
+            setDeckView();
             SetMenuButtonAsClicked(decksButton);
+            
+        }
+
+        public void setDeckView()
+        {
+            DeckListFlowPanel.BringToFront();
             DeckListFlowPanel.Controls.Clear();
             UpdateDeckScreen();
         }
@@ -103,17 +115,6 @@ namespace Smart_Cards
         {
             DeckListFlowPanel.Controls.Clear();
             DeckListFlowPanel.Controls.Add(new StudyPanel(DeckClicked));
-        }
-
-        /// <summary>
-        /// Executes whenever an Edit button of a deck is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnEditButtonClicked(object sender, EventArgs e, Deck DeckClicked)
-        {
-            DeckListFlowPanel.Controls.Clear();
-            DeckListFlowPanel.Controls.Add(new EditPanel(DeckClicked));
         }
     }
 }

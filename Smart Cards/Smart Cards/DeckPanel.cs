@@ -32,5 +32,12 @@ namespace Smart_Cards
 
             deckTitleLabel.Text = DeckReference.Title;
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            PrimaryForm mainForm = (PrimaryForm)ParentForm;
+            mainForm.ePanel.BringToFront();
+            mainForm.ePanel.setDeckToEdit(DeckReference.Id);
+        }
     }
 }

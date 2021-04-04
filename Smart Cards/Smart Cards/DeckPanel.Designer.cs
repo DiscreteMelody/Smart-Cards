@@ -100,6 +100,7 @@
             this.editButton.Size = new System.Drawing.Size(82, 82);
             this.editButton.TabIndex = 3;
             this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // DeckPanel
             // 

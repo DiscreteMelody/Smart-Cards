@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deckTitleLabel = new System.Windows.Forms.Label();
             this.termFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.saveDeckLabel = new System.Windows.Forms.Label();
             this.deleteDeckLabel = new System.Windows.Forms.Label();
@@ -39,26 +38,14 @@
             this.deckTitleTextbox = new Smart_Cards.CustomizedTextBox();
             this.SuspendLayout();
             // 
-            // deckTitleLabel
-            // 
-            this.deckTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.deckTitleLabel.AutoSize = true;
-            this.deckTitleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.deckTitleLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deckTitleLabel.Location = new System.Drawing.Point(234, 12);
-            this.deckTitleLabel.Name = "deckTitleLabel";
-            this.deckTitleLabel.Size = new System.Drawing.Size(140, 32);
-            this.deckTitleLabel.TabIndex = 9;
-            this.deckTitleLabel.Text = "Deck Title";
-            // 
             // termFlowLayoutPanel
             // 
             this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.termFlowLayoutPanel.AutoScroll = true;
-            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 121);
+            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 69);
             this.termFlowLayoutPanel.MinimumSize = new System.Drawing.Size(603, 221);
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 221);
+            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 273);
             this.termFlowLayoutPanel.TabIndex = 15;
             // 
             // saveDeckLabel
@@ -155,7 +142,7 @@
             this.deckTitleTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.deckTitleTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.deckTitleTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.deckTitleTextbox.Location = new System.Drawing.Point(118, 63);
+            this.deckTitleTextbox.Location = new System.Drawing.Point(119, 15);
             this.deckTitleTextbox.Name = "deckTitleTextbox";
             this.deckTitleTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
             this.deckTitleTextbox.Size = new System.Drawing.Size(372, 48);
@@ -176,19 +163,15 @@
             this.Controls.Add(this.termFlowLayoutPanel);
             this.Controls.Add(this.addTermButton);
             this.Controls.Add(this.deckTitleTextbox);
-            this.Controls.Add(this.deckTitleLabel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EditPanel";
             this.Size = new System.Drawing.Size(609, 464);
-            this.Load += new System.EventHandler(this.EditPanel_Load);
-            this.Resize += new System.EventHandler(this.EditPanel_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label deckTitleLabel;
         private CustomizedTextBox deckTitleTextbox;
         private System.Windows.Forms.FlowLayoutPanel termFlowLayoutPanel;
         private CircularButton addTermButton;

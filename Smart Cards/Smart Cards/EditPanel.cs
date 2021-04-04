@@ -13,44 +13,25 @@ namespace Smart_Cards
     public partial class EditPanel : UserControl
     {
         private Deck DeckReference;
-
         public EditPanel()
         {
             InitializeComponent();
         }
 
-        public EditPanel(Deck DeckClicked)
+        public void setDeckToEdit(int DeckId)
         {
-            InitializeComponent();
-
-            DeckReference = DeckClicked;
-        }
-
-        //use this to run necessary code when the EditPanel is opened
-        private void EditPanel_Load(object sender, EventArgs e)
-        {
-            if(DeckReference != null)
+            DeckReference = DeckManager.GetDeckFromId(DeckId);
+            termFlowLayoutPanel.Controls.Clear();
+            if (DeckReference != null)
             {
+                deckTitleTextbox.Text = DeckReference.Title;
                 foreach (Card c in DeckReference.Cards)
                 {
                     termFlowLayoutPanel.Controls.Add(new EditCardPanel(c));
                 }
             }
-
-            this.EditPanel_Resize(sender, e);
         }
 
-        private void EditPanel_Resize(object sender, EventArgs e)
-        {
-            this.Dock = DockStyle.Fill;
-            this.AutoSize = false;
-            this.Width = Parent.Width;
-            this.Height = Parent.Height;
-
-            termFlowLayoutPanel.Height = Convert.ToInt32(this.Height * 0.45);
-            termFlowLayoutPanel.Width = Convert.ToInt32(this.Width * 0.9);
-
-        }
 
         private void deleteDeckButton_Click(object sender, EventArgs e)
         {
@@ -60,7 +41,9 @@ namespace Smart_Cards
             //if the user answers yes
             if (confirmResult == DialogResult.Yes)
             {
-                MessageBox.Show("TODO: delete the user's deck.");
+                DeckManager.DeleteDeck(DeckReference);
+                PrimaryForm mainForm = (PrimaryForm)ParentForm;
+                mainForm.setDeckView();
             }
         }
 
@@ -76,8 +59,15 @@ namespace Smart_Cards
             {
                 Cards.Add(cardInDeck.CardReference);
             }
-            DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards);
+            DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards,DeckReference.Id);
 
+            DeckManager.OverwriteDeck(DeckReference);
+            DeckManager.ExportDecksToJson();
+
+            PrimaryForm mainForm = (PrimaryForm)ParentForm;
+            mainForm.setDeckView();
         }
+
+        
     }
 }

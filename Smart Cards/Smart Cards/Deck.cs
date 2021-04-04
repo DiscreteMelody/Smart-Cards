@@ -9,15 +9,23 @@ namespace Smart_Cards
 {
     public class Deck
     {
+        public int Id { get; }
+        private static int NextId = 0;
         public string Title { get; set; }
         public string Description { get; set; }
         public List<Card> Cards { get; set; }
 
+        [JsonConstructor]
         public Deck(string title, string description, List<Card> cards)
         {
+            Id = NextId++;
             Title = title;
             Description = description;
             Cards = cards;
+        }
+        public Deck(string title, string description, List<Card> cards,int overwrittenId) : this(title, description, cards)
+        {
+            Id = overwrittenId;
         }
 
         public override string ToString()

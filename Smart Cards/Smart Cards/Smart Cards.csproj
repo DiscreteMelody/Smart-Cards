@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Deck.cs" />
     <Compile Include="DeckJson.cs" />
+    <Compile Include="DeckManager.cs" />
     <Compile Include="DeckPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,7 +80,6 @@
     <Compile Include="EditPanel.Designer.cs">
       <DependentUpon>EditPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileManager.cs" />
     <Compile Include="HelpPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

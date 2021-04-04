@@ -12,7 +12,7 @@ namespace Smart_Cards
 {
     public partial class DeckPanel : UserControl
     {
-        private Deck DeckReference;
+        public Deck DeckReference { get; set; }
         
         public CircularButton StudyButton
         {

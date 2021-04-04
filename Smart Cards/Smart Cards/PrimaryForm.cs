@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smart_Cards;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,21 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Smart_Cards
 {
     public partial class PrimaryForm : Form
     {
-        private readonly FileManager fm;
-        private readonly List<Deck> DeckList;
         private Button[] MenuButtons;
-        private List<DeckPanel> DeckPanels;
-
+        
         public PrimaryForm()
         {
             InitializeComponent();
 
-            fm = new FileManager("deck_data/DeckList.json");
-            DeckList = fm.ImportDecksFromJson();
+            DeckManager.ImportDecksFromJson();
         }
 
         //use this to run neccessary code at the time the application runs
@@ -30,7 +29,6 @@ namespace Smart_Cards
         {
             //instantiate the necessary variables
             MenuButtons = new Button[] { decksButton, addDeckButton, helpButton };
-            DeckPanels = new List<DeckPanel>();
 
             //this will be the default screen when the app loads
             decksButton.PerformClick();
@@ -38,15 +36,11 @@ namespace Smart_Cards
 
         private void UpdateDeckScreen()
         {
-            DeckPanel newDeckPanel;
-            DeckPanels.Clear();
-            foreach (Deck d in DeckList)
+            foreach(DeckPanel dp in DeckManager.CreateDeckPanels())
             {
-                newDeckPanel = new DeckPanel(d);
-                DeckListFlowPanel.Controls.Add(newDeckPanel);
-                DeckPanels.Add(newDeckPanel);
-                newDeckPanel.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, d); };
-                newDeckPanel.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, d); };
+                dp.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, dp.DeckReference); };
+                dp.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, dp.DeckReference); };
+                DeckListFlowPanel.Controls.Add(dp);
             }
         }
 

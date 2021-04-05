@@ -102,7 +102,7 @@
         #endregion
 
         private CustomizedTextBox QuestionTextbox;
-        private CustomizedTextBox AnswerTextbox;
         private System.Windows.Forms.Button deleteTermButton;
+        private CustomizedTextBox AnswerTextbox;
     }
 }

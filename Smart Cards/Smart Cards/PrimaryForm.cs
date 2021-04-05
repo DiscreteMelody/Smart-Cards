@@ -16,13 +16,13 @@ namespace Smart_Cards
     public partial class PrimaryForm : Form
     {
         private Button[] MenuButtons;
-        public EditPanel ePanel { get; set; }
+        public EditPanel EditPanelObject { get; set; }
 
         public PrimaryForm()
         {
             InitializeComponent();
 
-            ePanel = EditPanelLayout;
+            EditPanelObject = EditPanelLayout;
 
             DeckManager.ImportDecksFromJson();
         }
@@ -75,12 +75,11 @@ namespace Smart_Cards
 
         private void decksButton_Click(object sender, EventArgs e)
         {
-            setDeckView();
+            setToDecksView();
             SetMenuButtonAsClicked(decksButton);
-            
         }
 
-        public void setDeckView()
+        public void setToDecksView()
         {
             DeckListFlowPanel.BringToFront();
             DeckListFlowPanel.Controls.Clear();
@@ -90,8 +89,8 @@ namespace Smart_Cards
         private void addDeckButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(addDeckButton);
-            ePanel.BringToFront();
-            ePanel.setDeckToEdit(DeckManager.GetNewDeck().Id);
+            EditPanelObject.BringToFront();
+            EditPanelObject.setDeckToEdit(DeckManager.GetNewDeck().Id);
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -115,6 +114,11 @@ namespace Smart_Cards
         {
             DeckListFlowPanel.Controls.Clear();
             DeckListFlowPanel.Controls.Add(new StudyPanel(DeckClicked));
+        }
+
+        private void PrimaryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DeckManager.ExportDecksToJson();
         }
     }
 }

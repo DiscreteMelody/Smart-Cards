@@ -24,6 +24,12 @@ namespace Smart_Cards
             AnswerTextbox.Text = CardReference.Answer;
         }
 
+        //returns this EditCardPanel's values as a Card
+        public Card ConvertToCard()
+        {
+            return new Card(QuestionTextbox.Text, AnswerTextbox.Text);
+        }
+
         private void deleteTermButton_Click_1(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);

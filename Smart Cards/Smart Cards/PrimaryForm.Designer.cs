@@ -37,11 +37,9 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.DeckListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.EditPanelLayout = new Smart_Cards.EditPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
-            this.DeckListFlowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -180,24 +178,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DeckListFlowPanel.AutoScroll = true;
-            this.DeckListFlowPanel.Controls.Add(this.flowLayoutPanel1);
             this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
             this.DeckListFlowPanel.Margin = new System.Windows.Forms.Padding(0);
             this.DeckListFlowPanel.Name = "DeckListFlowPanel";
             this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);
             this.DeckListFlowPanel.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(634, 0);
-            this.flowLayoutPanel1.TabIndex = 4;
             // 
             // EditPanelLayout
             // 
@@ -219,11 +204,11 @@
             this.Controls.Add(this.EditPanelLayout);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "PrimaryForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrimaryForm_FormClosing);
             this.Load += new System.EventHandler(this.PrimaryForm_Load);
             this.menuPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            this.DeckListFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -239,7 +224,6 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private EditPanel EditPanelLayout;
     }
 }

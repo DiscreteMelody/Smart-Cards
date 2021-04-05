@@ -42,8 +42,10 @@ namespace Smart_Cards
             if (confirmResult == DialogResult.Yes)
             {
                 DeckManager.DeleteDeck(DeckReference);
+                DeckManager.ExportDecksToJson();
+
                 PrimaryForm mainForm = (PrimaryForm)ParentForm;
-                mainForm.setDeckView();
+                mainForm.setToDecksView();
             }
         }
 
@@ -57,7 +59,7 @@ namespace Smart_Cards
             List<Card> Cards = new List<Card>();
             foreach (EditCardPanel cardInDeck in this.termFlowLayoutPanel.Controls)
             {
-                Cards.Add(cardInDeck.CardReference);
+                Cards.Add(cardInDeck.ConvertToCard());
             }
             DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards,DeckReference.Id);
 
@@ -65,7 +67,7 @@ namespace Smart_Cards
             DeckManager.ExportDecksToJson();
 
             PrimaryForm mainForm = (PrimaryForm)ParentForm;
-            mainForm.setDeckView();
+            mainForm.setToDecksView();
         }
 
         

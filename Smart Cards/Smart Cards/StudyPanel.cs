@@ -18,6 +18,10 @@ namespace Smart_Cards
         private Card CurrentCard;
 
         private List<int> IncorrectCardIndexes;
+        public StudyPanel()
+        {
+            InitializeComponent();
+        }
         public StudyPanel(Deck d)
         {
             InitializeComponent();

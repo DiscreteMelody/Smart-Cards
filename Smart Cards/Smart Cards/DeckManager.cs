@@ -18,9 +18,15 @@ namespace Smart_Cards
         //reads Json file located at 'filePath' and initializes DeckList Dictionary
         public static void ImportDecksFromJson()
         {
-            string data = File.ReadAllText(filePath);
-
-            DeckList = JsonConvert.DeserializeObject<Dictionary<int,Deck>>(data);
+            try
+            {
+                string data = File.ReadAllText(filePath);
+                DeckList = JsonConvert.DeserializeObject<Dictionary<int, Deck>>(data);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
         }
 
         public static void ExportDecksToJson()
@@ -68,6 +74,7 @@ namespace Smart_Cards
         public static List<DeckPanel> CreateDeckPanels()
         {
             List<DeckPanel> DeckPanels = new List<DeckPanel>();
+            if (DeckList.Count == 0) return DeckPanels;
 
             DeckPanel newDeckPanel;
             foreach (KeyValuePair<int,Deck> d in DeckList)
@@ -78,9 +85,5 @@ namespace Smart_Cards
 
             return DeckPanels;
         }
-
-
-        
-
     }
 }

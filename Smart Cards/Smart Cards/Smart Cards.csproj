@@ -60,7 +60,6 @@
       <DependentUpon>CustomizedTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Deck.cs" />
-    <Compile Include="DeckJson.cs" />
     <Compile Include="DeckManager.cs" />
     <Compile Include="DeckPanel.cs">
       <SubType>UserControl</SubType>

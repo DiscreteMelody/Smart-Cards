@@ -44,7 +44,6 @@ namespace Smart_Cards
             foreach(DeckPanel dp in DeckManager.CreateDeckPanels())
             {
                 dp.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, dp.DeckReference); };
-                //dp.EditButton.Click += delegate (object sender, EventArgs e) { OnEditButtonClicked(sender, e, dp.DeckReference); };
                 DeckListFlowPanel.Controls.Add(dp);
             }
         }

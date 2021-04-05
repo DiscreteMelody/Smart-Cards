@@ -42,6 +42,13 @@ namespace Smart_Cards
             DeckList[newDeck.Id] = newDeck;
         }
 
+        public static Deck GetNewDeck()
+        {
+            Deck newDeck = new Deck();
+            DeckList.Add(newDeck.Id, newDeck);
+            return newDeck;
+        }
+
         public static void DeleteDeck(Deck deckToDelete)
         {
             DeckList.Remove(deckToDelete.Id);

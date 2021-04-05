@@ -10,6 +10,6 @@ namespace Smart_Cards
     public class DeckJson
     {
         [JsonProperty("decks")]
-        public List<Deck> DeckList { get; set; }
+        public Dictionary<int, Deck> DeckList { get; set; }
     }
 }

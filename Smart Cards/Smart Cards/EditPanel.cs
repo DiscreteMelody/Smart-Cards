@@ -25,9 +25,9 @@ namespace Smart_Cards
             if (DeckReference != null)
             {
                 deckTitleTextbox.Text = DeckReference.Title;
-                foreach (Card c in DeckReference.Cards)
+                foreach (KeyValuePair<int, Card> c in DeckReference.Cards)
                 {
-                    termFlowLayoutPanel.Controls.Add(new EditCardPanel(c));
+                    termFlowLayoutPanel.Controls.Add(new EditCardPanel(c.Value));
                 }
             }
         }
@@ -57,9 +57,10 @@ namespace Smart_Cards
             List<Card> Cards = new List<Card>();
             foreach (EditCardPanel cardInDeck in this.termFlowLayoutPanel.Controls)
             {
+                Console.WriteLine(cardInDeck.CardReference.ToString());
                 Cards.Add(cardInDeck.CardReference);
             }
-            DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards,DeckReference.Id);
+            DeckReference = new Deck(DeckReference.Id, deckTitleTextbox.Text, "description", Cards);
 
             DeckManager.OverwriteDeck(DeckReference);
             DeckManager.ExportDecksToJson();

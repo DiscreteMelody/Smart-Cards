@@ -1,185 +1,108 @@
 {
-  "decks":[
-    {
-      "Title": "Spanish 2",
-      "Description": "Sra. Mendoza's class",
-      "cards":[
-        {
-          "Question": "One",
-          "Answer": "Uno"
-        },
-        {
-          "Question": "Two",
-          "Answer": "Dos"
-        },
-        {
-          "Question": "Three",
-          "Answer": "Tres"
-        },
-        {
-          "Question": "Four",
-          "Answer": "Cuatro"
-        }
-        ]
-    },
-    {
-      "Title": "U.S Capitals",
-      "Description": "Memorize the capitals",
-      "cards":[
-        {
-          "Question": "Alabama",
-          "Answer": "Montgomery"
-        },
-        {
-          "Question": "Alaska",
-          "Answer": "Juneau"
-        },
-        {
-          "Question": "Arizona",
-          "Answer": "Phoenix"
-        },
-        {
-          "Question": "Arkansas",
-          "Answer": "Little Rock"
-        },
-        {
-          "Question": "California",
-          "Answer": "Sacramento"
-        },
-        {
-          "Question": "Colorado",
-          "Answer": "Denver"
-        },
-        {
-          "Question": "Connecticut",
-          "Answer": "Hartford"
-        },
-        {
-          "Question": "Delaware",
-          "Answer": "Dover"
-        },
-        {
-          "Question": "Florida",
-          "Answer": "Tallahassee"
-        },
-        {
-          "Question": "Georgia",
-          "Answer": "Atlanta"
-        },
-        {
-          "Question": "Hawaii",
-          "Answer": "Honolulu"
-        },
-        {
-          "Question": "Idaho",
-          "Answer": "Boise"
-        },
-        {
-          "Question": "Illinois",
-          "Answer": "Springfield"
-        },
-        {
-          "Question": "Indiana",
-          "Answer": "Indianapolis"
-        },
-        {
-          "Question": "Iowa",
-          "Answer": "Des Moines"
-        },
-        {
-          "Question": "Kansas",
-          "Answer": "Topeka"
-        },
-        {
-          "Question": "Kentucky",
-          "Answer": "Frankfort"
-        },
-        {
-          "Question": "Louisiana",
-          "Answer": "Baton Rouge"
-        },
-        {
-          "Question": "Maine",
-          "Answer": "Augusta"
-        },
-        {
-          "Question": "Maryland",
-          "Answer": "Annapolis"
-        },
-        {
-          "Question": "Massachusetts",
-          "Answer": "Boston"
-        },
-        {
-          "Question": "Michigan",
-          "Answer": "Lansing"
-        },
-        {
-          "Question": "Minnesota",
-          "Answer": "St. Paul"
-        },
-        {
-          "Question": "Mississippi",
-          "Answer": "Jackson"
-        },
-        {
-          "Question": "Missouri",
-          "Answer": "Jefferson City"
-        }
-        ]
-    },
-    {
-      "Title": "Computer Science",
-      "Description": "Web Design",
-      "cards":[
-        {
-          "Question": "Computer Science Question 1",
-          "Answer": "Computer Science Answer 1"
-        },
-        {
-          "Question": "Computer Science Question 2",
-          "Answer": "Computer Science Answer 2"
-        },
-        {
-          "Question": "Computer Science Question 3",
-          "Answer": "Computer Science Answer 3"
-        },
-        {
-          "Question": "Computer Science Question 4",
-          "Answer": "Computer Science Answer 4"
-        },
-        {
-          "Question": "Computer Science Question 5",
-          "Answer": "Computer Science Answer 5"
-        }
-        ]
-    },
-    {
-      "Title": "Criminal Justice",
-      "Description": "CJ1932",
-      "cards":[
-        {
-          "Question": "Criminal Justice Question 1",
-          "Answer": "Criminal Justice Answer 1"
-        },
-        {
-          "Question": "Criminal Justice Question 2",
-          "Answer": "Criminal Justice Answer 2"
-        },
-        {
-          "Question": "Criminal Justice Question 3",
-          "Answer": "Criminal Justice Answer 3"
-        },
-        {
-          "Question": "Criminal Justice Question 4",
-          "Answer": "Criminal Justice Answer 4"
-        },
-        {
-          "Question": "Criminal Justice Question 5",
-          "Answer": "Criminal Justice Answer 5"
-        }
-        ]
+  "0": {
+    "Id": 0,
+    "Title": "Spanish 2",
+    "Description": "description",
+    "Cards": {
+      "0": { "Id": 0, "Question": "One", "Answer": "Uno" },
+      "1": { "Id": 1, "Question": "Two", "Answer": "Dos" },
+      "2": { "Id": 2, "Question": "Three", "Answer": "Tres" }
     }
-    ]
-
+  },
+  "1": {
+    "Id": 1,
+    "Title": "U.S Capitals",
+    "Description": "Memorize the capitals",
+    "Cards": {
+      "3": { "Id": 3, "Question": "Alabama", "Answer": "Montgomery" },
+      "4": { "Id": 4, "Question": "Alaska", "Answer": "Juneau" },
+      "5": { "Id": 5, "Question": "Arizona", "Answer": "Phoenix" },
+      "6": { "Id": 6, "Question": "Arkansas", "Answer": "Little Rock" },
+      "7": { "Id": 7, "Question": "California", "Answer": "Sacramento" },
+      "8": { "Id": 8, "Question": "Colorado", "Answer": "Denver" },
+      "9": { "Id": 9, "Question": "Connecticut", "Answer": "Hartford" },
+      "10": { "Id": 10, "Question": "Delaware", "Answer": "Dover" },
+      "11": { "Id": 11, "Question": "Florida", "Answer": "Tallahassee" },
+      "12": { "Id": 12, "Question": "Georgia", "Answer": "Atlanta" },
+      "13": { "Id": 13, "Question": "Hawaii", "Answer": "Honolulu" },
+      "14": { "Id": 14, "Question": "Idaho", "Answer": "Boise" },
+      "15": { "Id": 15, "Question": "Illinois", "Answer": "Springfield" },
+      "16": { "Id": 16, "Question": "Indiana", "Answer": "Indianapolis" },
+      "17": { "Id": 17, "Question": "Iowa", "Answer": "Des Moines" },
+      "18": { "Id": 18, "Question": "Kansas", "Answer": "Topeka" },
+      "19": { "Id": 19, "Question": "Kentucky", "Answer": "Frankfort" },
+      "20": { "Id": 20, "Question": "Louisiana", "Answer": "Baton Rouge" },
+      "21": { "Id": 21, "Question": "Maine", "Answer": "Augusta" },
+      "22": { "Id": 22, "Question": "Maryland", "Answer": "Annapolis" },
+      "23": { "Id": 23, "Question": "Massachusetts", "Answer": "Boston" },
+      "24": { "Id": 24, "Question": "Michigan", "Answer": "Lansing" },
+      "25": { "Id": 25, "Question": "Minnesota", "Answer": "St. Paul" },
+      "26": { "Id": 26, "Question": "Mississippi", "Answer": "Jackson" },
+      "27": { "Id": 27, "Question": "Missouri", "Answer": "Jefferson City" }
+    }
+  },
+  "2": {
+    "Id": 2,
+    "Title": "Computer Science",
+    "Description": "Web Design",
+    "Cards": {
+      "28": {
+        "Id": 28,
+        "Question": "Computer Science Question 1",
+        "Answer": "Computer Science Answer 1"
+      },
+      "29": {
+        "Id": 29,
+        "Question": "Computer Science Question 2",
+        "Answer": "Computer Science Answer 2"
+      },
+      "30": {
+        "Id": 30,
+        "Question": "Computer Science Question 3",
+        "Answer": "Computer Science Answer 3"
+      },
+      "31": {
+        "Id": 31,
+        "Question": "Computer Science Question 4",
+        "Answer": "Computer Science Answer 4"
+      },
+      "32": {
+        "Id": 32,
+        "Question": "Computer Science Question 5",
+        "Answer": "Computer Science Answer 5"
+      }
+    }
+  },
+  "3": {
+    "Id": 3,
+    "Title": "Criminal Justice",
+    "Description": "CJ1932",
+    "Cards": {
+      "33": {
+        "Id": 33,
+        "Question": "Criminal Justice Question 1",
+        "Answer": "Criminal Justice Answer 1"
+      },
+      "34": {
+        "Id": 34,
+        "Question": "Criminal Justice Question 2",
+        "Answer": "Criminal Justice Answer 2"
+      },
+      "35": {
+        "Id": 35,
+        "Question": "Criminal Justice Question 3",
+        "Answer": "Criminal Justice Answer 3"
+      },
+      "36": {
+        "Id": 36,
+        "Question": "Criminal Justice Question 4",
+        "Answer": "Criminal Justice Answer 4"
+      },
+      "37": {
+        "Id": 37,
+        "Question": "Criminal Justice Question 5",
+        "Answer": "Criminal Justice Answer 5"
+      }
+    }
+  }
 }

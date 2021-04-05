@@ -16,22 +16,20 @@ namespace Smart_Cards
         private static readonly string filePath = "deck_data/DeckList.json";
 
 
-        //private static readonly StreamReader deckFile = new StreamReader(filePath);
+        private static readonly StreamReader deckFile = new StreamReader(filePath);
 
 
         //reads Json file located at 'filePath' and returns list of Decks
         public static void ImportDecksFromJson()
         {
+            string data = deckFile.ReadToEnd();
+            DeckJson DeckJson = JsonConvert.DeserializeObject<DeckJson>(data);
 
-            string json;
-            using (StreamReader r = new StreamReader(filePath)) {
-                json = r.ReadToEnd();
+            foreach (Deck d in DeckJson.DeckList)
+            {
+                DeckList[d.Id] = d;
+                Console.WriteLine(d.ToString());
             }
-            DeckList = JsonConvert.DeserializeObject<Dictionary<int, Deck>>(json);
-            //Console.WriteLine("DeckManage ln 30: " + String.Join(Environment.NewLine, DeckList));
-            //foreach(KeyValuePair<int, Deck> p in DeckList) {
-            //    Console.WriteLine(p.Value.ToString());
-			//}
         }
 
         public static Deck GetDeckFromId(int id)

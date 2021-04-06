@@ -11,21 +11,26 @@ namespace Smart_Cards
 {
     public static class DeckManager
     {
-        private static Dictionary<int,Deck> DeckList = new Dictionary<int,Deck>();
+        private static Dictionary<int,Deck> DeckList = new Dictionary<int, Deck>();
 
-        private static readonly string filePath = "deck_data/DeckList.json";
+        //private static readonly string filePath = "deck_data/DeckList.json";
+
+        private static readonly string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards\\DeckList.json");
 
         //reads Json file located at 'filePath' and initializes DeckList Dictionary
         public static void ImportDecksFromJson()
         {
+            Console.WriteLine(filePath);
             try
             {
                 string data = File.ReadAllText(filePath);
                 DeckList = JsonConvert.DeserializeObject<Dictionary<int, Deck>>(data);
+                Console.WriteLine(DeckList.Count);
             }
             catch(Exception e)
             {
-                Console.WriteLine("Exception: " + e.Message);
+                
+                Console.WriteLine("Could not read file: " + e.Message);
             }
         }
 
@@ -42,7 +47,20 @@ namespace Smart_Cards
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception: " + e.Message);
+                Console.WriteLine("Could not write file: " + e.Message);
+                try {
+                    if (!Directory.Exists(filePath)) {
+                        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards"));
+                        using (StreamWriter file = File.CreateText(filePath)) {
+                            JsonSerializer serializer = new JsonSerializer();
+                            serializer.Serialize(file, DeckList);
+                        }
+                    } else {
+                        Console.WriteLine(e);
+                    }
+                } catch (Exception e2) {
+                    Console.WriteLine(e2.Message);
+				}
             }
         }
 
@@ -85,5 +103,10 @@ namespace Smart_Cards
 
             return DeckPanels;
         }
+
+        public static Dictionary<int,Deck> getDeckList()
+            {
+            return DeckList;
+		}
     }
 }

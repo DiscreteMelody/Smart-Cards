@@ -31,12 +31,12 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.ContentPanel = new System.Windows.Forms.Panel();
-            this.PrimaryAddNewDeckPanel = new Smart_Cards.AddNewDeckPanel();
             this.PrimaryDeckListPanel = new Smart_Cards.DeckListPanel();
+            this.PrimaryAddNewDeckPanel = new Smart_Cards.AddNewDeckPanel();
             this.PrimaryEditPanel = new Smart_Cards.EditPanel();
             this.PrimaryStudyPanel = new Smart_Cards.StudyPanel();
             this.PrimaryHelpPanel = new Smart_Cards.HelpPanel();
-            this.navMenu1 = new Smart_Cards.NavMenu();
+            this.PrimaryNavMenu = new Smart_Cards.NavMenu();
             this.headerPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -77,14 +77,6 @@
             this.ContentPanel.Size = new System.Drawing.Size(634, 486);
             this.ContentPanel.TabIndex = 7;
             // 
-            // PrimaryAddNewDeckPanel
-            // 
-            this.PrimaryAddNewDeckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PrimaryAddNewDeckPanel.Location = new System.Drawing.Point(0, 0);
-            this.PrimaryAddNewDeckPanel.Name = "PrimaryAddNewDeckPanel";
-            this.PrimaryAddNewDeckPanel.Size = new System.Drawing.Size(634, 486);
-            this.PrimaryAddNewDeckPanel.TabIndex = 6;
-            // 
             // PrimaryDeckListPanel
             // 
             this.PrimaryDeckListPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,6 +84,14 @@
             this.PrimaryDeckListPanel.Name = "PrimaryDeckListPanel";
             this.PrimaryDeckListPanel.Size = new System.Drawing.Size(634, 486);
             this.PrimaryDeckListPanel.TabIndex = 5;
+            // 
+            // PrimaryAddNewDeckPanel
+            // 
+            this.PrimaryAddNewDeckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrimaryAddNewDeckPanel.Location = new System.Drawing.Point(0, 0);
+            this.PrimaryAddNewDeckPanel.Name = "PrimaryAddNewDeckPanel";
+            this.PrimaryAddNewDeckPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryAddNewDeckPanel.TabIndex = 6;
             // 
             // PrimaryEditPanel
             // 
@@ -121,13 +121,13 @@
             this.PrimaryHelpPanel.Size = new System.Drawing.Size(634, 486);
             this.PrimaryHelpPanel.TabIndex = 0;
             // 
-            // navMenu1
+            // PrimaryNavMenu
             // 
-            this.navMenu1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navMenu1.Location = new System.Drawing.Point(0, 0);
-            this.navMenu1.Name = "navMenu1";
-            this.navMenu1.Size = new System.Drawing.Size(150, 561);
-            this.navMenu1.TabIndex = 6;
+            this.PrimaryNavMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PrimaryNavMenu.Location = new System.Drawing.Point(0, 0);
+            this.PrimaryNavMenu.Name = "PrimaryNavMenu";
+            this.PrimaryNavMenu.Size = new System.Drawing.Size(150, 561);
+            this.PrimaryNavMenu.TabIndex = 6;
             // 
             // PrimaryForm
             // 
@@ -136,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.headerPanel);
-            this.Controls.Add(this.navMenu1);
+            this.Controls.Add(this.PrimaryNavMenu);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "PrimaryForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrimaryForm_FormClosing);
@@ -155,7 +155,7 @@
         private StudyPanel PrimaryStudyPanel;
         private HelpPanel PrimaryHelpPanel;
         private DeckListPanel PrimaryDeckListPanel;
-        private NavMenu navMenu1;
+        private NavMenu PrimaryNavMenu;
         private System.Windows.Forms.Panel ContentPanel;
         private AddNewDeckPanel PrimaryAddNewDeckPanel;
     }

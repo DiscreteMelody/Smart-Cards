@@ -20,7 +20,20 @@ namespace Smart_Cards
         private void decksButton_Click(object sender, EventArgs e)
         {
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
+        }
 
+        private void addDeckButton_Click(object sender, EventArgs e)
+        {
+            NavigationManager.SetActiveScreen(NavigationScreen.AddDeck);
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            NavigationManager.SetActiveScreen(NavigationScreen.Help); 
+        }
+
+        public void HighlightDeckListButton()
+        {
             decksButton.BackColor = StyleManager.primaryColor;
             addDeckButton.BackColor = StyleManager.secondaryColor;
             helpButton.BackColor = StyleManager.secondaryColor;
@@ -28,10 +41,8 @@ namespace Smart_Cards
             HighlightPanel.Location = new Point(decksButton.Location.X + decksButton.Width - HighlightPanel.Width, decksButton.Location.Y);
         }
 
-        private void addDeckButton_Click(object sender, EventArgs e)
+        public void HighlightAddDeckButton()
         {
-            NavigationManager.SetActiveScreen(NavigationScreen.AddDeck);
-
             decksButton.BackColor = StyleManager.secondaryColor;
             addDeckButton.BackColor = StyleManager.primaryColor;
             helpButton.BackColor = StyleManager.secondaryColor;
@@ -39,10 +50,8 @@ namespace Smart_Cards
             HighlightPanel.Location = new Point(addDeckButton.Location.X + addDeckButton.Width - HighlightPanel.Width, addDeckButton.Location.Y);
         }
 
-        private void helpButton_Click(object sender, EventArgs e)
+        public void HighlightHelpButton()
         {
-            NavigationManager.SetActiveScreen(NavigationScreen.Help);
-
             decksButton.BackColor = StyleManager.secondaryColor;
             addDeckButton.BackColor = StyleManager.secondaryColor;
             helpButton.BackColor = StyleManager.primaryColor;

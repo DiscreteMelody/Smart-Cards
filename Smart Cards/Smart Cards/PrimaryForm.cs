@@ -19,8 +19,12 @@ namespace Smart_Cards
         {
             InitializeComponent();
 
+            //Import deck file
             DeckManager.ImportDecksFromJson();
 
+            //Initialize references to form controls
+            NavigationManager.InitializeControl(PrimaryNavMenu);
+            
             NavigationManager.InitializeControl(PrimaryDeckListPanel);
             NavigationManager.InitializeControl(PrimaryEditPanel);
             NavigationManager.InitializeControl(PrimaryStudyPanel);

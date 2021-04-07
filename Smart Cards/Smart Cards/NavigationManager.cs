@@ -17,12 +17,18 @@ namespace Smart_Cards
     }
     public static class NavigationManager
     {
+        private static NavMenu NavMenuBar;
+
         private static DeckListPanel DeckListScreen;
         private static AddNewDeckPanel AddDeckScreen;
         private static EditPanel EditDeckScreen;
         private static StudyPanel StudyDeckScreen;
         private static HelpPanel HelpScreen;
 
+        public static void InitializeControl(NavMenu ControlToInitialize)
+        {
+            NavMenuBar = ControlToInitialize;
+        }
         public static void InitializeControl(DeckListPanel ControlToInitialize)
         {
             DeckListScreen = ControlToInitialize;
@@ -51,9 +57,11 @@ namespace Smart_Cards
                 case NavigationScreen.DeckList:
                     DeckListScreen.LoadDeckPanels();
                     DeckListScreen.BringToFront();
+                    NavMenuBar.HighlightDeckListButton();
                     break;
                 case NavigationScreen.AddDeck:
                     AddDeckScreen.BringToFront();
+                    NavMenuBar.HighlightAddDeckButton();
                     break;
                 case NavigationScreen.EditDeck:
                     EditDeckScreen.SetDeckToEdit(OptionalDeckParameter);
@@ -65,6 +73,7 @@ namespace Smart_Cards
                     break;
                 case NavigationScreen.Help:
                     HelpScreen.BringToFront();
+                    NavMenuBar.HighlightHelpButton();
                     break;
             }
         }

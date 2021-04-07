@@ -36,9 +36,10 @@
             this.decksButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.EditPanelLayout = new Smart_Cards.EditPanel();
-            this.studyPanelLayout = new Smart_Cards.StudyPanel();
-            this.DeckListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.PrimaryHelpPanel = new Smart_Cards.HelpPanel();
+            this.PrimaryStudyPanel = new Smart_Cards.StudyPanel();
+            this.PrimaryEditPanel = new Smart_Cards.EditPanel();
+            this.PrimaryDeckListPanel = new Smart_Cards.DeckListPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -173,45 +174,51 @@
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Smart Cards";
             // 
+            // HelpPanelLayout
+            // 
+            this.PrimaryHelpPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrimaryHelpPanel.Location = new System.Drawing.Point(150, 75);
+            this.PrimaryHelpPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.PrimaryHelpPanel.Name = "HelpPanelLayout";
+            this.PrimaryHelpPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryHelpPanel.TabIndex = 0;
+            // 
+            // StudyPanelLayout
+            // 
+            this.PrimaryStudyPanel.AutoSize = true;
+            this.PrimaryStudyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrimaryStudyPanel.Location = new System.Drawing.Point(150, 75);
+            this.PrimaryStudyPanel.Name = "StudyPanelLayout";
+            this.PrimaryStudyPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryStudyPanel.TabIndex = 0;
+            // 
             // EditPanelLayout
             // 
-            this.EditPanelLayout.AutoSize = true;
-            this.EditPanelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditPanelLayout.Location = new System.Drawing.Point(150, 75);
-            this.EditPanelLayout.Margin = new System.Windows.Forms.Padding(0);
-            this.EditPanelLayout.Name = "EditPanelLayout";
-            this.EditPanelLayout.Size = new System.Drawing.Size(634, 486);
-            this.EditPanelLayout.TabIndex = 4;
+            this.PrimaryEditPanel.AutoSize = true;
+            this.PrimaryEditPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrimaryEditPanel.Location = new System.Drawing.Point(150, 75);
+            this.PrimaryEditPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.PrimaryEditPanel.Name = "EditPanelLayout";
+            this.PrimaryEditPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryEditPanel.TabIndex = 4;
             // 
-            // studyPanelLayout
+            // PrimaryDeckListPanel
             // 
-            this.studyPanelLayout.AutoSize = true;
-            this.studyPanelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studyPanelLayout.Location = new System.Drawing.Point(150, 75);
-            this.studyPanelLayout.Name = "studyPanelLayout";
-            this.studyPanelLayout.Size = new System.Drawing.Size(634, 486);
-            this.studyPanelLayout.TabIndex = 0;
-            // 
-            // DeckListFlowPanel
-            // 
-            this.DeckListFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeckListFlowPanel.AutoScroll = true;
-            this.DeckListFlowPanel.Location = new System.Drawing.Point(150, 75);
-            this.DeckListFlowPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.DeckListFlowPanel.Name = "DeckListFlowPanel";
-            this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);
-            this.DeckListFlowPanel.TabIndex = 3;
+            this.PrimaryDeckListPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrimaryDeckListPanel.Location = new System.Drawing.Point(150, 75);
+            this.PrimaryDeckListPanel.Name = "PrimaryDeckListPanel";
+            this.PrimaryDeckListPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryDeckListPanel.TabIndex = 5;
             // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.studyPanelLayout);
-            this.Controls.Add(this.EditPanelLayout);
-            this.Controls.Add(this.DeckListFlowPanel);
+            this.Controls.Add(this.PrimaryDeckListPanel);
+            this.Controls.Add(this.PrimaryHelpPanel);
+            this.Controls.Add(this.PrimaryStudyPanel);
+            this.Controls.Add(this.PrimaryEditPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -236,9 +243,10 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
-        private EditPanel EditPanelLayout;
-        private StudyPanel studyPanelLayout;
-        private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
+        private EditPanel PrimaryEditPanel;
+        private StudyPanel PrimaryStudyPanel;
+        private HelpPanel PrimaryHelpPanel;
+        private DeckListPanel PrimaryDeckListPanel;
     }
 }
 

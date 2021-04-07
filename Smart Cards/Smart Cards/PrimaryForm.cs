@@ -18,13 +18,17 @@ namespace Smart_Cards
         private Button[] MenuButtons;
         public EditPanel EditPanelObject { get; set; }
         public StudyPanel StudyPanelObject { get; set; }
+        public HelpPanel HelpPanelObject { get; set; }
+        public DeckListPanel DeckListObject { get; set; }
 
         public PrimaryForm()
         {
             InitializeComponent();
 
-            EditPanelObject = EditPanelLayout;
-            StudyPanelObject = studyPanelLayout;
+            EditPanelObject = PrimaryEditPanel;
+            StudyPanelObject = PrimaryStudyPanel;
+            HelpPanelObject = PrimaryHelpPanel;
+            DeckListObject = PrimaryDeckListPanel;
 
             DeckManager.ImportDecksFromJson();
         }
@@ -39,16 +43,6 @@ namespace Smart_Cards
             decksButton.PerformClick();
         }
 
-        
-
-        public void UpdateDeckScreen()
-        {
-            foreach(DeckPanel dp in DeckManager.CreateDeckPanels())
-            {
-                dp.StudyButton.Click += delegate (object sender, EventArgs e) { OnStudyButtonClicked(sender, e, dp.DeckReference); };
-                DeckListFlowPanel.Controls.Add(dp);
-            }
-        }
 
         /// <summary>
         /// Styles the Menu to show which button is clicked
@@ -77,14 +71,13 @@ namespace Smart_Cards
         private void decksButton_Click(object sender, EventArgs e)
         {
             setToDecksView();
-            SetMenuButtonAsClicked(decksButton);
         }
 
         public void setToDecksView()
         {
-            DeckListFlowPanel.BringToFront();
-            DeckListFlowPanel.Controls.Clear();
-            UpdateDeckScreen();
+            SetMenuButtonAsClicked(decksButton);
+            DeckListObject.BringToFront();
+            DeckListObject.LoadDeckPanels();
         }
 
         private void addDeckButton_Click(object sender, EventArgs e)
@@ -97,24 +90,12 @@ namespace Smart_Cards
         private void helpButton_Click(object sender, EventArgs e)
         {
             SetMenuButtonAsClicked(helpButton);
-            DeckListFlowPanel.Controls.Clear();
-            DeckListFlowPanel.Controls.Add(new HelpPanel());
+            HelpPanelObject.BringToFront();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        /// <summary>
-        /// Executes whenever a Study button of a deck is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnStudyButtonClicked(object sender, EventArgs e, Deck DeckClicked)
-        {
-            DeckListFlowPanel.Controls.Clear();
-            //DeckListFlowPanel.Controls.Add(new StudyPanel(DeckClicked));
         }
 
         private void PrimaryForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -40,12 +40,12 @@
             // 
             // termFlowLayoutPanel
             // 
-            this.termFlowLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.termFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.termFlowLayoutPanel.AutoScroll = true;
-            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 69);
+            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 82);
             this.termFlowLayoutPanel.MinimumSize = new System.Drawing.Size(603, 221);
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 273);
+            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 240);
             this.termFlowLayoutPanel.TabIndex = 15;
             // 
             // saveDeckLabel

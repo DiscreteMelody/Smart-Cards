@@ -60,6 +60,12 @@
       <DependentUpon>CustomizedTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Deck.cs" />
+    <Compile Include="DeckListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeckListPanel.Designer.cs">
+      <DependentUpon>DeckListPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeckManager.cs" />
     <Compile Include="DeckPanel.cs">
       <SubType>UserControl</SubType>
@@ -102,6 +108,9 @@
     <Compile Include="StyleManager.cs" />
     <EmbeddedResource Include="CustomizedTextBox.resx">
       <DependentUpon>CustomizedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeckListPanel.resx">
+      <DependentUpon>DeckListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeckPanel.resx">
       <DependentUpon>DeckPanel.cs</DependentUpon>

@@ -9,6 +9,9 @@ namespace Smart_Cards
 {
     public class Deck
     {
+        public const string DefaultTitle = "My Deck";
+        public const string DefaultDescription = "An interesting description";
+
         public int Id { get; }
         private static int NextId = 0;
         public string Title { get; set; }

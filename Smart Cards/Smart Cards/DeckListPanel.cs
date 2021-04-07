@@ -21,6 +21,7 @@ namespace Smart_Cards
         //and adds the controls into the flow layout
         public void LoadDeckPanels()
         {
+            DeckListFlowLayoutPanel.Controls.Clear();
             foreach (DeckPanel dp in DeckManager.CreateDeckPanels())
             {
                 DeckListFlowLayoutPanel.Controls.Add(dp);

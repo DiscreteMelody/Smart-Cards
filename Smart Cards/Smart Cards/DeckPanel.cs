@@ -35,16 +35,12 @@ namespace Smart_Cards
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            PrimaryForm mainForm = (PrimaryForm)ParentForm;
-            mainForm.EditPanelObject.BringToFront();
-            mainForm.EditPanelObject.SetDeckToEdit(DeckReference.Id);
+            NavigationManager.SetActiveScreen(NavigationScreen.EditDeck, DeckReference.Id);
         }
 
         private void studyButton_Click(object sender, EventArgs e)
         {
-            PrimaryForm mainForm = (PrimaryForm)ParentForm;
-            mainForm.StudyPanelObject.BringToFront();
-            mainForm.StudyPanelObject.SetDeckToStudy(DeckReference.Id);
+            NavigationManager.SetActiveScreen(NavigationScreen.StudyDeck, DeckReference.Id);
         }
     }
 }

@@ -44,8 +44,7 @@ namespace Smart_Cards
                 DeckManager.DeleteDeck(DeckReference);
                 DeckManager.ExportDecksToJson();
 
-                PrimaryForm mainForm = (PrimaryForm)ParentForm;
-                mainForm.setToDecksView();
+                NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
             }
         }
 
@@ -66,8 +65,7 @@ namespace Smart_Cards
             DeckManager.OverwriteDeck(DeckReference);
             DeckManager.ExportDecksToJson();
 
-            PrimaryForm mainForm = (PrimaryForm)ParentForm;
-            mainForm.setToDecksView();
+            NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
         }
 
         

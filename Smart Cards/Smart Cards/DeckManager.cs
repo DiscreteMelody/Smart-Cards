@@ -85,9 +85,9 @@ namespace Smart_Cards
         }
 
         //Creates an empty deck, adds it to the DeckList and returns it
-        public static Deck GetNewDeck()
+        public static Deck CreateNewDeck(string DeckTitle = Deck.DefaultTitle,string DeckDescription = Deck.DefaultDescription)
         {
-            Deck newDeck = new Deck();
+            Deck newDeck = new Deck(DeckTitle, DeckDescription, new List<Card>());
             DeckList.Add(newDeck.Id, newDeck);
             return newDeck;
         }

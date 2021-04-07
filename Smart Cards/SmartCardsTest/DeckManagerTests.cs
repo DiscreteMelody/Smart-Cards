@@ -19,7 +19,7 @@ namespace Smart_Cards.Tests {
 		public void GetNewDeckTest() {
 			DeckManager.ImportDecksFromJson();
 			int count_orig = DeckManager.getDeckList().Count;
-			Deck newDeck = DeckManager.GetNewDeck();
+			Deck newDeck = DeckManager.CreateNewDeck();
 			int count_new = DeckManager.getDeckList().Count;
 			Assert.IsNotNull(newDeck);
 			Assert.IsInstanceOfType(newDeck, typeof(Deck));

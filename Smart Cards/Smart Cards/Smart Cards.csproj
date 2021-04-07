@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewDeckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewDeckPanel.Designer.cs">
+      <DependentUpon>AddNewDeckPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs" />
     <Compile Include="CircularButton.cs">
       <SubType>Component</SubType>
@@ -91,6 +97,13 @@
     <Compile Include="HelpPanel.Designer.cs">
       <DependentUpon>HelpPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="NavigationManager.cs" />
+    <Compile Include="NavMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavMenu.Designer.cs">
+      <DependentUpon>NavMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrimaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +119,9 @@
       <DependentUpon>StudyPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="StyleManager.cs" />
+    <EmbeddedResource Include="AddNewDeckPanel.resx">
+      <DependentUpon>AddNewDeckPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomizedTextBox.resx">
       <DependentUpon>CustomizedTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpPanel.resx">
       <DependentUpon>HelpPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavMenu.resx">
+      <DependentUpon>NavMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrimaryForm.resx">
       <DependentUpon>PrimaryForm.cs</DependentUpon>

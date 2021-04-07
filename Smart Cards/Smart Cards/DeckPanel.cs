@@ -37,7 +37,14 @@ namespace Smart_Cards
         {
             PrimaryForm mainForm = (PrimaryForm)ParentForm;
             mainForm.EditPanelObject.BringToFront();
-            mainForm.EditPanelObject.setDeckToEdit(DeckReference.Id);
+            mainForm.EditPanelObject.SetDeckToEdit(DeckReference.Id);
+        }
+
+        private void studyButton_Click(object sender, EventArgs e)
+        {
+            PrimaryForm mainForm = (PrimaryForm)ParentForm;
+            mainForm.StudyPanelObject.BringToFront();
+            mainForm.StudyPanelObject.SetDeckToStudy(DeckReference.Id);
         }
     }
 }

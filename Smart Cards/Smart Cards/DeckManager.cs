@@ -66,7 +66,15 @@ namespace Smart_Cards
 
         public static Deck GetDeckFromId(int id)
         {
-            return DeckList[id];
+            try
+            {
+                return DeckList[id];
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
         //Pass in a deck and it's original will be replaced in DeckList storage with the new one

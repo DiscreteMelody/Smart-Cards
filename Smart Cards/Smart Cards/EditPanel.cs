@@ -18,7 +18,7 @@ namespace Smart_Cards
             InitializeComponent();
         }
 
-        public void setDeckToEdit(int DeckId)
+        public void SetDeckToEdit(int DeckId)
         {
             DeckReference = DeckManager.GetDeckFromId(DeckId);
             termFlowLayoutPanel.Controls.Clear();

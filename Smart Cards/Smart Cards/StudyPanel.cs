@@ -12,111 +12,95 @@ namespace Smart_Cards
 {
     public partial class StudyPanel : UserControl
     {
-        private readonly Deck DeckToStudy;
+        private Deck DeckToStudy;
 
         private int CurrentCardIndex;
         private Card CurrentCard;
 
-        private List<int> IncorrectCardIndexes;
+        private static List<int> IncorrectCardIndexes = new List<int>();
         public StudyPanel()
         {
             InitializeComponent();
         }
-        public StudyPanel(Deck d)
-        {
-            InitializeComponent();
 
-            DeckToStudy = d;
+        public void SetDeckToStudy(int DeckId)
+        {
+            DeckToStudy = DeckManager.GetDeckFromId(DeckId);
+
             CurrentCardIndex = 0;
+            CurrentCard = DeckToStudy.Cards[0];
 
-            if (DeckToStudy.Cards.Count > 0)
-                CurrentCard = DeckToStudy.Cards[0];
+            IncorrectCardIndexes.Clear();
 
-            IncorrectCardIndexes = new List<int>();
+            ShowCardQuestion();
+            ShowSubmitButton();
         }
 
-        //use this to run code that's necessary when the StudyPanel loads
-        private void StudyPanel_Load(object sender, EventArgs e)
+        private void ShowCardQuestion()
         {
-            termAnswerLabel.Visible = false;
-            nextTermButton.Visible = false;
-            this.Dock = DockStyle.Fill;
-            this.AutoSize = false;
-            this.Width = Parent.Width;
-            this.Height = Parent.Height;
-            termAnswerTextbox.SetSubmitButton(submitAnswerButton);
-
-            UpdateCard();
+            termTitleLabel.Text = CurrentCard.Question;
         }
 
-        private void submitAnswerButton_Click(object sender, EventArgs e)
+        private void ShowCardAnswer()
         {
-            termAnswerLabel.Visible = true;
-            nextTermButton.Visible = true;
-            nextTermButton.Enabled = true;
-
-            termAnswerLabel.Location = termTitleLabel.Location;
-            nextTermButton.Location = submitAnswerButton.Location;
-
-            submitAnswerButton.Visible = false;
-            submitAnswerButton.Enabled = false;
-
-            CompareAnswer();
+            termTitleLabel.Text = CurrentCard.Answer;
         }
 
-        private void nextTermButton_Click(object sender, EventArgs e)
+        private void ShowSubmitButton()
         {
-            termAnswerLabel.Visible = false;
-            nextTermButton.Visible = false;
-            nextTermButton.Enabled = false;
-
             submitAnswerButton.Visible = true;
-            submitAnswerButton.Enabled = true;
-
-            termAnswerTextbox.PerformClick();
-
-            NextQuestion();
+            nextTermButton.Visible = false;
         }
 
-        private void CompareAnswer()
+        private void ShowNextButton()
+        {
+            nextTermButton.Visible = true;
+            submitAnswerButton.Visible = false;
+        }
+
+        private bool CompareAnswer()
         {
             //if your answer matches the card's answer
             if (termAnswerTextbox.Text.Equals(CurrentCard.Answer, StringComparison.OrdinalIgnoreCase))
             {
                 this.BackColor = Color.LightGreen;
+                return true;
             }
             else
             {
                 this.BackColor = Color.LightSalmon;
                 IncorrectCardIndexes.Add(CurrentCardIndex);
+                return false;
             }
         }
 
         private void NextQuestion()
         {
             //if there is at least one more card in the deck
-            if(DeckToStudy.Cards.Count > ++CurrentCardIndex)
+            if (DeckToStudy.Cards.Count > ++CurrentCardIndex)
             {
                 //update the current card
                 CurrentCard = DeckToStudy.Cards[CurrentCardIndex];
-                UpdateCard();
+                ShowCardQuestion();
+                termAnswerTextbox.clearText();
+                ShowSubmitButton();
+                this.BackColor = StudyPanel.DefaultBackColor;
             }
         }
 
-        private void UpdateCard()
+        private void submitAnswerButton_Click(object sender, EventArgs e)
         {
-            termTitleLabel.Text = CurrentCard.Question;
-            termAnswerLabel.Text = CurrentCard.Answer;
-
-            this.BackColor = StudyPanel.DefaultBackColor;
+            if(termAnswerTextbox.Text.Trim() != "")
+            {
+                ShowCardAnswer();
+                CompareAnswer();
+                ShowNextButton();
+            }
         }
 
-        private void StudyPanel_Resize(object sender, EventArgs e)
+        private void nextTermButton_Click(object sender, EventArgs e)
         {
-            this.Dock = DockStyle.Fill;
-            this.AutoSize = false;
-            this.Width = Parent.Width;
-            this.Height = Parent.Height;
+            NextQuestion();
         }
     }
 }

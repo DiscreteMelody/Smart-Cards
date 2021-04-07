@@ -85,6 +85,7 @@
             this.studyButton.Size = new System.Drawing.Size(82, 82);
             this.studyButton.TabIndex = 12;
             this.studyButton.UseVisualStyleBackColor = false;
+            this.studyButton.Click += new System.EventHandler(this.studyButton_Click);
             // 
             // editButton
             // 

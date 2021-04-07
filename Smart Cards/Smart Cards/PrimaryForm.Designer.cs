@@ -36,8 +36,9 @@
             this.decksButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.DeckListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.EditPanelLayout = new Smart_Cards.EditPanel();
+            this.studyPanelLayout = new Smart_Cards.StudyPanel();
+            this.DeckListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -172,6 +173,25 @@
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Smart Cards";
             // 
+            // EditPanelLayout
+            // 
+            this.EditPanelLayout.AutoSize = true;
+            this.EditPanelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditPanelLayout.Location = new System.Drawing.Point(150, 75);
+            this.EditPanelLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.EditPanelLayout.Name = "EditPanelLayout";
+            this.EditPanelLayout.Size = new System.Drawing.Size(634, 486);
+            this.EditPanelLayout.TabIndex = 4;
+            // 
+            // studyPanelLayout
+            // 
+            this.studyPanelLayout.AutoSize = true;
+            this.studyPanelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studyPanelLayout.Location = new System.Drawing.Point(150, 75);
+            this.studyPanelLayout.Name = "studyPanelLayout";
+            this.studyPanelLayout.Size = new System.Drawing.Size(634, 486);
+            this.studyPanelLayout.TabIndex = 0;
+            // 
             // DeckListFlowPanel
             // 
             this.DeckListFlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -184,24 +204,16 @@
             this.DeckListFlowPanel.Size = new System.Drawing.Size(634, 486);
             this.DeckListFlowPanel.TabIndex = 3;
             // 
-            // EditPanelLayout
-            // 
-            this.EditPanelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditPanelLayout.Location = new System.Drawing.Point(0, 0);
-            this.EditPanelLayout.Margin = new System.Windows.Forms.Padding(0);
-            this.EditPanelLayout.Name = "EditPanelLayout";
-            this.EditPanelLayout.Size = new System.Drawing.Size(800, 600);
-            this.EditPanelLayout.TabIndex = 4;
-            // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.studyPanelLayout);
+            this.Controls.Add(this.EditPanelLayout);
             this.Controls.Add(this.DeckListFlowPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.EditPanelLayout);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "PrimaryForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrimaryForm_FormClosing);
@@ -210,6 +222,7 @@
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,8 +236,9 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
         private EditPanel EditPanelLayout;
+        private StudyPanel studyPanelLayout;
+        private System.Windows.Forms.FlowLayoutPanel DeckListFlowPanel;
     }
 }
 

@@ -74,7 +74,7 @@
             this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentPanel.Location = new System.Drawing.Point(150, 75);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(634, 486);
+            this.ContentPanel.Size = new System.Drawing.Size(634, 586);
             this.ContentPanel.TabIndex = 7;
             // 
             // PrimaryDeckListPanel
@@ -82,7 +82,7 @@
             this.PrimaryDeckListPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PrimaryDeckListPanel.Location = new System.Drawing.Point(0, 0);
             this.PrimaryDeckListPanel.Name = "PrimaryDeckListPanel";
-            this.PrimaryDeckListPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryDeckListPanel.Size = new System.Drawing.Size(634, 586);
             this.PrimaryDeckListPanel.TabIndex = 5;
             // 
             // PrimaryAddNewDeckPanel
@@ -90,7 +90,7 @@
             this.PrimaryAddNewDeckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PrimaryAddNewDeckPanel.Location = new System.Drawing.Point(0, 0);
             this.PrimaryAddNewDeckPanel.Name = "PrimaryAddNewDeckPanel";
-            this.PrimaryAddNewDeckPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryAddNewDeckPanel.Size = new System.Drawing.Size(634, 586);
             this.PrimaryAddNewDeckPanel.TabIndex = 6;
             // 
             // PrimaryEditPanel
@@ -100,7 +100,7 @@
             this.PrimaryEditPanel.Location = new System.Drawing.Point(0, 0);
             this.PrimaryEditPanel.Margin = new System.Windows.Forms.Padding(0);
             this.PrimaryEditPanel.Name = "PrimaryEditPanel";
-            this.PrimaryEditPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryEditPanel.Size = new System.Drawing.Size(634, 586);
             this.PrimaryEditPanel.TabIndex = 4;
             // 
             // PrimaryStudyPanel
@@ -109,7 +109,7 @@
             this.PrimaryStudyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PrimaryStudyPanel.Location = new System.Drawing.Point(0, 0);
             this.PrimaryStudyPanel.Name = "PrimaryStudyPanel";
-            this.PrimaryStudyPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryStudyPanel.Size = new System.Drawing.Size(634, 586);
             this.PrimaryStudyPanel.TabIndex = 0;
             // 
             // PrimaryHelpPanel
@@ -118,7 +118,7 @@
             this.PrimaryHelpPanel.Location = new System.Drawing.Point(0, 0);
             this.PrimaryHelpPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PrimaryHelpPanel.Name = "PrimaryHelpPanel";
-            this.PrimaryHelpPanel.Size = new System.Drawing.Size(634, 486);
+            this.PrimaryHelpPanel.Size = new System.Drawing.Size(634, 586);
             this.PrimaryHelpPanel.TabIndex = 0;
             // 
             // PrimaryNavMenu
@@ -126,18 +126,18 @@
             this.PrimaryNavMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PrimaryNavMenu.Location = new System.Drawing.Point(0, 0);
             this.PrimaryNavMenu.Name = "PrimaryNavMenu";
-            this.PrimaryNavMenu.Size = new System.Drawing.Size(150, 561);
+            this.PrimaryNavMenu.Size = new System.Drawing.Size(150, 661);
             this.PrimaryNavMenu.TabIndex = 6;
             // 
             // PrimaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 661);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.PrimaryNavMenu);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 700);
             this.Name = "PrimaryForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrimaryForm_FormClosing);
             this.headerPanel.ResumeLayout(false);

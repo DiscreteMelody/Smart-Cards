@@ -34,12 +34,14 @@
             this.helpButton = new System.Windows.Forms.Button();
             this.addDeckButton = new System.Windows.Forms.Button();
             this.decksButton = new System.Windows.Forms.Button();
+            this.shareButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.menuPanel.Controls.Add(this.shareButton);
             this.menuPanel.Controls.Add(this.HighlightPanel);
             this.menuPanel.Controls.Add(this.exitButton);
             this.menuPanel.Controls.Add(this.helpButton);
@@ -144,6 +146,26 @@
             this.decksButton.UseVisualStyleBackColor = false;
             this.decksButton.Click += new System.EventHandler(this.decksButton_Click);
             // 
+            // shareButton
+            // 
+            this.shareButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.shareButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shareButton.FlatAppearance.BorderSize = 0;
+            this.shareButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.shareButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.shareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shareButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shareButton.ForeColor = System.Drawing.Color.White;
+            this.shareButton.Image = global::Smart_Cards.Properties.Resources.box_icon_light;
+            this.shareButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.shareButton.Location = new System.Drawing.Point(0, 405);
+            this.shareButton.Name = "shareButton";
+            this.shareButton.Size = new System.Drawing.Size(150, 110);
+            this.shareButton.TabIndex = 7;
+            this.shareButton.Text = "Share Decks";
+            this.shareButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.shareButton.UseVisualStyleBackColor = false;
+            // 
             // NavMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,5 +186,6 @@
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button addDeckButton;
         private System.Windows.Forms.Button decksButton;
+        private System.Windows.Forms.Button shareButton;
     }
 }

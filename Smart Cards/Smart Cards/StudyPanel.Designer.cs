@@ -31,6 +31,7 @@
             this.termTitleLabel = new System.Windows.Forms.Label();
             this.submitAnswerButton = new System.Windows.Forms.Button();
             this.nextTermButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.SuspendLayout();
             // 
@@ -90,6 +91,19 @@
             this.nextTermButton.UseVisualStyleBackColor = false;
             this.nextTermButton.Click += new System.EventHandler(this.nextTermButton_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(20);
+            this.label1.Size = new System.Drawing.Size(606, 62);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "World History";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // termAnswerTextbox
             // 
             this.termAnswerTextbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -112,6 +126,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nextTermButton);
             this.Controls.Add(this.submitAnswerButton);
             this.Controls.Add(this.termAnswerTextbox);
@@ -129,5 +144,6 @@
         private CustomizedTextBox termAnswerTextbox;
         private System.Windows.Forms.Button submitAnswerButton;
         private System.Windows.Forms.Button nextTermButton;
+        private System.Windows.Forms.Label label1;
     }
 }

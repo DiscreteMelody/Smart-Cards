@@ -236,5 +236,8 @@
   <ItemGroup>
     <None Include="Resources\trash icon dark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_icon_light.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

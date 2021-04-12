@@ -1,30 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj": {}
+    "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
+    "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj",
+        "projectUniqueName": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj",
         "projectName": "Smart Cards",
-        "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
+        "projectPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj": {
+    "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+        "projectUniqueName": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
         "projectName": "SmartCardsTest",
-        "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
-        "packagesPath": "C:\\Users\\Levi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
+        "projectPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+        "packagesPath": "C:\\Users\\Ben\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Levi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ben\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,8 +38,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
-                "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
+              "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
+                "projectPath": "C:\\Users\\Ben\\Documents\\Santa Fe Work\\CIS4891 Senior Project\\Repository\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
               }
             }
           }
@@ -84,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

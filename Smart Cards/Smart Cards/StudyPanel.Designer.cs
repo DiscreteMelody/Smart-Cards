@@ -31,7 +31,7 @@
             this.termTitleLabel = new System.Windows.Forms.Label();
             this.submitAnswerButton = new System.Windows.Forms.Button();
             this.nextTermButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CurrentDeckTitle = new System.Windows.Forms.Label();
             this.termAnswerTextbox = new Smart_Cards.CustomizedTextBox();
             this.SuspendLayout();
             // 
@@ -40,10 +40,10 @@
             this.termTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.termTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.termTitleLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.termTitleLabel.Location = new System.Drawing.Point(-3, 0);
+            this.termTitleLabel.Location = new System.Drawing.Point(-2, 62);
             this.termTitleLabel.Name = "termTitleLabel";
             this.termTitleLabel.Padding = new System.Windows.Forms.Padding(20);
-            this.termTitleLabel.Size = new System.Drawing.Size(609, 152);
+            this.termTitleLabel.Size = new System.Drawing.Size(609, 142);
             this.termTitleLabel.TabIndex = 10;
             this.termTitleLabel.Text = "Sample Term/Question";
             this.termTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             this.submitAnswerButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitAnswerButton.ForeColor = System.Drawing.Color.White;
             this.submitAnswerButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.submitAnswerButton.Location = new System.Drawing.Point(215, 283);
+            this.submitAnswerButton.Location = new System.Drawing.Point(213, 341);
             this.submitAnswerButton.Name = "submitAnswerButton";
             this.submitAnswerButton.Size = new System.Drawing.Size(179, 49);
             this.submitAnswerButton.TabIndex = 16;
@@ -82,7 +82,7 @@
             this.nextTermButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextTermButton.ForeColor = System.Drawing.Color.White;
             this.nextTermButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.nextTermButton.Location = new System.Drawing.Point(215, 338);
+            this.nextTermButton.Location = new System.Drawing.Point(213, 341);
             this.nextTermButton.Name = "nextTermButton";
             this.nextTermButton.Size = new System.Drawing.Size(179, 49);
             this.nextTermButton.TabIndex = 18;
@@ -91,18 +91,20 @@
             this.nextTermButton.UseVisualStyleBackColor = false;
             this.nextTermButton.Click += new System.EventHandler(this.nextTermButton_Click);
             // 
-            // label1
+            // CurrentDeckTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(20);
-            this.label1.Size = new System.Drawing.Size(606, 62);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "World History";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CurrentDeckTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CurrentDeckTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CurrentDeckTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentDeckTitle.Location = new System.Drawing.Point(0, 0);
+            this.CurrentDeckTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.CurrentDeckTitle.Name = "CurrentDeckTitle";
+            this.CurrentDeckTitle.Padding = new System.Windows.Forms.Padding(20);
+            this.CurrentDeckTitle.Size = new System.Drawing.Size(606, 62);
+            this.CurrentDeckTitle.TabIndex = 19;
+            this.CurrentDeckTitle.Text = "World History";
+            this.CurrentDeckTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // termAnswerTextbox
             // 
@@ -112,7 +114,7 @@
             this.termAnswerTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.termAnswerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termAnswerTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.termAnswerTextbox.Location = new System.Drawing.Point(50, 187);
+            this.termAnswerTextbox.Location = new System.Drawing.Point(57, 224);
             this.termAnswerTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.termAnswerTextbox.Name = "termAnswerTextbox";
             this.termAnswerTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
@@ -126,9 +128,9 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.nextTermButton);
+            this.Controls.Add(this.CurrentDeckTitle);
             this.Controls.Add(this.submitAnswerButton);
+            this.Controls.Add(this.nextTermButton);
             this.Controls.Add(this.termAnswerTextbox);
             this.Controls.Add(this.termTitleLabel);
             this.Name = "StudyPanel";
@@ -144,6 +146,6 @@
         private CustomizedTextBox termAnswerTextbox;
         private System.Windows.Forms.Button submitAnswerButton;
         private System.Windows.Forms.Button nextTermButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CurrentDeckTitle;
     }
 }

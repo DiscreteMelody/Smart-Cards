@@ -27,6 +27,8 @@ namespace Smart_Cards
         {
             DeckToStudy = DeckManager.GetDeckFromId(DeckId);
 
+            CurrentDeckTitle.Text = DeckToStudy.Title;
+
             CurrentCardIndex = 0;
             CurrentCard = DeckToStudy.Cards[0];
 
@@ -39,6 +41,9 @@ namespace Smart_Cards
         private void ShowCardQuestion()
         {
             termTitleLabel.Text = CurrentCard.Question;
+
+            this.BackColor = StudyPanel.DefaultBackColor;
+            CurrentDeckTitle.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void ShowCardAnswer()
@@ -64,11 +69,13 @@ namespace Smart_Cards
             if (termAnswerTextbox.Text.Equals(CurrentCard.Answer, StringComparison.OrdinalIgnoreCase))
             {
                 this.BackColor = Color.LightGreen;
+                CurrentDeckTitle.BackColor = Color.FromArgb(95,46, 204, 113);
                 return true;
             }
             else
             {
-                this.BackColor = Color.LightSalmon;
+                this.BackColor = Color.FromArgb(250, 177, 160);
+                CurrentDeckTitle.BackColor = Color.LightSalmon;
                 IncorrectCardIndexes.Add(CurrentCardIndex);
                 return false;
             }
@@ -84,7 +91,8 @@ namespace Smart_Cards
                 ShowCardQuestion();
                 termAnswerTextbox.clearText();
                 ShowSubmitButton();
-                this.BackColor = StudyPanel.DefaultBackColor;
+
+                
             }
         }
 

@@ -55,6 +55,7 @@ namespace Smart_Cards
             switch(ScreenToActivate)
             {
                 case NavigationScreen.DeckList:
+                    DeckListScreen.ResetSearch();
                     DeckListScreen.LoadDeckPanels();
                     DeckListScreen.BringToFront();
                     NavMenuBar.HighlightDeckListButton();

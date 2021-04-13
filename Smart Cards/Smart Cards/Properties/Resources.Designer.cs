@@ -93,6 +93,16 @@ namespace Smart_Cards.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clear_search_icon {
+            get {
+                object obj = ResourceManager.GetObject("clear search icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_icon_dark {
             get {
                 object obj = ResourceManager.GetObject("edit icon dark", resourceCulture);

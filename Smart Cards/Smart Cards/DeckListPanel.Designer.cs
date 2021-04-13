@@ -36,7 +36,8 @@
 			// 
 			// DeckListFlowLayoutPanel
 			// 
-			this.DeckListFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.DeckListFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.DeckListFlowLayoutPanel.AutoScroll = true;
 			this.DeckListFlowLayoutPanel.AutoSize = true;
 			this.DeckListFlowLayoutPanel.Location = new System.Drawing.Point(0, 67);
@@ -89,6 +90,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "DeckListPanel";
 			this.Size = new System.Drawing.Size(893, 692);
+			this.Load += new System.EventHandler(this.DeckListPanel_Load);
 			this.Click += new System.EventHandler(this.DeckListPanel_Click);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();

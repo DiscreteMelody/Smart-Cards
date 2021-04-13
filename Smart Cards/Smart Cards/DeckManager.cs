@@ -34,7 +34,7 @@ namespace Smart_Cards
             }
         }
 
-        public static void ExportDecksToJson()
+		public static void ExportDecksToJson()
         {
             try
             {
@@ -107,6 +107,21 @@ namespace Smart_Cards
             {
                 newDeckPanel = new DeckPanel(d.Value);
                 DeckPanels.Add(newDeckPanel);
+            }
+
+            return DeckPanels;
+        }
+
+        public static List<DeckPanel> CreateDeckPanels(string str) {
+            List<DeckPanel> DeckPanels = new List<DeckPanel>();
+            if (DeckList.Count == 0) return DeckPanels;
+
+            DeckPanel newDeckPanel;
+            foreach (KeyValuePair<int, Deck> d in DeckList) {
+                if (d.Value.Title.ToLower().StartsWith(str)) {
+                    newDeckPanel = new DeckPanel(d.Value);
+                    DeckPanels.Add(newDeckPanel);
+                }
             }
 
             return DeckPanels;

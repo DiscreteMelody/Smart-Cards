@@ -34,5 +34,6 @@ namespace Smart_Cards
         {
             this.Parent.Controls.Remove(this);
         }
+
     }
 }

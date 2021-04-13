@@ -36,18 +36,16 @@
             this.saveDeckButton = new Smart_Cards.CircularButton();
             this.addTermButton = new Smart_Cards.CircularButton();
             this.deckTitleTextbox = new Smart_Cards.CustomizedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // termFlowLayoutPanel
             // 
             this.termFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.termFlowLayoutPanel.AutoScroll = true;
-            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 122);
+            this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 85);
             this.termFlowLayoutPanel.MinimumSize = new System.Drawing.Size(603, 200);
             this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 200);
+            this.termFlowLayoutPanel.Size = new System.Drawing.Size(603, 237);
             this.termFlowLayoutPanel.TabIndex = 15;
             // 
             // saveDeckLabel
@@ -153,32 +151,10 @@
             this.deckTitleTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.deckTitleTextbox.WatermarkText = "Enter a title for your deck";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Question";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(342, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Answer";
-            // 
             // EditPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.newTermLabel);
             this.Controls.Add(this.deleteDeckLabel);
             this.Controls.Add(this.deleteDeckButton);
@@ -204,7 +180,5 @@
         private CircularButton deleteDeckButton;
         private System.Windows.Forms.Label deleteDeckLabel;
         private System.Windows.Forms.Label newTermLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -27,15 +27,24 @@ namespace Smart_Cards
         {
             DeckToStudy = DeckManager.GetDeckFromId(DeckId);
 
-            CurrentDeckTitle.Text = DeckToStudy.Title;
+            //disallow decks with 0 cards to be studied
+            if(DeckToStudy.Cards.Count <= 0)
+            {
+                MessageBox.Show("It looks like there are no cards in this deck to study. Try adding some now.");
+                NavigationManager.SetActiveScreen(NavigationScreen.EditDeck, DeckId);
+            }
+            else
+            {
+                CurrentDeckTitle.Text = DeckToStudy.Title;
 
-            CurrentCardIndex = 0;
-            CurrentCard = DeckToStudy.Cards[0];
+                CurrentCardIndex = 0;
+                CurrentCard = DeckToStudy.Cards[0];
 
-            IncorrectCardIndexes.Clear();
+                IncorrectCardIndexes.Clear();
 
-            ShowCardQuestion();
-            ShowSubmitButton();
+                ShowCardQuestion();
+                ShowSubmitButton();
+            }
         }
 
         private void ShowCardQuestion()

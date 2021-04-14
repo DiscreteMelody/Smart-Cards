@@ -21,6 +21,7 @@ namespace Smart_Cards
         public StudyPanel()
         {
             InitializeComponent();
+            termAnswerTextbox.SetSubmitButton(submitAnswerButton);
         }
 
         public void SetDeckToStudy(int DeckId)
@@ -100,8 +101,6 @@ namespace Smart_Cards
                 ShowCardQuestion();
                 termAnswerTextbox.clearText();
                 ShowSubmitButton();
-
-                
             }
         }
 
@@ -118,6 +117,11 @@ namespace Smart_Cards
         private void nextTermButton_Click(object sender, EventArgs e)
         {
             NextQuestion();
+        }
+
+        private void termAnswerTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show(e.ToString());
         }
     }
 }

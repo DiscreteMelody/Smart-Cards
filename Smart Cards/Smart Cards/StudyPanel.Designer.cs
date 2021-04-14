@@ -123,6 +123,7 @@
             this.termAnswerTextbox.TogglesBorder = true;
             this.termAnswerTextbox.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.termAnswerTextbox.WatermarkText = "Enter the answer here";
+            this.termAnswerTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.termAnswerTextbox_KeyDown);
             // 
             // StudyPanel
             // 

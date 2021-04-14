@@ -14,10 +14,11 @@ namespace Smart_Cards
     {
         private Deck DeckToStudy;
 
-        private int CurrentCardIndex;
+        private List<Card> Cards = new List<Card>();
         private Card CurrentCard;
+        private int Guesses;
+        private int InitialCardCount;
 
-        private static List<int> IncorrectCardIndexes = new List<int>();
         public StudyPanel()
         {
             InitializeComponent();
@@ -36,13 +37,21 @@ namespace Smart_Cards
             }
             else
             {
+                Cards.Clear();
+
+                //C# passes by reference, so a for loop must be used
+                foreach(Card card in DeckToStudy.Cards)
+                {
+                    Cards.Add(card);
+                }
+
                 CurrentDeckTitle.Text = DeckToStudy.Title;
+                CurrentCard = Cards[0];
+                Guesses = 0;
+                InitialCardCount = Cards.Count;
 
-                CurrentCardIndex = 0;
-                CurrentCard = DeckToStudy.Cards[0];
-
-                IncorrectCardIndexes.Clear();
-
+                termAnswerTextbox.Show();
+                termAnswerTextbox.clearText();
                 ShowCardQuestion();
                 ShowSubmitButton();
             }
@@ -86,7 +95,7 @@ namespace Smart_Cards
             {
                 this.BackColor = Color.FromArgb(250, 177, 160);
                 CurrentDeckTitle.BackColor = Color.LightSalmon;
-                IncorrectCardIndexes.Add(CurrentCardIndex);
+                Cards.Add(CurrentCard);
                 return false;
             }
         }
@@ -94,13 +103,19 @@ namespace Smart_Cards
         private void NextQuestion()
         {
             //if there is at least one more card in the deck
-            if (DeckToStudy.Cards.Count > ++CurrentCardIndex)
+            if (Cards.Count > 0)
             {
                 //update the current card
-                CurrentCard = DeckToStudy.Cards[CurrentCardIndex];
+                CurrentCard = Cards[0];
                 ShowCardQuestion();
                 termAnswerTextbox.clearText();
                 ShowSubmitButton();
+            }
+            else
+            {
+                termTitleLabel.Text = "Nice job. You studied " + InitialCardCount + " cards in " + Guesses.ToString() + " attempts.";
+                nextTermButton.Hide();
+                termAnswerTextbox.Hide();
             }
         }
 
@@ -108,6 +123,8 @@ namespace Smart_Cards
         {
             if(termAnswerTextbox.Text.Trim() != "")
             {
+                Guesses++;
+                Cards.RemoveAt(0);
                 ShowCardAnswer();
                 CompareAnswer();
                 ShowNextButton();

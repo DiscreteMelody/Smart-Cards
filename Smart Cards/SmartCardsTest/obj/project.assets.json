@@ -5702,26 +5702,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Levi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\School\\Spring 2021\\CIS4891\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+      "projectUniqueName": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
       "projectName": "SmartCardsTest",
-      "projectPath": "C:\\Users\\Lucas\\Desktop\\School\\Spring 2021\\CIS4891\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Desktop\\School\\Spring 2021\\CIS4891\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
+      "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\SmartCardsTest.csproj",
+      "packagesPath": "C:\\Users\\Levi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\SmartCardsTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Levi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5733,10 +5726,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lucas\\Desktop\\School\\Spring 2021\\CIS4891\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
-              "projectPath": "C:\\Users\\Lucas\\Desktop\\School\\Spring 2021\\CIS4891\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
+            "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj": {
+              "projectPath": "C:\\Users\\Levi\\Documents\\Current Classes\\Senior Project\\Smart-Cards\\Smart Cards\\Smart Cards\\Smart Cards.csproj"
             }
           }
         }
@@ -5749,7 +5741,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -5783,7 +5774,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

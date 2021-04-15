@@ -14,28 +14,47 @@ namespace Smart_Cards
     {
         private Deck DeckToStudy;
 
-        private int CurrentCardIndex;
+        private List<Card> Cards = new List<Card>();
         private Card CurrentCard;
+        private int Guesses;
+        private int InitialCardCount;
 
-        private static List<int> IncorrectCardIndexes = new List<int>();
         public StudyPanel()
         {
             InitializeComponent();
+            termAnswerTextbox.SetSubmitButton(submitAnswerButton);
         }
 
         public void SetDeckToStudy(int DeckId)
         {
             DeckToStudy = DeckManager.GetDeckFromId(DeckId);
 
-            CurrentDeckTitle.Text = DeckToStudy.Title;
+            //disallow decks with 0 cards to be studied
+            if(DeckToStudy.Cards.Count <= 0)
+            {
+                MessageBox.Show("It looks like there are no cards in this deck to study. Try adding some now.");
+                NavigationManager.SetActiveScreen(NavigationScreen.EditDeck, DeckId);
+            }
+            else
+            {
+                Cards.Clear();
 
-            CurrentCardIndex = 0;
-            CurrentCard = DeckToStudy.Cards[0];
+                //C# passes by reference, so a for loop must be used
+                foreach(Card card in DeckToStudy.Cards)
+                {
+                    Cards.Add(card);
+                }
 
-            IncorrectCardIndexes.Clear();
+                CurrentDeckTitle.Text = DeckToStudy.Title;
+                CurrentCard = Cards[0];
+                Guesses = 0;
+                InitialCardCount = Cards.Count;
 
-            ShowCardQuestion();
-            ShowSubmitButton();
+                termAnswerTextbox.Show();
+                termAnswerTextbox.clearText();
+                ShowCardQuestion();
+                ShowSubmitButton();
+            }
         }
 
         private void ShowCardQuestion()
@@ -76,7 +95,7 @@ namespace Smart_Cards
             {
                 this.BackColor = Color.FromArgb(250, 177, 160);
                 CurrentDeckTitle.BackColor = Color.LightSalmon;
-                IncorrectCardIndexes.Add(CurrentCardIndex);
+                Cards.Add(CurrentCard);
                 return false;
             }
         }
@@ -84,15 +103,19 @@ namespace Smart_Cards
         private void NextQuestion()
         {
             //if there is at least one more card in the deck
-            if (DeckToStudy.Cards.Count > ++CurrentCardIndex)
+            if (Cards.Count > 0)
             {
                 //update the current card
-                CurrentCard = DeckToStudy.Cards[CurrentCardIndex];
+                CurrentCard = Cards[0];
                 ShowCardQuestion();
                 termAnswerTextbox.clearText();
                 ShowSubmitButton();
-
-                
+            }
+            else
+            {
+                termTitleLabel.Text = "Nice job. You studied " + InitialCardCount + " cards in " + Guesses.ToString() + " attempts.";
+                nextTermButton.Hide();
+                termAnswerTextbox.Hide();
             }
         }
 
@@ -100,6 +123,8 @@ namespace Smart_Cards
         {
             if(termAnswerTextbox.Text.Trim() != "")
             {
+                Guesses++;
+                Cards.RemoveAt(0);
                 ShowCardAnswer();
                 CompareAnswer();
                 ShowNextButton();
@@ -109,6 +134,11 @@ namespace Smart_Cards
         private void nextTermButton_Click(object sender, EventArgs e)
         {
             NextQuestion();
+        }
+
+        private void termAnswerTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show(e.ToString());
         }
     }
 }

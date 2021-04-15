@@ -69,8 +69,8 @@ namespace Smart_Cards
                     EditDeckScreen.BringToFront();
                     break;
                 case NavigationScreen.StudyDeck:
-                    StudyDeckScreen.SetDeckToStudy(OptionalDeckParameter);
                     StudyDeckScreen.BringToFront();
+                    StudyDeckScreen.SetDeckToStudy(OptionalDeckParameter);
                     break;
                 case NavigationScreen.Help:
                     HelpScreen.BringToFront();

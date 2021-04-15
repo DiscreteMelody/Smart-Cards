@@ -77,13 +77,8 @@ namespace Smart_Cards
 		}
 
 		private void DeckListPanel_Load(object sender, EventArgs e) {
-            clearBtn = new Button();
-            clearBtn.Size = new Size(32, 32);
+            clearBtn = new Button() { Size = new Size(32, 32), Cursor = Cursors.Default, Image = Properties.Resources.clear_search_icon, Name = "clearBtn", Visible = false };
             clearBtn.Location = new Point(textBox1.ClientSize.Width - clearBtn.Width, -1);
-            clearBtn.Cursor = Cursors.Default;
-            clearBtn.Image = Properties.Resources.clear_search_icon;
-            clearBtn.Name = "clearBtn";
-            clearBtn.Visible = false;
             clearBtn.Click += new EventHandler(clearBtn_Click);
             textBox1.Controls.Add(clearBtn);
         }
@@ -96,6 +91,5 @@ namespace Smart_Cards
             this.LoadDeckPanels();
             textBox1.Enabled = true;
         }
-
     }
 }

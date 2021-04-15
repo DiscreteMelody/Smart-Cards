@@ -12,13 +12,15 @@ namespace Smart_Cards
 {
     public partial class EditCardPanel : UserControl
     {
+        public static EditPanel edit;
         public Card CardReference { get; set; }
 
-        public EditCardPanel(Card c)
+        public EditCardPanel(Card c, EditPanel ep)
         {
             InitializeComponent();
 
             CardReference = c;
+            edit = ep;
 
             QuestionTextbox.Text = CardReference.Question;
             AnswerTextbox.Text = CardReference.Answer;
@@ -33,6 +35,7 @@ namespace Smart_Cards
         private void deleteTermButton_Click_1(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
+            edit.OnCardRemoved();
         }
 
     }

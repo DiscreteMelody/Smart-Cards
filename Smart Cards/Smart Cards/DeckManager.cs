@@ -118,7 +118,7 @@ namespace Smart_Cards
 
             DeckPanel newDeckPanel;
             foreach (KeyValuePair<int, Deck> d in DeckList) {
-                if (d.Value.Title.ToLower().StartsWith(str)) {
+                if (d.Value.Title.ToLower().Contains(str)) {
                     newDeckPanel = new DeckPanel(d.Value);
                     DeckPanels.Add(newDeckPanel);
                 }

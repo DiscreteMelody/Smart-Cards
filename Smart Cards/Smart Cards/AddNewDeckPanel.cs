@@ -22,6 +22,8 @@ namespace Smart_Cards
         {
             Deck NewDeck = DeckManager.CreateNewDeck(DeckTitle.Text,DeckDescription.Text);
             NavigationManager.SetActiveScreen(NavigationScreen.EditDeck, NewDeck.Id);
+            DeckTitle.ResetText();
+            DeckDescription.ResetText();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

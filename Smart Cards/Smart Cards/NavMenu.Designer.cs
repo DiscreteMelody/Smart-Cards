@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
 			this.menuPanel = new System.Windows.Forms.Panel();
-			this.HighlightPanel = new System.Windows.Forms.Panel();
 			this.shareButton = new System.Windows.Forms.Button();
+			this.HighlightPanel = new System.Windows.Forms.Panel();
 			this.exitButton = new System.Windows.Forms.Button();
 			this.helpButton = new System.Windows.Forms.Button();
 			this.addDeckButton = new System.Windows.Forms.Button();
@@ -49,19 +49,10 @@
 			this.menuPanel.Controls.Add(this.decksButton);
 			this.menuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.menuPanel.Location = new System.Drawing.Point(0, 0);
-			this.menuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.menuPanel.Margin = new System.Windows.Forms.Padding(4);
 			this.menuPanel.Name = "menuPanel";
 			this.menuPanel.Size = new System.Drawing.Size(200, 838);
 			this.menuPanel.TabIndex = 1;
-			// 
-			// HighlightPanel
-			// 
-			this.HighlightPanel.BackColor = System.Drawing.Color.White;
-			this.HighlightPanel.Location = new System.Drawing.Point(173, 92);
-			this.HighlightPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.HighlightPanel.Name = "HighlightPanel";
-			this.HighlightPanel.Size = new System.Drawing.Size(27, 135);
-			this.HighlightPanel.TabIndex = 3;
 			// 
 			// shareButton
 			// 
@@ -83,6 +74,16 @@
 			this.shareButton.Text = "Share Decks";
 			this.shareButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.shareButton.UseVisualStyleBackColor = false;
+			this.shareButton.Click += new System.EventHandler(this.shareButton_Click);
+			// 
+			// HighlightPanel
+			// 
+			this.HighlightPanel.BackColor = System.Drawing.Color.White;
+			this.HighlightPanel.Location = new System.Drawing.Point(173, 92);
+			this.HighlightPanel.Margin = new System.Windows.Forms.Padding(4);
+			this.HighlightPanel.Name = "HighlightPanel";
+			this.HighlightPanel.Size = new System.Drawing.Size(27, 135);
+			this.HighlightPanel.TabIndex = 3;
 			// 
 			// exitButton
 			// 
@@ -178,7 +179,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.menuPanel);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "NavMenu";
 			this.Size = new System.Drawing.Size(200, 838);
 			this.menuPanel.ResumeLayout(false);

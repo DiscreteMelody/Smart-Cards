@@ -13,7 +13,8 @@ namespace Smart_Cards
         AddDeck,
         EditDeck,
         StudyDeck,
-        Help
+        Help,
+        Share
     }
     public static class NavigationManager
     {
@@ -24,6 +25,7 @@ namespace Smart_Cards
         private static EditPanel EditDeckScreen;
         private static StudyPanel StudyDeckScreen;
         private static HelpPanel HelpScreen;
+        private static SharePanel ShareScreen;
 
         public static void InitializeControl(NavMenu ControlToInitialize)
         {
@@ -48,6 +50,9 @@ namespace Smart_Cards
         public static void InitializeControl(HelpPanel ControlToInitialize)
         {
             HelpScreen = ControlToInitialize;
+        }
+        public static void InitializeControl(SharePanel ControlToInitialize) {
+            ShareScreen = ControlToInitialize;
         }
 
         public static void SetActiveScreen(NavigationScreen ScreenToActivate, int OptionalDeckParameter = 0)
@@ -75,6 +80,11 @@ namespace Smart_Cards
                 case NavigationScreen.Help:
                     HelpScreen.BringToFront();
                     NavMenuBar.HighlightHelpButton();
+                    break;
+                case NavigationScreen.Share:
+                    ShareScreen.SetDeckList();
+                    ShareScreen.BringToFront();
+                    NavMenuBar.HighlightShareButton();
                     break;
             }
         }

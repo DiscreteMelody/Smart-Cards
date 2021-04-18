@@ -13,26 +13,25 @@ namespace Smart_Cards
         public const string DefaultDescription = "An interesting description";
 
         public int Id { get; }
-        private static int NextId = 0;
         public string Title { get; set; }
         public string Description { get; set; }
         public List<Card> Cards { get; set; }
 
         [JsonConstructor]
-        public Deck(string title, string description, List<Card> cards)
+        public Deck(int id, string title, string description, List<Card> cards)
         {
-            Id = NextId++;
+            Id = id;
             Title = title;
             Description = description;
             Cards = cards;
         }
-        public Deck(string title, string description, List<Card> cards,int overwrittenId) : this(title, description, cards)
+        public Deck(string title, string description, List<Card> cards,int overwrittenId)
         {
             Id = overwrittenId;
         }
-        public Deck()
+        public Deck(int id)
         {
-            Id = NextId++;
+            Id = id;
             Title = "Enter a Title";
             Description = "Enter a Description";
             Cards = new List<Card>();
@@ -50,5 +49,13 @@ namespace Smart_Cards
             }
             return deckInfo;
         }
-    }
+
+		public override bool Equals(object obj) {
+			return base.Equals(obj);
+		}
+
+		public override int GetHashCode() {
+			return base.GetHashCode();
+		}
+	}
 }

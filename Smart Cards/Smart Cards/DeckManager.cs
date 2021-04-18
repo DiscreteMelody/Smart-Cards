@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Smart_Cards
     public static class DeckManager
     {
         private static Dictionary<int,Deck> DeckList = new Dictionary<int, Deck>();
+
+        public static int nextId = 0;
 
         //private static readonly string filePath = "deck_data/DeckList.json";
 
@@ -25,6 +28,7 @@ namespace Smart_Cards
             {
                 string data = File.ReadAllText(filePath);
                 DeckList = JsonConvert.DeserializeObject<Dictionary<int, Deck>>(data);
+                nextId = DeckList.Count;
                 Console.WriteLine(DeckList.Count);
             }
             catch(Exception e)
@@ -87,14 +91,16 @@ namespace Smart_Cards
         //Creates an empty deck, adds it to the DeckList and returns it
         public static Deck CreateNewDeck(string DeckTitle = Deck.DefaultTitle,string DeckDescription = Deck.DefaultDescription)
         {
-            Deck newDeck = new Deck(DeckTitle, DeckDescription, new List<Card>());
+            Deck newDeck = new Deck(nextId, DeckTitle, DeckDescription, new List<Card>());
             DeckList.Add(newDeck.Id, newDeck);
+            nextId++;
             return newDeck;
         }
 
         public static void DeleteDeck(Deck deckToDelete)
         {
             DeckList.Remove(deckToDelete.Id);
+            nextId--;
         }
 
         public static List<DeckPanel> CreateDeckPanels()
@@ -128,8 +134,72 @@ namespace Smart_Cards
         }
 
         public static Dictionary<int,Deck> getDeckList()
-            {
+        {
             return DeckList;
+		}
+
+        public static Dictionary<int, string> getDeckNames() {
+            Dictionary<int, string> deckNames = new Dictionary<int, string>();
+            foreach(KeyValuePair<int, Deck> kvp in DeckList) {
+				deckNames.Add(kvp.Key, kvp.Value.Title);
+			}
+
+            return deckNames;
+		}
+
+        public static void ShareDecks(List<int> ids) {
+            List<Deck> exportList = new List<Deck>();
+            
+            foreach(int id in ids) {
+                Deck deck = GetDeckFromId(id);
+                
+                exportList.Add(deck);
+			}
+
+            using(SaveFileDialog sfd = new SaveFileDialog()) {
+                sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                sfd.FileName = "SmartCards_Export";
+                sfd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                sfd.Title = "Save Your Exported Decks";
+                sfd.ShowDialog();
+
+                if (sfd.FileName != "") {
+                    using (StreamWriter export = File.CreateText(sfd.FileName)) {
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.Serialize(export, exportList);
+                    }
+                }
+            }
+		}
+
+        public static void ImportDecks() {
+            using (OpenFileDialog ofd = new OpenFileDialog()) {
+                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                ofd.Title = "Import Shared Decks";
+
+                if (ofd.ShowDialog() == DialogResult.OK) {
+                    try {
+                        List<Deck> importedDecks = new List<Deck>();
+                        List<string> titles = DeckList.Values.ToList().Select(el => el.Title).ToList();
+
+                        using (StreamReader file = File.OpenText(ofd.FileName)) {
+                            string json = file.ReadToEnd();
+                            importedDecks = JsonConvert.DeserializeObject<List<Deck>>(json);
+                        }
+
+                        foreach(Deck d in importedDecks) {
+                            if (titles.Contains(d.Title)) {
+                                d.Title = d.Title + " (From import)";
+							}
+                            DeckList.Add(nextId, d);
+                            nextId++;
+						}
+					} catch(Exception e) {
+                        Console.WriteLine(e);
+					}
+				}
+            }
 		}
     }
 }

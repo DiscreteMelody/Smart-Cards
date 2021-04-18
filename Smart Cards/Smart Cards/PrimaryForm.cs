@@ -30,6 +30,7 @@ namespace Smart_Cards
             NavigationManager.InitializeControl(PrimaryStudyPanel);
             NavigationManager.InitializeControl(PrimaryHelpPanel);
             NavigationManager.InitializeControl(PrimaryAddNewDeckPanel);
+            NavigationManager.InitializeControl(PrimarySharePanel);
 
             //Set deck list screen as active when the form loads
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);

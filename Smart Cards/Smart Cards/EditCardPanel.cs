@@ -19,6 +19,7 @@ namespace Smart_Cards
         {
             InitializeComponent();
 
+
             CardReference = c;
             edit = ep;
 

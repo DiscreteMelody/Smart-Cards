@@ -32,6 +32,10 @@ namespace Smart_Cards
             NavigationManager.SetActiveScreen(NavigationScreen.Help); 
         }
 
+        private void shareButton_Click(object sender, EventArgs e) {
+            NavigationManager.SetActiveScreen(NavigationScreen.Share);
+        }
+
         public void HighlightDeckListButton()
         {
             decksButton.BackColor = StyleManager.primaryColor;
@@ -59,9 +63,20 @@ namespace Smart_Cards
             HighlightPanel.Location = new Point(helpButton.Location.X + helpButton.Width - HighlightPanel.Width, helpButton.Location.Y);
         }
 
+        public void HighlightShareButton() {
+            decksButton.BackColor = StyleManager.secondaryColor;
+            addDeckButton.BackColor = StyleManager.secondaryColor;
+            helpButton.BackColor = StyleManager.secondaryColor;
+            shareButton.BackColor = StyleManager.primaryColor;
+
+            HighlightPanel.Location = new Point(shareButton.Location.X + shareButton.Width - HighlightPanel.Width, shareButton.Location.Y);
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.FindForm().Close();
         }
-    }
+
+		
+	}
 }

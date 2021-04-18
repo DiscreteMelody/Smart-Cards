@@ -51,9 +51,9 @@
 			this.tableLayoutPanel1.SetColumnSpan(this.termFlowLayoutPanel, 2);
 			this.termFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.termFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.termFlowLayoutPanel.Location = new System.Drawing.Point(3, 43);
+			this.termFlowLayoutPanel.Location = new System.Drawing.Point(4, 45);
 			this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-			this.termFlowLayoutPanel.Size = new System.Drawing.Size(594, 298);
+			this.termFlowLayoutPanel.Size = new System.Drawing.Size(592, 295);
 			this.termFlowLayoutPanel.TabIndex = 15;
 			this.termFlowLayoutPanel.WrapContents = false;
 			// 
@@ -98,6 +98,7 @@
 			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+			this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -119,7 +120,7 @@
 			this.label1.AutoSize = true;
 			this.label1.Dock = System.Windows.Forms.DockStyle.Right;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(3, 0);
+			this.label1.Location = new System.Drawing.Point(4, 1);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(99, 40);
 			this.label1.TabIndex = 0;
@@ -132,7 +133,7 @@
 			this.searchButton.FlatAppearance.BorderSize = 0;
 			this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.searchButton.Image = global::Smart_Cards.Properties.Resources.clear_search_icon;
-			this.searchButton.Location = new System.Drawing.Point(108, 3);
+			this.searchButton.Location = new System.Drawing.Point(110, 4);
 			this.searchButton.Name = "searchButton";
 			this.searchButton.Size = new System.Drawing.Size(34, 34);
 			this.searchButton.TabIndex = 1;

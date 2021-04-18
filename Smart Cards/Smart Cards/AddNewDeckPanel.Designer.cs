@@ -28,30 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DeckTitle = new Smart_Cards.CustomizedTextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.CreateDeckButton = new System.Windows.Forms.Button();
             this.DeckDescription = new Smart_Cards.CustomizedTextBox();
+            this.DeckTitle = new Smart_Cards.CustomizedTextBox();
             this.SuspendLayout();
-            // 
-            // DeckTitle
-            // 
-            this.DeckTitle.BackColor = System.Drawing.Color.Transparent;
-            this.DeckTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.DeckTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DeckTitle.ForeColor = System.Drawing.Color.Transparent;
-            this.DeckTitle.Location = new System.Drawing.Point(58, 79);
-            this.DeckTitle.Name = "DeckTitle";
-            this.DeckTitle.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
-            this.DeckTitle.Size = new System.Drawing.Size(529, 47);
-            this.DeckTitle.TabIndex = 0;
-            this.DeckTitle.TogglesBorder = true;
-            this.DeckTitle.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.DeckTitle.WatermarkText = "Deck Title";
             // 
             // CancelButton
             // 
-            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CancelButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CancelButton.FlatAppearance.BorderSize = 0;
@@ -61,7 +46,7 @@
             this.CancelButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButton.ForeColor = System.Drawing.Color.White;
             this.CancelButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CancelButton.Location = new System.Drawing.Point(121, 353);
+            this.CancelButton.Location = new System.Drawing.Point(58, 228);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(120, 60);
             this.CancelButton.TabIndex = 17;
@@ -72,7 +57,7 @@
             // 
             // CreateDeckButton
             // 
-            this.CreateDeckButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CreateDeckButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CreateDeckButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CreateDeckButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateDeckButton.FlatAppearance.BorderSize = 0;
@@ -82,7 +67,7 @@
             this.CreateDeckButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateDeckButton.ForeColor = System.Drawing.Color.White;
             this.CreateDeckButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CreateDeckButton.Location = new System.Drawing.Point(331, 353);
+            this.CreateDeckButton.Location = new System.Drawing.Point(408, 228);
             this.CreateDeckButton.Name = "CreateDeckButton";
             this.CreateDeckButton.Size = new System.Drawing.Size(179, 60);
             this.CreateDeckButton.TabIndex = 18;
@@ -93,6 +78,7 @@
             // 
             // DeckDescription
             // 
+            this.DeckDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DeckDescription.BackColor = System.Drawing.Color.Transparent;
             this.DeckDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.DeckDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -106,10 +92,27 @@
             this.DeckDescription.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.DeckDescription.WatermarkText = "Deck Description";
             // 
+            // DeckTitle
+            // 
+            this.DeckTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DeckTitle.BackColor = System.Drawing.Color.Transparent;
+            this.DeckTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.DeckTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DeckTitle.ForeColor = System.Drawing.Color.Transparent;
+            this.DeckTitle.Location = new System.Drawing.Point(58, 79);
+            this.DeckTitle.Name = "DeckTitle";
+            this.DeckTitle.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
+            this.DeckTitle.Size = new System.Drawing.Size(529, 47);
+            this.DeckTitle.TabIndex = 0;
+            this.DeckTitle.TogglesBorder = true;
+            this.DeckTitle.WatermarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.DeckTitle.WatermarkText = "Deck Title";
+            // 
             // AddNewDeckPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.DeckDescription);
             this.Controls.Add(this.CreateDeckButton);
             this.Controls.Add(this.CancelButton);

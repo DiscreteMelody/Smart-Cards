@@ -183,6 +183,7 @@ namespace Smart_Cards
                         List<Deck> importedDecks = new List<Deck>();
                         List<string> titles = DeckList.Values.ToList().Select(el => el.Title).ToList();
 
+
                         using (StreamReader file = File.OpenText(ofd.FileName)) {
                             string json = file.ReadToEnd();
                             importedDecks = JsonConvert.DeserializeObject<List<Deck>>(json);
@@ -192,7 +193,7 @@ namespace Smart_Cards
                             if (titles.Contains(d.Title)) {
                                 d.Title = d.Title + " (From import)";
 							}
-                            DeckList.Add(nextId, d);
+                            DeckList.Add(nextId, new Deck(nextId, d.Title, d.Description, d.Cards));
                             nextId++;
 						}
 					} catch(Exception e) {

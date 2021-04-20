@@ -129,7 +129,7 @@ namespace Smart_Cards
             {
                 Cards.Add(cardInDeck.ConvertToCard());
             }
-            DeckReference = new Deck(deckTitleTextbox.Text, "description", Cards,DeckReference.Id);
+            DeckReference = new Deck(DeckReference.Id, deckTitleTextbox.Text, "description", Cards);
 
             DeckManager.OverwriteDeck(DeckReference);
             DeckManager.ExportDecksToJson();

@@ -36,6 +36,7 @@ namespace Smart_Cards
             NavigationManager.SetActiveScreen(NavigationScreen.Share);
         }
 
+        //style each button to its "selected" appearance when clicked - LS
         public void HighlightDeckListButton()
         {
             decksButton.BackColor = StyleManager.primaryColor;

@@ -29,7 +29,7 @@ namespace Smart_Cards
         {
             DeckToStudy = DeckManager.GetDeckFromId(DeckId);
 
-            //disallow decks with 0 cards to be studied
+            //disallow decks with 0 cards to be studied - LS
             if(DeckToStudy.Cards.Count <= 0)
             {
                 MessageBox.Show("It looks like there are no cards in this deck to study. Try adding some now.");
@@ -39,12 +39,13 @@ namespace Smart_Cards
             {
                 Cards.Clear();
 
-                //C# passes by reference, so a for loop must be used
+                //C# passes by reference, so a for loop must be used - LS
                 foreach(Card card in DeckToStudy.Cards)
                 {
                     Cards.Add(card);
                 }
 
+                //reset necessary variables for a study session - LS
                 CurrentDeckTitle.Text = DeckToStudy.Title;
                 CurrentCard = Cards[0];
                 Guesses = 0;
@@ -70,12 +71,14 @@ namespace Smart_Cards
             termTitleLabel.Text = CurrentCard.Answer;
         }
 
+        //make the Submit button visible and enabled - LS
         private void ShowSubmitButton()
         {
             submitAnswerButton.Visible = true;
             nextTermButton.Visible = false;
         }
 
+        //make the Next button visible and enabled - LS
         private void ShowNextButton()
         {
             nextTermButton.Visible = true;
@@ -102,15 +105,16 @@ namespace Smart_Cards
 
         private void NextQuestion()
         {
-            //if there is at least one more card in the deck
+            //if there is at least one more card in the deck - LS
             if (Cards.Count > 0)
             {
-                //update the current card
+                //update the current card - LS
                 CurrentCard = Cards[0];
                 ShowCardQuestion();
                 termAnswerTextbox.clearText();
                 ShowSubmitButton();
             }
+            //when the study session is complete, show some basic stats - LS
             else
             {
                 termTitleLabel.Text = "Nice job. You studied " + InitialCardCount + " cards in " + Guesses.ToString() + " attempts.";
@@ -119,6 +123,7 @@ namespace Smart_Cards
             }
         }
 
+        //fires whenever the Submit button is clicked - LS
         private void submitAnswerButton_Click(object sender, EventArgs e)
         {
             if(termAnswerTextbox.Text.Trim() != "")
@@ -131,11 +136,13 @@ namespace Smart_Cards
             }
         }
 
+        //fires when the Next button is clicked - LS
         private void nextTermButton_Click(object sender, EventArgs e)
         {
             NextQuestion();
         }
 
+        //fires when a key is pressed and the answer textbox is in focus - LS
         private void termAnswerTextbox_KeyDown(object sender, KeyEventArgs e)
         {
             MessageBox.Show(e.ToString());

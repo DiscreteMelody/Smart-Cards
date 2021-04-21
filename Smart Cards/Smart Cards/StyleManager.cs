@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
+    //this static class is meant to be referenced by controls for styling purposes
+    //it is meant to make restyling simple by editing this file - LS
     public static class StyleManager
     {
         public static Color primaryColor = Color.FromArgb(0, 191, 255);
@@ -26,6 +28,7 @@ namespace Smart_Cards
         /// <typeparam name="T"></typeparam>
         /// <param name="controlToClone">The control to be cloned</param>
         /// <returns></returns>
+        // - LS
         public static T Clone<T>(this T controlToClone)
         where T : Control
         {

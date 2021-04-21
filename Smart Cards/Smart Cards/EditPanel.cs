@@ -59,16 +59,6 @@ namespace Smart_Cards
             if (cards.Count>0) {
                 tableLayoutPanel1.Visible = true;
             }
-            /*if (DeckReference != null) {
-
-                foreach (Card c in DeckReference.Cards) {
-                    termFlowLayoutPanel.Controls.Add(new EditCardPanel(c, this));
-                }
-
-                if (DeckReference.Cards.Count > 0) {
-                    
-                }
-            }*/
         }
 
         public void SearchCards(string str) {
@@ -93,12 +83,13 @@ namespace Smart_Cards
 		}
 
 
+        //fires when the delete button is clicked - LS
         private void deleteDeckButton_Click(object sender, EventArgs e)
         {
-            //create a yes/no dialog box
+            //create a yes/no dialog box - LS
             var confirmResult = MessageBox.Show("Really delete the deck?", "Deck deletion", MessageBoxButtons.YesNo);
 
-            //if the user answers yes
+            //if the user answers yes - LS
             if (confirmResult == DialogResult.Yes)
             {
                 DeckManager.DeleteDeck(DeckReference);
@@ -108,6 +99,7 @@ namespace Smart_Cards
             }
         }
 
+        //fires whenever the Add Term button is clicked - LS
         private void addTermButton_Click(object sender, EventArgs e)
         {
             SearchBox.Enabled = false;
@@ -136,10 +128,6 @@ namespace Smart_Cards
 
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
         }
-
-		private void label1_Click(object sender, EventArgs e) {
-
-		}
 
 		private void searchButton_Click(object sender, EventArgs e) {
             tableLayoutPanel1.Controls.Remove(SearchButton);

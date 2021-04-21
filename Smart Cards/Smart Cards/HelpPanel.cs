@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Smart_Cards {
+
+	//the panel displayed when the user clicks the "Help" button - LS
 	public partial class HelpPanel : UserControl {
+		//project generated code
 		public HelpPanel() {
 			InitializeComponent();
 		}

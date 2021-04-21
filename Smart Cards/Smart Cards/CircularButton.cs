@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
+    //a round shaped button that inherits the same functionality from the built in Button class - LS
     public class CircularButton : Button
     {
         private Color borderColor;
@@ -17,6 +18,7 @@ namespace Smart_Cards
         private SolidBrush brush;
         private Pen pen;
 
+        //code to make fields visible in the designer - LS
         [Description("The color of the round border"), Category("Data")]
         public Color BorderColor
         {
@@ -34,6 +36,7 @@ namespace Smart_Cards
             get { return this.pen; }
         }
 
+        //draw the border around the button - LS
         protected override void OnPaint(PaintEventArgs e)
         {
             GraphicsPath grPath = new GraphicsPath();
@@ -48,6 +51,7 @@ namespace Smart_Cards
             e.Graphics.DrawEllipse(borderPen, location);
         }
 
+        //project generated code
         private void InitializeComponent()
         {
             this.SuspendLayout();

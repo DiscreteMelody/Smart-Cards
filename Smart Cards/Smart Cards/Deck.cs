@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Smart_Cards
 {
+    //Class representing a Deck with a title, optional descriptions, and list of cards with a length>=0
+    //Author: BH
     public class Deck
     {
+        //default values for title and description of the deck to be used if a deck is created without those values provided
         public const string DefaultTitle = "My Deck";
         public const string DefaultDescription = "An interesting description";
 
@@ -17,6 +20,7 @@ namespace Smart_Cards
         public string Description { get; set; }
         public List<Card> Cards { get; set; }
 
+        //Constructor used to create new decks from user actions or by initializing from JSON
         [JsonConstructor]
         public Deck(int id, string title, string description, List<Card> cards)
         {
@@ -25,18 +29,8 @@ namespace Smart_Cards
             Description = description;
             Cards = cards;
         }
-        public Deck(string title, string description, List<Card> cards,int overwrittenId)
-        {
-            Id = overwrittenId;
-        }
-        public Deck(int id)
-        {
-            Id = id;
-            Title = "Enter a Title";
-            Description = "Enter a Description";
-            Cards = new List<Card>();
-        }
 
+        //Overridden ToString method used during the debugging process
         public override string ToString()
         {
             string deckInfo = "\n-----------------------------------------" +
@@ -49,13 +43,5 @@ namespace Smart_Cards
             }
             return deckInfo;
         }
-
-		public override bool Equals(object obj) {
-			return base.Equals(obj);
-		}
-
-		public override int GetHashCode() {
-			return base.GetHashCode();
-		}
 	}
 }

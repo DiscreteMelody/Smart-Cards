@@ -53,7 +53,7 @@
 			this.termFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.termFlowLayoutPanel.Location = new System.Drawing.Point(4, 45);
 			this.termFlowLayoutPanel.Name = "termFlowLayoutPanel";
-			this.termFlowLayoutPanel.Size = new System.Drawing.Size(592, 295);
+			this.termFlowLayoutPanel.Size = new System.Drawing.Size(592, 560);
 			this.termFlowLayoutPanel.TabIndex = 15;
 			this.termFlowLayoutPanel.WrapContents = false;
 			// 
@@ -63,7 +63,7 @@
 			this.saveDeckLabel.AutoSize = true;
 			this.saveDeckLabel.BackColor = System.Drawing.Color.Transparent;
 			this.saveDeckLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.saveDeckLabel.Location = new System.Drawing.Point(720, 505);
+			this.saveDeckLabel.Location = new System.Drawing.Point(1247, 770);
 			this.saveDeckLabel.Name = "saveDeckLabel";
 			this.saveDeckLabel.Size = new System.Drawing.Size(156, 32);
 			this.saveDeckLabel.TabIndex = 18;
@@ -75,7 +75,7 @@
 			this.deleteDeckLabel.AutoSize = true;
 			this.deleteDeckLabel.BackColor = System.Drawing.Color.Transparent;
 			this.deleteDeckLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.deleteDeckLabel.Location = new System.Drawing.Point(855, 506);
+			this.deleteDeckLabel.Location = new System.Drawing.Point(1382, 771);
 			this.deleteDeckLabel.Name = "deleteDeckLabel";
 			this.deleteDeckLabel.Size = new System.Drawing.Size(176, 32);
 			this.deleteDeckLabel.TabIndex = 20;
@@ -87,7 +87,7 @@
 			this.newTermLabel.AutoSize = true;
 			this.newTermLabel.BackColor = System.Drawing.Color.Transparent;
 			this.newTermLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.newTermLabel.Location = new System.Drawing.Point(3, 506);
+			this.newTermLabel.Location = new System.Drawing.Point(3, 771);
 			this.newTermLabel.Name = "newTermLabel";
 			this.newTermLabel.Size = new System.Drawing.Size(144, 32);
 			this.newTermLabel.TabIndex = 21;
@@ -105,14 +105,14 @@
 			this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.searchButton, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.termFlowLayoutPanel, 0, 1);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(207, 70);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(470, 70);
 			this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(600, 10000);
 			this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(600, 344);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 344);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 609);
 			this.tableLayoutPanel1.TabIndex = 22;
 			// 
 			// label1
@@ -132,7 +132,7 @@
 			this.searchButton.Dock = System.Windows.Forms.DockStyle.Left;
 			this.searchButton.FlatAppearance.BorderSize = 0;
 			this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.searchButton.Image = global::Smart_Cards.Properties.Resources.clear_search_icon;
+			this.searchButton.Image = global::Smart_Cards.Properties.Resources.loupe;
 			this.searchButton.Location = new System.Drawing.Point(110, 4);
 			this.searchButton.Name = "searchButton";
 			this.searchButton.Size = new System.Drawing.Size(34, 34);
@@ -150,7 +150,7 @@
 			this.deleteDeckButton.FlatAppearance.BorderSize = 0;
 			this.deleteDeckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.deleteDeckButton.Image = global::Smart_Cards.Properties.Resources.trash_icon_light;
-			this.deleteDeckButton.Location = new System.Drawing.Point(883, 420);
+			this.deleteDeckButton.Location = new System.Drawing.Point(1410, 685);
 			this.deleteDeckButton.Name = "deleteDeckButton";
 			this.deleteDeckButton.Size = new System.Drawing.Size(82, 82);
 			this.deleteDeckButton.TabIndex = 19;
@@ -167,7 +167,7 @@
 			this.saveDeckButton.FlatAppearance.BorderSize = 0;
 			this.saveDeckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.saveDeckButton.Image = global::Smart_Cards.Properties.Resources.save_icon_light;
-			this.saveDeckButton.Location = new System.Drawing.Point(739, 420);
+			this.saveDeckButton.Location = new System.Drawing.Point(1266, 685);
 			this.saveDeckButton.Name = "saveDeckButton";
 			this.saveDeckButton.Size = new System.Drawing.Size(82, 82);
 			this.saveDeckButton.TabIndex = 17;
@@ -184,7 +184,7 @@
 			this.addTermButton.FlatAppearance.BorderSize = 0;
 			this.addTermButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.addTermButton.Image = global::Smart_Cards.Properties.Resources.plus_icon_light;
-			this.addTermButton.Location = new System.Drawing.Point(17, 420);
+			this.addTermButton.Location = new System.Drawing.Point(17, 685);
 			this.addTermButton.Name = "addTermButton";
 			this.addTermButton.Size = new System.Drawing.Size(82, 82);
 			this.addTermButton.TabIndex = 16;
@@ -198,7 +198,7 @@
 			this.deckTitleTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
 			this.deckTitleTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.deckTitleTextbox.ForeColor = System.Drawing.Color.Transparent;
-			this.deckTitleTextbox.Location = new System.Drawing.Point(316, 15);
+			this.deckTitleTextbox.Location = new System.Drawing.Point(579, 15);
 			this.deckTitleTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.deckTitleTextbox.Name = "deckTitleTextbox";
 			this.deckTitleTextbox.Padding = new System.Windows.Forms.Padding(5, 7, 5, 5);
@@ -222,7 +222,7 @@
 			this.Controls.Add(this.deckTitleTextbox);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "EditPanel";
-			this.Size = new System.Drawing.Size(1002, 536);
+			this.Size = new System.Drawing.Size(1529, 801);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);

@@ -250,6 +250,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\clear search icon.png" />
+    <None Include="Resources\loupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

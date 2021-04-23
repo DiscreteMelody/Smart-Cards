@@ -26,6 +26,7 @@ namespace Smart_Cards
             DeckDescription.ResetText();
         }
 
+        //Clears the contents of the textboxes and sends the user back to the DeckList screen
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DeckTitle.ResetText();

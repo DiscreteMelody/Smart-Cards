@@ -18,6 +18,7 @@ namespace Smart_Cards
     }
     public static class NavigationManager
     {
+        private static PrimaryForm PF;
         private static NavMenu NavMenuBar;
 
         private static DeckListPanel DeckListScreen;
@@ -26,6 +27,10 @@ namespace Smart_Cards
         private static StudyPanel StudyDeckScreen;
         private static HelpPanel HelpScreen;
         private static SharePanel ShareScreen;
+
+        public static void GetParent(PrimaryForm pf) {
+            PF = pf;
+		}
 
         public static void InitializeControl(NavMenu ControlToInitialize)
         {
@@ -57,8 +62,47 @@ namespace Smart_Cards
 
         public static void SetActiveScreen(NavigationScreen ScreenToActivate, int OptionalDeckParameter = 0)
         {
-            switch(ScreenToActivate)
+            bool isEditFront = PF.IsFrontPanel(EditDeckScreen);
+            if (isEditFront) {
+                EditDeckScreen.SaveCurrentDeck();
+            }
+            switch (ScreenToActivate)
             {
+                case NavigationScreen.DeckList:
+                    DeckListScreen.ResetSearch();
+                    DeckListScreen.LoadDeckPanels();
+                    DeckListScreen.BringToFront();
+                    NavMenuBar.HighlightDeckListButton();
+                    break;
+                case NavigationScreen.AddDeck:
+                    AddDeckScreen.BringToFront();
+                    NavMenuBar.HighlightAddDeckButton();
+                    break;
+                case NavigationScreen.EditDeck:
+                    EditDeckScreen.SetDeckToEdit(OptionalDeckParameter);
+                    EditDeckScreen.BringToFront();
+                    break;
+                case NavigationScreen.StudyDeck:
+                    StudyDeckScreen.BringToFront();
+                    StudyDeckScreen.SetDeckToStudy(OptionalDeckParameter);
+                    break;
+                case NavigationScreen.Help:
+                    HelpScreen.BringToFront();
+                    NavMenuBar.HighlightHelpButton();
+                    break;
+                case NavigationScreen.Share:
+                    ShareScreen.SetDeckList();
+                    ShareScreen.BringToFront();
+                    NavMenuBar.HighlightShareButton();
+                    break;
+            }
+        }
+        public static void SetActiveScreen(NavigationScreen ScreenToActivate, bool autoSave, int OptionalDeckParameter = 0) {
+            bool isEditFront = PF.IsFrontPanel(EditDeckScreen);
+            if (isEditFront && autoSave) {
+                EditDeckScreen.SaveCurrentDeck();
+            }
+            switch (ScreenToActivate) {
                 case NavigationScreen.DeckList:
                     DeckListScreen.ResetSearch();
                     DeckListScreen.LoadDeckPanels();

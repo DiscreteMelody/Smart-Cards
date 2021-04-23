@@ -82,6 +82,17 @@ namespace Smart_Cards
 			}
 		}
 
+        public void SaveCurrentDeck() {
+            List<Card> Cards = new List<Card>();
+            foreach (EditCardPanel cardInDeck in this.termFlowLayoutPanel.Controls) {
+                Cards.Add(cardInDeck.ConvertToCard());
+            }
+            DeckReference = new Deck(DeckReference.Id, deckTitleTextbox.Text, "description", Cards);
+
+            DeckManager.OverwriteDeck(DeckReference);
+            DeckManager.ExportDecksToJson();
+        }
+
 
         //fires when the delete button is clicked - LS
         private void deleteDeckButton_Click(object sender, EventArgs e)
@@ -95,7 +106,7 @@ namespace Smart_Cards
                 DeckManager.DeleteDeck(DeckReference);
                 DeckManager.ExportDecksToJson();
 
-                NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
+                NavigationManager.SetActiveScreen(NavigationScreen.DeckList, false);
             }
         }
 
@@ -116,15 +127,7 @@ namespace Smart_Cards
 
         private void saveDeckButton_Click(object sender, EventArgs e)
         {
-            List<Card> Cards = new List<Card>();
-            foreach (EditCardPanel cardInDeck in this.termFlowLayoutPanel.Controls)
-            {
-                Cards.Add(cardInDeck.ConvertToCard());
-            }
-            DeckReference = new Deck(DeckReference.Id, deckTitleTextbox.Text, "description", Cards);
-
-            DeckManager.OverwriteDeck(DeckReference);
-            DeckManager.ExportDecksToJson();
+            SaveCurrentDeck();
 
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
         }

@@ -22,6 +22,8 @@ namespace Smart_Cards
             //Import deck file
             DeckManager.ImportDecksFromJson();
 
+            NavigationManager.GetParent(this);
+
             //Initialize references to form controls
             NavigationManager.InitializeControl(PrimaryNavMenu);
             
@@ -35,6 +37,15 @@ namespace Smart_Cards
             //Set deck list screen as active when the form loads
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
         }
+
+        public bool IsFrontPanel (Control panel) {
+            int index = this.ContentPanel.Controls.GetChildIndex(panel);
+            if (index==0) {
+                return true;
+			} else {
+                return false;
+			}
+		}
 
         private void PrimaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {

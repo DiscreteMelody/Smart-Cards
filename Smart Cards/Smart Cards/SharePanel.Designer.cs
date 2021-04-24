@@ -25,8 +25,8 @@ namespace Smart_Cards {
 		/// </summary>
 		private void InitializeComponent() {
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.importBtn = new System.Windows.Forms.Button();
+			this.exportBtn = new System.Windows.Forms.Button();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -37,8 +37,8 @@ namespace Smart_Cards {
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-			this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-			this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.importBtn, 1, 0);
+			this.tableLayoutPanel1.Controls.Add(this.exportBtn, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.checkedListBox1, 0, 0);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -49,28 +49,28 @@ namespace Smart_Cards {
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(609, 464);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
-			// button2
+			// importBtn
 			// 
-			this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.button2.Location = new System.Drawing.Point(423, 210);
-			this.button2.Name = "button2";
-			this.tableLayoutPanel1.SetRowSpan(this.button2, 2);
-			this.button2.Size = new System.Drawing.Size(126, 43);
-			this.button2.TabIndex = 1;
-			this.button2.Text = "Import";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
+			this.importBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.importBtn.Location = new System.Drawing.Point(423, 210);
+			this.importBtn.Name = "importBtn";
+			this.tableLayoutPanel1.SetRowSpan(this.importBtn, 2);
+			this.importBtn.Size = new System.Drawing.Size(126, 43);
+			this.importBtn.TabIndex = 1;
+			this.importBtn.Text = "Import";
+			this.importBtn.UseVisualStyleBackColor = true;
+			this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
 			// 
-			// button1
+			// exportBtn
 			// 
-			this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.button1.Location = new System.Drawing.Point(120, 401);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(126, 43);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Export";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.exportBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.exportBtn.Location = new System.Drawing.Point(120, 401);
+			this.exportBtn.Name = "exportBtn";
+			this.exportBtn.Size = new System.Drawing.Size(126, 43);
+			this.exportBtn.TabIndex = 0;
+			this.exportBtn.Text = "Export";
+			this.exportBtn.UseVisualStyleBackColor = true;
+			this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
 			// 
 			// checkedListBox1
 			// 
@@ -99,8 +99,8 @@ namespace Smart_Cards {
 		#endregion
 
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button exportBtn;
+		private System.Windows.Forms.Button importBtn;
 		private System.Windows.Forms.CheckedListBox checkedListBox1;
 	}
 }

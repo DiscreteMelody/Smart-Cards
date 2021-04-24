@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
+    /*
+     * Author: LS
+     * Responsible for triggering navigation and updating NavMeny visual studios to make navigation selections as obvious as possible
+     */
     public partial class NavMenu : UserControl
     {
         public NavMenu()
@@ -17,6 +21,9 @@ namespace Smart_Cards
             InitializeComponent();
         }
 
+        /*
+         * Methods to trigger the correct navigation based on which button is clicked
+         */
         private void decksButton_Click(object sender, EventArgs e)
         {
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
@@ -36,7 +43,7 @@ namespace Smart_Cards
             NavigationManager.SetActiveScreen(NavigationScreen.Share);
         }
 
-        //style each button to its "selected" appearance when clicked - LS
+        //style each button to its "selected" appearance when clicked
         public void HighlightDeckListButton()
         {
             decksButton.BackColor = StyleManager.primaryColor;
@@ -73,6 +80,9 @@ namespace Smart_Cards
             HighlightPanel.Location = new Point(shareButton.Location.X + shareButton.Width - HighlightPanel.Width, shareButton.Location.Y);
         }
 
+        /*
+         * Trigger the closing of the primary form
+         */
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.FindForm().Close();

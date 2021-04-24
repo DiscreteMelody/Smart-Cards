@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Smart_Cards
 {
     /*
-     * Author: ?
+     * Author: BH
      * Class representing a panel for each individual deck on the DeckList screen
      */
     public partial class DeckPanel : UserControl
@@ -38,7 +38,7 @@ namespace Smart_Cards
         }
 
         /*
-         *Send the user to the Edit Deck screen to edit the selected deck
+         *Send the user to the Edit Deck screen to edit the selected deck - BH
          */
         private void editButton_Click(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace Smart_Cards
         }
 
         /*
-         *Send the user to the Study screen to study the cards in the selected deck
+         *Send the user to the Study screen to study the cards in the selected deck - BH
          */
         private void studyButton_Click(object sender, EventArgs e)
         {

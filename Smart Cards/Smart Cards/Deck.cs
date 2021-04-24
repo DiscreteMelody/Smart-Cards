@@ -20,7 +20,7 @@ namespace Smart_Cards
         public string Description { get; set; }
         public List<Card> Cards { get; set; }
 
-        //Constructor used to create new decks from user actions or by initializing from JSON
+        //Constructor used to create new decks from user actions or by initializing from JSON - BH
         [JsonConstructor]
         public Deck(int id, string title, string description, List<Card> cards)
         {
@@ -30,7 +30,7 @@ namespace Smart_Cards
             Cards = cards;
         }
 
-        //Overridden ToString method used during the debugging process
+        //Overridden ToString method used during the debugging process - BH
         public override string ToString()
         {
             string deckInfo = "\n-----------------------------------------" +

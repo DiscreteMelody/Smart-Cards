@@ -58,6 +58,7 @@ namespace Smart_Cards
             }
         }
 
+        //Changes the main label to show the question - BH
         private void ShowCardQuestion()
         {
             termTitleLabel.Text = CurrentCard.Question;
@@ -66,6 +67,7 @@ namespace Smart_Cards
             CurrentDeckTitle.BackColor = Color.FromArgb(224, 224, 224);
         }
 
+        //Changes the main label to show the answer - BH
         private void ShowCardAnswer()
         {
             termTitleLabel.Text = CurrentCard.Answer;
@@ -87,7 +89,7 @@ namespace Smart_Cards
 
         private bool CompareAnswer()
         {
-            //if your answer matches the card's answer
+            //if your answer matches the card's answer - BH
             if (termAnswerTextbox.Text.Equals(CurrentCard.Answer, StringComparison.OrdinalIgnoreCase))
             {
                 this.BackColor = Color.LightGreen;

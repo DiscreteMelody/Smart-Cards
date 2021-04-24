@@ -23,7 +23,7 @@ namespace Smart_Cards
         }
 
         /*
-         * Gets a panel representing each deck in storageDisplays those panels in the FlowPanel
+         * Gets a panel representing each deck in storageDisplays those panels in the FlowPanel - BH
          */
         public void LoadDeckPanels()
         {
@@ -36,7 +36,7 @@ namespace Smart_Cards
 
         /*
          * Author: LM
-         * Overload of LoadDeckPanels method that accept a string and passes that string to the overloaded CreateDeckPanels method of the DeckManager class
+         * Overload of Ben's LoadDeckPanels method that accept a string and passes that string to the overloaded CreateDeckPanels method of the DeckManager class
          * This is one of the foundations of the functionality allowing users to search for Decks by name
          * As the user's search string is built up, the DeckPanels are re-rendered with each update slowly excluding every deck that does not contain the current string in its title
          */

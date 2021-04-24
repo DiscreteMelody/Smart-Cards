@@ -14,20 +14,20 @@ namespace Smart_Cards
         public string Question { get; set; }
         public string Answer { get; set; }
 
-        //Empty default constructor
+        //Empty default constructor - BH
         public Card()
         {
             Question = "";
             Answer = "";
         }
-        //Constructor with parameters to set the question and answer properties of the Card object
+        //Constructor with parameters to set the question and answer properties of the Card object - BH
         public Card(string question, string answer)
         {
             Question = question;
             Answer = answer;
         }
 
-        //Override of the ToString method used during the debugging process
+        //Override of the ToString method used during the debugging process - BH
         public override string ToString()
         {
             return "Question:\t\t\t" + Question +

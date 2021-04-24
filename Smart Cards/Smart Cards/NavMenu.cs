@@ -12,7 +12,7 @@ namespace Smart_Cards
 {
     /*
      * Author: LS
-     * Responsible for triggering navigation and updating NavMeny visual studios to make navigation selections as obvious as possible
+     * Responsible for triggering navigation and updating NavMenu visual studios to make navigation selections as obvious as possible
      */
     public partial class NavMenu : UserControl
     {

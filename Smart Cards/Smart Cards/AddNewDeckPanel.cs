@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
+    //Class for panel when adding new deck
+    //Author: BH
     public partial class AddNewDeckPanel : UserControl
     {
         public AddNewDeckPanel()

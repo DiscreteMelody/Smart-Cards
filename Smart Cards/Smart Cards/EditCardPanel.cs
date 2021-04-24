@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Smart_Cards
 {
     /*
+     * Author BH
      * Takes in the contents of a card and a reference to the parent EditDeck panel
      * Allow the user to edit the contents of a card before saving it back to the deck
      */

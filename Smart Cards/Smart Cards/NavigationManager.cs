@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Smart_Cards
 {
-    //Enum to keep track of all the screens in the app
+    //Enum to keep track of all the screens in the app - BH
     public enum NavigationScreen
     {
         DeckList,
@@ -41,7 +41,7 @@ namespace Smart_Cards
 		}
 
         /*
-         * Author: LS
+         * Author: BH
          * Overloads to InitializeControl methods to get navigation references for all of the PrimaryForm's child panels on application start
          */
         public static void InitializeControl(NavMenu ControlToInitialize)

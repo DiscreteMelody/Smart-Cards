@@ -51,6 +51,7 @@ namespace Smart_Cards
 		}
 
         /*
+         * Author: BH
          * Detects when the PrimaryForm is closing, signaling that the application is closing
          * Writes the master DeckList to storage one more time before closing so that the next time the application starts it has access to the most recent, up-to-date data
          */

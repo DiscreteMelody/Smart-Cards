@@ -22,10 +22,11 @@ namespace Smart_Cards
         public static int nextId = 0;
         //Data file will always be located in the currently signed-in user's AppData/Roaming directory. This makes it easy to deal with a standardized location that is not relative to the location of the project files
         private static readonly string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards\\DeckList.json");
+        private static readonly string backup_filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards\\DeckList_Backup.json");
 
         /*
          * Author: BH, LM
-         * Notes: Ben wrote almost all of this method, Lucas only added the line assigning nextId as part of an update to the system of tracking deck ids while working on the deck import/export feature
+         * Notes: Ben wrote almost all of this method, Lucas  added the line assigning nextId as part of an update to the system of tracking deck ids while working on the deck import/export feature as well as the backup data file functionality
          * Reads all text from the data file as JSON and deserializes into dictionary
          */
         public static void ImportDecksFromJson()
@@ -40,7 +41,14 @@ namespace Smart_Cards
             }
             catch(Exception e)
             {
-                
+                try {
+                    string backup_data = File.ReadAllText(backup_filePath);
+                    DeckList = JsonConvert.DeserializeObject<Dictionary<int, Deck>>(backup_data);
+                    nextId = DeckList.Count;
+                    Console.WriteLine(DeckList.Count);
+                } catch (Exception e2) {
+                    Console.WriteLine("Could not read backup file:" + e2.Message);
+				}
                 Console.WriteLine("Could not read file: " + e.Message);
             }
         }
@@ -60,13 +68,16 @@ namespace Smart_Cards
                     JsonSerializer serializer = new JsonSerializer();
                     serializer.Serialize(file, DeckList);
                 }
-
+                using (StreamWriter backup_file = File.CreateText(backup_filePath)) {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(backup_file, DeckList);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Could not write file: " + e.Message);
                 try {
-                    //Check to see if path to the data file exists
+                    //Check to see if path to the primary data file exists
                     if (!Directory.Exists(filePath)) {
                         //If not, then create the path and then try writing the file again
                         Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards"));
@@ -75,6 +86,18 @@ namespace Smart_Cards
                             serializer.Serialize(file, DeckList);
                         }
                     } else {
+                        Console.WriteLine(e);
+                    }
+                    //Check to see if path to backup data file exists
+                    if (!Directory.Exists(backup_filePath)) {
+                        //If not, then create the path and then try writing the file again
+                        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Smart_Cards"));
+                        using (StreamWriter backup_file = File.CreateText(backup_filePath)) {
+                            JsonSerializer serializer = new JsonSerializer();
+                            serializer.Serialize(backup_file, DeckList);
+                        }
+                    }
+                    else {
                         Console.WriteLine(e);
                     }
                 } catch (Exception e2) {

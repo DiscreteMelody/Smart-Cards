@@ -24,17 +24,17 @@ namespace Smart_Cards
         {
             Deck NewDeck = DeckManager.CreateNewDeck(DeckTitle.Text,DeckDescription.Text);
             NavigationManager.SetActiveScreen(NavigationScreen.EditDeck, NewDeck.Id);
-            DeckTitle.ResetText();
-            DeckDescription.ResetText();
+            DeckTitle.clearText();
+            DeckDescription.clearText();
         }
 
         //Clears the contents of the textboxes and sends the user back to the DeckList screen
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            DeckTitle.ResetText();
-            DeckDescription.ResetText();
+            DeckTitle.clearText();
+            DeckDescription.clearText();
 
             NavigationManager.SetActiveScreen(NavigationScreen.DeckList);
         }
-    }
+	}
 }

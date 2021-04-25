@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Not at all. Any edits you make to a deck will be automatically saved if you navigate away or close the application without clicking the Save button. We simply provided a Save button as reassurance for people who don't trust autosaves and want to be very certain that their changes won't be lost.</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Of course! From the main list of decks you can start typing the name of the deck you are looking for and any decks that don't match will be filtered away.
+If you want to search for a card that contains a specific question or answer, just go to edit the deck that you think contains your card. If there are any cards in the deck, you will be able to begin searching just like with decks.</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Everything to do with deck sharing is done through the Share screen that you can access from the Navigation menu on the left.
+From there you can select as many of your decks as you want and save them as a new file that you can share with other people.
+If you want to use some decks that somebody else shared with you, just click the Import button and find the file that they shared with you. Smart Cards will do the rest to import and store it alongside the decks you already had.</value>
+  </data>
 </root>

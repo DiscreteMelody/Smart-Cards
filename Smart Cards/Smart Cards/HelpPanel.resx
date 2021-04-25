@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Click the "Decks" button on the left hand side. You will see a list of all of your decks. Press the "edit" button beneath the deck you wish to edit.
+To add a new term to your deck, press the "add term" button. To delete a specific term and answer pair in your deck, press the "delete" button next to the term/answer pair you wish to delete.
+To change a term/answer pair, simply change the text to what you would like for it to be. 
+To save your changes, click the "save" button. 
+To delete the deck, press the "delete" button.</value>
+  </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Not at all. Any edits you make to a deck will be automatically saved if you navigate away or close the application without clicking the Save button. We simply provided a Save button as reassurance for people who don't trust autosaves and want to be very certain that their changes won't be lost.</value>
   </data>

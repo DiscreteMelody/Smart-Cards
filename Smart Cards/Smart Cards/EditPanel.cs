@@ -120,6 +120,7 @@ namespace Smart_Cards
                 Cards.Add(cardInDeck.ConvertToCard());
             }
             DeckReference.Cards = Cards;
+            DeckReference.Title = deckTitleTextbox.Text;
             DeckManager.OverwriteDeck(DeckReference);
             DeckManager.ExportDecksToJson();
         }
